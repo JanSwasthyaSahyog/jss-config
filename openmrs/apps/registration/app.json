@@ -77,7 +77,10 @@
         "abnormalIndicator": true
       }
     },
-
+    "fieldValidation" : {
+                "primaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
+                "secondaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"}
+    },
     "patientSearch": {
       "address": {
         "label": "Village",
