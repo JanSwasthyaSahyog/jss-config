@@ -413,6 +413,13 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssrhdprogram.sql"
     }
  },
+ "jssancprogramreport": {
+    "name": "ANC Program Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
+    }
+ },
  "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
