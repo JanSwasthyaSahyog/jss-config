@@ -89,7 +89,7 @@ FROM obs o
   JOIN episode_patient_program epp ON ee.episode_id=epp.episode_id
   JOIN patient_program pp ON epp.patient_program_id = pp.patient_program_id
   JOIN program program ON pp.program_id = program.program_id AND program.name IN ("TB Program")
-  WHERE o.voided is false AND cast(v.date_started AS DATE) BETWEEN "2016-11-17" AND "2016-11-22"
+  WHERE o.voided is false AND cast(v.date_started AS DATE) BETWEEN '#startDate#' AND "'endDate#'
   GROUP BY e.encounter_id
 ) as ProgDetails
 Left Join 
@@ -136,8 +136,7 @@ FROM obs o
   LEFT OUTER JOIN concept_name scn ON pat.format = "org.openmrs.Concept" AND pa.value = scn.concept_id AND scn.concept_name_type = "SHORT" AND scn.voided is false
   LEFT OUTER JOIN concept_name fscn ON pat.format = "org.openmrs.Concept" AND pa.value = fscn.concept_id AND fscn.concept_name_type = "FULLY_SPECIFIED" AND fscn.voided is false 
   LEFT OUTER JOIN person_address paddress ON p.person_id = paddress.person_id AND paddress.voided is false 
-  WHERE o.voided is false 
-  AND cast(v.date_started AS DATE) BETWEEN "2016-11-17" AND "2016-11-22"
+  WHERE o.voided is false AND cast(v.date_started AS DATE) BETWEEN '#startDate#' AND "'endDate#'
 GROUP BY e.encounter_id
 ) as LabDetails
 On LabDetails.identifier=ProgDetails.Patient_Identifier and LabDetails.visit_id=ProgDetails.visit_id ;
