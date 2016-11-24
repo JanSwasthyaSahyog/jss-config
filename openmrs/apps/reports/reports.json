@@ -505,6 +505,15 @@
  "showObsOnlyForProgramDuration": false
    }
  },
+
+"tbTemplatereportwithsql": {
+        "name": "TB Report For Follow Up Patient",
+        "type": "MRSGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/reports/tbTemplatereport.sql"
+        }
+    },
+
  "diabetesobsCannedReport": {
  "name": "Diabetes Study Report",
  "type": "obsCannedReport",
