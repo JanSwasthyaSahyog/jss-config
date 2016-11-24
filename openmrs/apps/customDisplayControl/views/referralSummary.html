@@ -4,27 +4,29 @@
 <body>
 <br><br><br><br>
 
-<span ng-if="refsummryForm['Advice']!= null"><strong>{{observations.groupMembers[0].conceptNameToDisplay}} : </strong></span><span ng-repeat="x in observations.groupMembers" ng-if="x.conceptNameToDisplay=='Advice'">{{ x.valueAsString }}, </span><br><br>
+<span ng-if="refsummryForm['Advice']!= null"><strong>{{observations.groupMembers[0].conceptNameToDisplay}} : </strong></span>
+<span ng-repeat="x in observations.groupMembers" ng-if="x.conceptNameToDisplay=='Advice'">{{ x.valueAsString }}, </span><br><br>
 <span ng-if="refsummryForm['Summary Notes']!= null"><strong> Summary : </strong>  {{refsummryForm["Summary Notes"]}} </span><br><br>
 
 
 <div>
-    <span>The case is referred back for continuation of treatment from your centre, of course, the dosage may be adjusted as per reports.</span>
+    <span class="increased-font">The case is referred back for continuation of treatment from your centre, of course, the dosage may be adjusted as per reports.</span>
     <br><br>
-    <span>S/he can be referred back after  <strong>{{observation.groupMembers[1].value}}</strong>  months on  <strong>{{observation.groupMembers[2].value | bahmniDate}}</strong>  or if needed earlier, for review.</span>
+    <span class="increased-font">S/he can be referred back after  <strong>{{observation.groupMembers[1].value}}</strong>  months on  <strong>{{observation.groupMembers[2].value | bahmniDate}}</strong>  or if needed earlier, for review.</span>
     <br><br>
-    <span>Please feel free to contact <strong>{{observation.groupMembers[0].valueAsString}}</strong> / Email <strong>jss.referrals@gmail.com</strong> in case of any query.</span>
+    <span class="increased-font">Please feel free to contact <strong>{{observation.groupMembers[0].valueAsString}}</strong> / Email <strong>jss.referrals@gmail.com</strong> in case of any query.</span>
     <br><br>
 
 </div>
 <br><br>
-<span>Thanking you,</span>
+<span class="increased-font">Thanking you,</span>
 <br><br>
-<span>Yours sincerely</span>
+<span class="increased-font">Yours sincerely</span>
 <br><br>
 <div class="footer-referralform">
-    <span class="fl">Signature : {{observations.providers[0].name}} </span> <br>
-    <span >Date : {{curDate |date:'dd-MM-yyyy'}}</span>
+    <span class="increased-font" class="fl">Signature : {{observations.providers[0].name}} </span> <br>
+    <br><br><br>
+    <span class="increased-font">Date : {{curDate |date:'dd-MM-yyyy'}}</span>
 </div><br><br>
 </body>
 </html>

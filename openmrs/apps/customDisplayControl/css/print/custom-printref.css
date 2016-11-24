@@ -13,6 +13,9 @@
 .hidden-print{
  display:none;
 }
+.increased-font{
+	font-size:140%;
+}
 
 .footer-note{display:none;}
 
