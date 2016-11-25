@@ -4,9 +4,9 @@
 <body>
 <br><br><br><br>
 
-<span ng-if="refsummryForm['Advice']!= null"><strong>{{observations.groupMembers[0].conceptNameToDisplay}} : </strong></span>
-<span ng-repeat="x in observations.groupMembers" ng-if="x.conceptNameToDisplay=='Advice'">{{ x.valueAsString }}, </span><br><br>
-<span ng-if="refsummryForm['Summary Notes']!= null"><strong> Summary : </strong>  {{refsummryForm["Summary Notes"]}} </span><br><br>
+<span class="increased-font" ng-if="refsummryForm['Advice']!= null"><strong>{{observations.groupMembers[0].conceptNameToDisplay}} : </strong></span>
+<span class="increased-font" ng-repeat="x in observations.groupMembers" ng-if="x.conceptNameToDisplay=='Advice'">{{ x.valueAsString }}, </span><br><br>
+<span class="increased-font" ng-if="refsummryForm['Summary Notes']!= null"><strong> Summary : </strong>  {{refsummryForm["Summary Notes"]}} </span><br><br>
 
 
 <div>
