@@ -1,3 +1,4 @@
+
 Select ProgDetails.*,
 LabDetails.Haemoglobin_Blood,
 LabDetails.FBS,
@@ -18,9 +19,9 @@ LabDetails.Albumin_Serum
   floor(DATEDIFF(DATE(o.obs_datetime), p.birthdate) / 365)      AS 'Age',
   DATE_FORMAT(p.birthdate, "%d-%b-%Y")                          AS 'Birthdate',
   p.gender                                                      AS 'Gender',
-  paddress.city_village											AS 'City_Village', 
-  paddress.address3												AS 'Tehsil', 
-  paddress.county_district										AS 'District',
+  paddress.city_village                     AS 'City_Village', 
+  paddress.address3                       AS 'Tehsil', 
+  paddress.county_district                    AS 'District',
   GROUP_CONCAT(DISTINCT(IF(pat.name = 'caste', IF(pat.format = 'org.openmrs.Concept',coalesce(scn.name, fscn.name),pa.value), NULL))) AS 'Caste', 
   GROUP_CONCAT(DISTINCT(IF(pat.name = 'class', IF(pat.format = 'org.openmrs.Concept',coalesce(scn.name, fscn.name),pa.value), NULL))) AS 'Class', 
   GROUP_CONCAT(DISTINCT(IF(pat.name = 'primaryRelative', IF(pat.format = 'org.openmrs.Concept',coalesce(scn.name, fscn.name),pa.value), NULL))) AS 'Primary_Relative', 
@@ -43,7 +44,6 @@ LabDetails.Albumin_Serum
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'BMI STATUS', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'BMI STATUS',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Symptoms', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Symptoms',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Symptoms Duration', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Symptoms Duration',
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Symptoms  duration', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Symptoms  duration',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Next Followup Visit', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Next Followup Visit',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Plan for next visit', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Plan for next visit',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Need of Admission', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Need of Admission',
@@ -52,7 +52,7 @@ LabDetails.Albumin_Serum
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Followup Visit', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Followup Visit',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Family Screened', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Family Screened',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Fever', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Fever',
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Cough', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Cough',	GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Anorexia', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Anorexia',
+  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Cough', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Cough', GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Anorexia', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Anorexia',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Chest Pain', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Chest Pain',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis, Breathlessness', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis, Breathlessness',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Tuberculosis Followup, Lymph Node Size', coalesce(o.value_numeric, o.value_boolean, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Tuberculosis Followup, Lymph Node Size',
@@ -64,7 +64,12 @@ LabDetails.Albumin_Serum
 FROM obs o
   JOIN concept obs_concept ON obs_concept.concept_id=o.concept_id AND obs_concept.retired is false
   JOIN concept_name obs_fscn on o.concept_id=obs_fscn.concept_id AND obs_fscn.concept_name_type="FULLY_SPECIFIED" AND obs_fscn.voided is false
-   AND obs_fscn.name IN ("WEIGHT","HEIGHT","BMI","BMI STATUS","Tuberculosis, Symptoms","Tuberculosis, Symptoms Duration","Tuberculosis, Symptoms  duration","Tuberculosis, Next Followup Visit","Tuberculosis, Plan for next visit","Tuberculosis, Need of Admission","Tuberculosis, Indication for Admission","Tuberculosis, Output of Treatment","Tuberculosis, Followup Visit","Tuberculosis, Family Screened","Tuberculosis, Fever","Tuberculosis, Cough","Tuberculosis, Anorexia","Tuberculosis, Chest Pain","Tuberculosis, Breathlessness","Tuberculosis Followup, Lymph Node Size","Tuberculosis, Examination","Tuberculosis, Treatment Compliance","Tuberculosis, Adverse Effects","Tuberculosis, Treatment for adverse effects","Tuberculosis, Visit Impression")
+   AND obs_fscn.name IN ("WEIGHT","HEIGHT","BMI","BMI STATUS","Tuberculosis, Symptoms","Tuberculosis, Symptoms Duration","Tuberculosis, Symptoms  duration","Tuberculosis, Next Followup Visit",
+   "Tuberculosis, Plan for next visit","Tuberculosis, Need of Admission","Tuberculosis, Indication for Admission","Tuberculosis, Output of Treatment",
+   "Tuberculosis, Followup Visit","Tuberculosis, Family Screened","Tuberculosis, Fever","Tuberculosis, Cough","Tuberculosis, Anorexia","Tuberculosis, Chest Pain",
+   "Tuberculosis, Breathlessness","Tuberculosis Followup, Lymph Node Size","Tuberculosis, Examination",
+   "Tuberculosis, Treatment Compliance","Tuberculosis, Adverse Effects",
+   "Tuberculosis, Treatment for adverse effects","Tuberculosis, Visit Impression")
   LEFT JOIN concept_name obs_scn on o.concept_id=obs_scn.concept_id AND obs_scn.concept_name_type="SHORT" AND obs_scn.voided is false
   JOIN person p ON p.person_id = o.person_id AND p.voided is false
   JOIN patient_identifier pi ON p.person_id = pi.patient_id AND pi.voided is false
@@ -85,9 +90,7 @@ FROM obs o
   LEFT OUTER JOIN concept_name scn ON pat.format = "org.openmrs.Concept" AND pa.value = scn.concept_id AND scn.concept_name_type = "SHORT" AND scn.voided is false
   LEFT OUTER JOIN concept_name fscn ON pat.format = "org.openmrs.Concept" AND pa.value = fscn.concept_id AND fscn.concept_name_type = "FULLY_SPECIFIED" AND fscn.voided is false 
   LEFT OUTER JOIN person_address paddress ON p.person_id = paddress.person_id AND paddress.voided is false 
-  JOIN episode_encounter ee ON e.encounter_id = ee.encounter_id
-  JOIN episode_patient_program epp ON ee.episode_id=epp.episode_id
-  JOIN patient_program pp ON epp.patient_program_id = pp.patient_program_id
+  JOIN patient_program pp ON e.patient_id=pp.patient_id
   JOIN program program ON pp.program_id = program.program_id AND program.name IN ("TB Program")
   WHERE o.voided is false AND cast(v.date_started AS DATE) BETWEEN '#startDate#' AND '#endDate#'
   GROUP BY e.encounter_id
@@ -140,4 +143,3 @@ FROM obs o
 GROUP BY e.encounter_id
 ) as LabDetails
 On LabDetails.identifier=ProgDetails.Patient_Identifier and LabDetails.visit_id=ProgDetails.visit_id ;
-
