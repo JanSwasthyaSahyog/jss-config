@@ -7,9 +7,8 @@ import java.util.*
 
 public class FiterDonorTestResults implements ElisFeedAccessionInterceptor {
 
-    public ArrayList<String> donorTests = ["Haemoglobin (Relative)","VDRL Rapid (Relative)", "VDRL ELISA (Relative)",
-                                   "Blood Group (Relative)","Malaria Parasite (Relative)","HIV Tridot (Relative)","HIV ELISA (Blood) (Relative)",
-                                    "HCV Tridot (Relative)","Malaria Parasite (Relative)","VDRL ELISA (Relative)","DRL Rapid (Relative)"];
+    public ArrayList<String> donorTests = [“HCV ELISA (Relative)”, ”HbsAg ELISA (Relative)”, “VDRL ELISA (Relative)”, “HIV Tridot (Relative)”, “HbsAg Rapid (Relative)”, “HCV Tridot (Relative)”, “HIV ELISA (Relative)”, “VDRL Rapid (Relative)”, “Malaria Parasite (Relative)”,“Hemoglobin (Relative)”, ”Blood Group (Relative)”];
+
     @Override
     public void run(OpenElisAccession openElisAccession) {
         Iterator<OpenElisTestDetail> iter = openElisAccession.getTestDetails().iterator();
