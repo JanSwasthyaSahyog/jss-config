@@ -106,5 +106,15 @@
         "url": "../clinical/#/programs/patient/search",
         "icon": "fa-tasks",
         "order": 12
+    },
+    "atomfeedConsole": {
+         "id": "bahmni.atomfeed.console",
+         "extensionPointId": "org.bahmni.home.dashboard",
+         "type": "link",
+         "label": "Atomfeed Console",
+         "url": "/atomfeed-console",
+         "icon": "fa fa-terminal",
+         "order": 13,
+        "requiredPrivilege": "app:admin"
     }
 }

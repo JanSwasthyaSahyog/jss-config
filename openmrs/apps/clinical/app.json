@@ -23,6 +23,7 @@
     "visitUuid"
   ],
   "config": {
+    "enablePACSOptions": true,
     "obsIgnoreList": [
       "Fee Information",
       "Patient file"
