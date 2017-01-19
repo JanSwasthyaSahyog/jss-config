@@ -91,7 +91,7 @@ FROM obs o
   LEFT OUTER JOIN concept_name fscn ON pat.format = "org.openmrs.Concept" AND pa.value = fscn.concept_id AND fscn.concept_name_type = "FULLY_SPECIFIED" AND fscn.voided is false 
   LEFT OUTER JOIN person_address paddress ON p.person_id = paddress.person_id AND paddress.voided is false 
   JOIN patient_program pp ON e.patient_id=pp.patient_id
-  JOIN program program ON pp.program_id = program.program_id AND program.name IN ("TB Program")
+  JOIN program program ON pp.program_id = program.program_id AND program.name IN ("JSS TB Program")
   WHERE o.voided is false AND cast(v.date_started AS DATE) BETWEEN '#startDate#' AND '#endDate#'
   GROUP BY e.encounter_id
 ) as ProgDetails

@@ -507,7 +507,7 @@
  },
 
 "tbTemplatereportwithsql": {
-        "name": "TB Report For Follow Up Patient",
+        "name": "JSS TB Report For Follow Up Patient",
         "type": "MRSGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/reports/tbTemplatereport.sql"
