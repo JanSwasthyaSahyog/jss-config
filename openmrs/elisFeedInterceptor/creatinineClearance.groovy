@@ -4,6 +4,8 @@ import org.bahmni.module.elisatomfeedclient.api.elisFeedInterceptor.ElisFeedEnco
 import java.util.Set
 import org.openmrs.api.OrderContext;
 import org.openmrs.api.context.Context;
+import org.openmrs.api.db.hibernate.DbSessionFactory;
+import org.hibernate.FlushMode;
 
 
 
@@ -15,7 +17,15 @@ public class CreatinineUpdate implements ElisFeedEncounterInterceptor {
     public BahmniBridge bahmniBridge;
 
     public void run(Set<Encounter> encounters) {
-        Obs creatinineObs = getCreatinineObs(encounters);
+        DbSessionFactory sessionFactory = Context.getRegisteredComponent("dbSessionFactory", DbSessionFactory.class);
+        FlushMode flushMode = sessionFactory.getCurrentSession().getFlushMode();
+        sessionFactory.getCurrentSession().setFlushMode(FlushMode.MANUAL);
+        try {
+            Obs creatinineObs = getCreatinineObs(encounters);
+        } finally {
+            sessionFactory.getCurrentSession().setFlushMode(flushMode)
+        }
+
     }
 
     private Obs getCreatinineObs(Set<Encounter> encounters) {
@@ -33,22 +43,22 @@ public class CreatinineUpdate implements ElisFeedEncounterInterceptor {
                     order.setAccessionNumber(obs.getAccessionNumber());
                     order.setEncounter(encounter);
                     order.setPatient(obs.getOrder().getPatient());
-                    OrderContext orderCtx = new OrderContext();
-                    orderCtx.setCareSetting(obs.getOrder().getCareSetting());
-                    orderCtx.setOrderType(obs.getOrder().getOrderType());
-                    Context.getOrderService().saveOrder(order,orderCtx);
-                    encounter.addOrder(order);
+encounter.addOrder(order);
                     Obs creatinineClearanceObs = getObs(obs, creatinineClearanceRateConcept,order);
                     if(creatinineClearanceObs != null){
 		   	Obs creatinineClearanceObsOne = getObs(obs, creatinineClearanceRateConcept,order);
-                    	creatinineClearanceObsOne.setObsGroup(creatinineClearanceObs);
-                    	Obs creatinineClearanceObsTwo = getObs(obs, creatinineClearanceRateConcept,order);
-                    	creatinineClearanceObsTwo.setObsGroup(creatinineClearanceObsOne);
-                    	encounter.addObs(creatinineClearanceObs);
-                    	encounter.addObs(creatinineClearanceObsOne);
-                    	encounter.addObs(creatinineClearanceObsTwo);
-                    	Context.getEncounterService().saveEncounter(encounter);
+                        creatinineClearanceObs.setValueNumeric(null);
+                        creatinineClearanceObs.addGroupMember(creatinineClearanceObsOne);
+                        
+                        Obs creatinineClearanceObsTwo = getObs(obs, creatinineClearanceRateConcept,order);
+                        creatinineClearanceObsOne.setValueNumeric(null);
+                        creatinineClearanceObsOne.addGroupMember(creatinineClearanceObsTwo)
+                        
+                        encounter.addObs(creatinineClearanceObs);
+                        encounter.addObs(creatinineClearanceObsOne);
+                        encounter.addObs(creatinineClearanceObsTwo);
 		    }
+Context.getEncounterService().saveEncounter(encounter);
                     	return creatinineClearanceObs;
                 }
             }
