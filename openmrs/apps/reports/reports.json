@@ -513,7 +513,41 @@
             "sqlPath": "/var/www/bahmni_config/openmrs/reports/tbTemplatereport.sql"
         }
     },
-
+"AllTestsReferredOut": {
+        "name": "All Tests Referred Out",
+        "type": "ElisGeneric",
+        "config": {
+          "sqlPath": "/var/www/bahmni_config/openmrs/reports/All_Tests_Referred_Out.sql"
+        }
+    },
+"SummaryReportForReferredOutCases": {
+    "name": "Summary Report For Referred Out Cases",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Summary_Report_ For_ReferredOut_Cases.sql"
+    }
+},
+"ReferredOutTestswithAbnormalResults": {
+    "name": "Referred Out Tests with Abnormal Results",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Referred_Out_Tests_with_Abnormal_Results.sql"
+    }
+},
+"TotalPatientsandTests": {
+    "name": "Total Patients and Tests",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
+    }
+},
+"TotalTestsPerPatientAndAbnormalResults": {
+    "name": "Total Tests Per Patient and Abnormal Results",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
+    }
+},
  "diabetesobsCannedReport": {
  "name": "Diabetes Study Report",
  "type": "obsCannedReport",
