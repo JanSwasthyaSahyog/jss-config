@@ -541,8 +541,8 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
     }
 },
-"TotalTestsPerPatientAndAbnormalResults": {
-    "name": "Total Tests Per Patient and Abnormal Results",
+"TotalTestsPerPatientAndResults": {
+    "name": "Total Tests Per Patient and Results",
     "type": "ElisGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
