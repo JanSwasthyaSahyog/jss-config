@@ -548,6 +548,13 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
     }
 },
+"AllTestResult": {
+    "name": "All Test Result",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/AllTestResult.sql"
+    }
+},
  "diabetesobsCannedReport": {
  "name": "Diabetes Study Report",
  "type": "obsCannedReport",
