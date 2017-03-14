@@ -58,6 +58,220 @@
       "Follow up Date": {
         "allowFutureDates": true
       },
+
+"Wagner Megitt Classification":{
+      "isTabular": true
+      },
+
+"Left Grade":{
+"disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Right Grade":{
+"disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Sensory Neuropathy Testing by 10 g Monofilament":{
+"isTabular": true
+      },
+
+      "1st Metatarsal Head Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "1st Metatarsal Head Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"2nd Metatarsal Head Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"2nd Metatarsal Head Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"5th Metatarsal Head Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"5th Metatarsal Head Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Plantar Surface of Distal Hallux Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Plantar Surface of Distal Hallux Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Vibration Sensation Using 128 Hz Tuning Forks":{
+        "isTabular": true
+      },
+
+      "Vibration Sensation Status Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Vibration Sensation Status Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      
+
+      "Ankle Reflex":{
+                "isTabular": true
+            },
+
+      "Ankle Reflex Status Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Ankle Reflex Status Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Pinprick Sensation":{
+                "isTabular": true
+            },
+
+      "Pinprick Sensation Status Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Pinprick Sensation Status Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Vascular Assessment":{
+                "isTabular": true
+            },
+
+      "Dorsalis Pedis Artery Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Dorsalis Pedis Artery Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+      "Ankle systolic pressure Left":{
+                "disableAddNotes": true
+            },
+
+"Ankle systolic pressure Right":{
+"disableAddNotes": true
+},
+
+"Brachial systolic pressure Left":{
+"disableAddNotes": true
+},
+
+"Brachial systolic pressure Right":{
+"disableAddNotes": true
+},
+
+
+"Musculoskeletal Assesment":{
+                "isTabular": true
+            },
+
+"Skin Color / Cracking / Sweating Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Skin Color / Cracking / Sweating Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Claw Toes / Hammer Toes Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Claw Toes / Hammer Toes Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Charcoat Joint Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Charcoat Joint Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Muscle Wasting (guttering between muscles) left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Muscle Wasting (guttering between muscles) right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Calluses Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Calluses Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+"Blisters Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Blisters Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Nail Infection Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Nail Infection Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Prominent Metatarsal Head Left":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+"Prominent Metatarsal Head Right":{
+                "disableAddNotes": true,
+                "dropdown": true
+            },
+
+
+
+
+
+
+
       "Tuberculosis Intake Template": {
         "computeDrugs": true,
         "showPreviousButton": true
