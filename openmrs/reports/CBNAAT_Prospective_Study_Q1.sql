@@ -62,5 +62,5 @@ SELECT pi.identifier AS 'Identifier',DATE(pi.date_created)RegistrationDate,date(
   LEFT OUTER JOIN obs hight ON pi.patient_id = hight.person_id AND hight.concept_id = 5
   LEFT OUTER JOIN obs wieght ON pi.patient_id = wieght.person_id AND wieght.concept_id = 6
   LEFT OUTER JOIN obs BMI ON pi.patient_id = BMI.person_id AND BMI.concept_id = 7
-  WHERE v.voided is false  AND cast(v.date_started AS DATE) BETWEEN '#startDate#' AND '#endDate#' GROUP BY e.encounter_id
+  WHERE v.voided is false  AND cast(o.obs_datetime AS DATE) BETWEEN '#startDate#' AND '#endDate#' GROUP BY e.encounter_id
   ) as result where Testing_Centre is not null ;
