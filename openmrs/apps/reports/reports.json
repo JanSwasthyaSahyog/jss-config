@@ -555,6 +555,20 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/AllTestResult.sql"
     }
 },
+"CBNAATProspectiveStudyQ1": {
+    "name": "CBNAAT Prospective Study 01",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q1.sql"
+    }
+  },
+"CBNAATProspectiveStudyQ2": {
+    "name": "CBNAAT Prospective Study 02",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
+    }
+  },
  "diabetesobsCannedReport": {
  "name": "Diabetes Study Report",
  "type": "obsCannedReport",
