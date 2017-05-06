@@ -265,7 +265,7 @@
                 "disableAddNotes": true,
                 "dropdown": true
             },
-"Why was CBNAAT useful? (please select all options that you feel apply – i.e. you can select more than one)": {
+"Why was CBNAAT useful?": {
         "multiSelect": true
       },
 
