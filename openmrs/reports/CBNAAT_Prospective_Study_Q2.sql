@@ -18,7 +18,7 @@ SELECT  pi.identifier AS 'Identifier',DATE(pi.date_created)RegistrationDate,date
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Are you currently planning to request additional tests to diagnose TB', coalesce(o.value_numeric, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Are_you_currently_planning_to_request_additional_tests_to_diagnose_TB',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Are you currently planning to request additional tests to make an alternative diagnosis to TB', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Are_you_currently_planning_to_request_additional_tests_to_make_an_alternative_diagnosis_to_TB',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Overall CBNAAT was useful in guiding the management of this patient', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Overall_CBNAAT_was_useful_in_guiding_the_management_of_this_patient',
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Why was CBNAAT useful? (please select all options that you feel apply – i.e. you can select more than one)', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Why_was_CBNAAT_useful',
+  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Why was CBNAAT useful?', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Why_was_CBNAAT_useful?',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'When did you see this CBNAAT result', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'When_did_you_see_this_CBNAAT_result',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Any other comments', coalesce(o.value_numeric, o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Any_other_comments'
   
@@ -33,7 +33,7 @@ SELECT  pi.identifier AS 'Identifier',DATE(pi.date_created)RegistrationDate,date
         'Are you currently planning to request additional tests to diagnose TB',
 	'Are you currently planning to request additional tests to make an alternative diagnosis to TB',
         'Overall CBNAAT was useful in guiding the management of this patient',
-	'Why was CBNAAT useful? (please select all options that you feel apply – i.e. you can select more than one)',
+	'Why was CBNAAT useful?',
         'When did you see this CBNAAT result','Any other comments',
 	'Any other comments')
   LEFT JOIN concept_name obs_scn on o.concept_id=obs_scn.concept_id AND obs_scn.concept_name_type="SHORT" AND obs_scn.voided is false
