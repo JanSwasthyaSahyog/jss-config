@@ -265,11 +265,16 @@
                 "disableAddNotes": true,
                 "dropdown": true
             },
-"Why was CBNAAT useful?": {
+
+     "Why was CBNAAT useful?": {
         "multiSelect": true
       },
-
-
+     "Tuberculosis, Comorbidity": {
+        "multiSelect": true
+      },
+     "Tuberculosis, Extrapulmonary Site": {
+        "multiSelect": true
+      },
 
 
       "Tuberculosis Intake Template": {
