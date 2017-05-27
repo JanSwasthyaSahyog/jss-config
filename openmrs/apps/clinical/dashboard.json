@@ -294,7 +294,13 @@
                     "Tuberculosis, Adverse Effects",
                     "Tuberculosis, Visit Impression",
                     "Tuberculosis, Next Followup Visit",
-                    "Tuberculosis Lab Template"
+                    "Tuberculosis Lab Template",
+		    "Tuberculosis, Number of Adult Family Members with Symptoms",
+	            "Tuberculosis, Number of Under 5 Years Children in the Family",
+		    "Tuberculosis, Family Member Name",
+		    "Tuberculosis, Family Member Treatment Plan",
+		    "Tuberculosis, Under 5 Year Name",
+		    "Tuberculosis, Family Member Treatment Plan"
                 ],
                 "dashboardConfig": {},
                 "expandedViewConfig": {
