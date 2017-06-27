@@ -64,11 +64,6 @@
 "Wagner Megitt Classification":{
       "isTabular": true
       },
-
- "ANC Template": {
-        "allowAddMore": true
-      },
-
 "Left Foot":{
 "disableAddNotes": true,
                 "dropdown": true
