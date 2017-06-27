@@ -58,9 +58,15 @@
       "Follow up Date": {
         "allowFutureDates": true
       },
-
+ "ANC Template": {
+        "allowAddMore": true
+      },
 "Wagner Megitt Classification":{
       "isTabular": true
+      },
+
+ "ANC Template": {
+        "allowAddMore": true
       },
 
 "Left Foot":{
