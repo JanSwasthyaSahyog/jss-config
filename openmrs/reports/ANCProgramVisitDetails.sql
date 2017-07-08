@@ -27,7 +27,8 @@ SELECT
   prog_attr_result.highRiskReason,
   prog_attr_result.highRiskReasonText, 
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Template, ANC ID', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'ANC ID',
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Gravida', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gravida',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC,Cluster', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Cluster',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Gravida', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gravida',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Parity', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Parity',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Abortion', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Abortion',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Live Births', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Live Births',
@@ -55,6 +56,7 @@ FROM obs o
   JOIN concept obs_concept ON obs_concept.concept_id=o.concept_id AND obs_concept.retired is false
   JOIN concept_name obs_fscn on o.concept_id=obs_fscn.concept_id AND obs_fscn.concept_name_type="FULLY_SPECIFIED" AND obs_fscn.voided is false
    AND obs_fscn.name IN ('ANC Template, ANC ID',
+   'ANC,Cluster',
    'Gravida',
    'Parity',
    'Abortion',

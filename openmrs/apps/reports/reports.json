@@ -20,6 +20,20 @@
       "templateName": "Diabetes Followup Template"
     }
   },
+ "diabetescounsellingtemplate": {
+    "name": "Diabetes Counselling Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Diabetes Counselling Template"
+    }
+  },
+ "jssdiabetesprogram": {
+    "name": "JSS Diabetes Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+    }
+ },
   "tuberculosisIntakeData": {
     "name": "Tuberculosis Intake Data",
     "type": "obsTemplate",
@@ -42,7 +56,59 @@
       "applyDateRangeFor": "encounterCreateDate"
     }
   },
-
+ "tuberculosisvillageprogramfollowup": {
+    "name": "Tuberculosis Village Program Followup Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Tuberculosis Village Program Followup Template",
+      "applyDateRangeFor": "encounterCreateDate"
+    }
+  },
+ "tuberculosisfamilymemberscreeningtemplate": {
+    "name": "Tuberculosis Family Member Screening Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Tuberculosis Lab Template",
+      "applyDateRangeFor": "encounterCreateDate"
+    }
+  },
+ "TBMonthlyReportingFormat": {
+    "name": "TB Monthly Reporting Format",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
+    }
+  },
+ "Sicklecelldiseaseintake": {
+    "name": "Sickle Cell Disease Intake Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Sickle Cell Disease Intake Template",
+      "applyDateRangeFor": "encounterCreateDate"
+    }
+  },
+"Sicklecelldiseasefollowup": {
+    "name": "Sickle Cell Disease Followup Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Sickle Cell Disease Followup Template",
+      "applyDateRangeFor": "encounterCreateDate"
+    }
+  },
+"dischargesummary": {
+    "name": "Discharge Summary Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Discharge Summary"
+    }
+  },
+"obusgtemplate": {
+    "name": "OB USG Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "OB USG Template"
+    }
+  },
 "Diabetic Foot Study": {
         "name": "Diabetic Foot Study",
         "type": "observations",
@@ -355,29 +421,6 @@
     "name": "Program Enrollments",
     "type": "ProgramEnrollmentReport"
   },
-  "obspatientwithEDD": {
-    "name": "ANC - Patients with EDD Report",
-    "type": "obsCannedReport",
-    "config": {
-      "patientAttributes": [
-        "primaryRelative"
-      ],
-      "applyDateRangeFor": "ProgramEnrollment",
-      "addressAttributes": [
-        "city_village",
-        "county_district",
-        "state_province"
-      ],
-      "conceptNames": [
-        "ANC, Estimated Date of Delivery"
-      ],
-      "visitIndependentConcept": [
-        "HEIGHT"
-      ],
-      "enrolledProgram": "Ante Natal Care Program",
-      "showObsOnlyForProgramDuration": false
-    }
-  },
   "ancdata1": {
     "name": "ANC Data Report",
     "type": "programObsTemplate",
@@ -438,13 +481,6 @@
       "encounterPerRow": true
     }
   },
- "jssrhdprogram": {
-    "name": "JSS RHD Program Enrollment Report",
-    "type": "MRSGeneric",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssrhdprogram.sql"
-    }
- },
  "jssancprogramreport": {
     "name": "ANC Program Report",
     "type": "MRSGeneric",
@@ -452,11 +488,18 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
     }
  },
- "jssdiabetesprogram": {
-    "name": "JSS Diabetes Program Enrollment Report",
+"ancpatientswitheddreport": {
+    "name": "ANC Patients with EDD Report",
     "type": "MRSGeneric",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANC_Patients_with_EDD_Report.sql"
+    }
+ },
+ "jssrhdprogram": {
+    "name": "JSS RHD Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssrhdprogram.sql"
     }
  },
  "rhdobsCannedReport": {
@@ -599,13 +642,6 @@
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
-    }
-  },
- "TBMonthlyReportingFormat": {
-    "name": "TB Monthly Reporting Format",
-    "type": "MRSGeneric",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
     }
   },
  "diabetesobsCannedReport": {

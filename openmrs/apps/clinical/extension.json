@@ -166,16 +166,5 @@
     "icon": "fa-user-md",
     "order": 6,
     "requiredPrivilege": "app:clinical:diagnosisTab"
-  },
- "bahmniClinicalConsultationBacteriology": {
-  "id": "bahmni.clinical.consultation.bacteriology",
-  "extensionPointId": "org.bahmni.clinical.consultation.board",
-  "type": "link",
-  "label": "Bacteriology",
-  "translationKey":"Bacteriology",
-  "url": "bacteriology",
-  "icon": "icon-user-md",
-  "order": 8
-}
-
+  }
 }
