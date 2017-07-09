@@ -24,6 +24,15 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
     static Double BMI_SEVERELY_OBESE = 40.0;
     static Map<BahmniObservation, BahmniObservation> obsParentMap = new HashMap<BahmniObservation, BahmniObservation>();
 
+
+
+    public static class DischargeSummaryConceptNames {
+        static TEMPLATE = "Discharge Summary, Template"
+        static HOSPITAL_COURSE = "Hospital Course"
+        static ADMISSION_INDICATION = "Discharge Summary, Admission Indication"
+        static ADVICE_ON_DISCHARGE = "Advice on Discharge"
+    }
+
     public static enum BmiStatus {
         VERY_SEVERELY_UNDERWEIGHT("Very Severely Underweight"),
         SEVERELY_UNDERWEIGHT("Severely Underweight"),
@@ -128,6 +137,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         setObstetricsEDD(observations, bahmniEncounterTransaction)
         setANCEDD(observations, bahmniEncounterTransaction)
         setWaistHipRatio(observations, bahmniEncounterTransaction)
+        setDischargeSummaryFields(observations, bahmniEncounterTransaction)
     }
     private
     static void setObstetricsEDD(Collection<BahmniObservation> observations, BahmniEncounterTransaction bahmniEncounterTransaction) {
@@ -197,6 +207,35 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         }
     }
 
+    private static void setDischargeSummaryFields(Collection<BahmniObservation> observations, BahmniEncounterTransaction bahmniEncounterTransaction) {
+        BahmniObservation parent;
+        BahmniObservation preloadTemplateObservation = find(DischargeSummaryConceptNames.TEMPLATE, observations, null)
+        if (hasValue(preloadTemplateObservation)) {
+            def dischargeSummaryTemplates = readDischargeSummaryTemplatesCSV(OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv");
+            println(preloadTemplateObservation.getValue())
+            println(preloadTemplateObservation.getValue().displayString)
+            def dischargeSummaryTemplate = dischargeSummaryTemplates.get(preloadTemplateObservation.getValue().displayString)
+            parent = obsParent(preloadTemplateObservation, null)
+            Date obsDatetime = getDate(preloadTemplateObservation)
+            setValueIfNotPresent(DischargeSummaryConceptNames.HOSPITAL_COURSE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.hospitalCourse, observations)
+            setValueIfNotPresent(DischargeSummaryConceptNames.ADMISSION_INDICATION, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.admissionIndication, observations)
+            setValueIfNotPresent(DischargeSummaryConceptNames.ADVICE_ON_DISCHARGE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.adviceOnDischarge, observations)
+
+        }
+
+
+    }
+
+    private
+    static void setValueIfNotPresent(String conceptName, BahmniObservation parent, BahmniEncounterTransaction bahmniEncounterTransaction, Date obsDatetime, String obsValue, observations) {
+        BahmniObservation observation = find(conceptName, observations, null)
+        if(! hasValue(observation)) {
+            BahmniObservation obs = createObs(conceptName, parent, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
+            obs.setValue(obsValue)
+        }
+    }
+
+
     private static BahmniObservation obsParent(BahmniObservation child, BahmniObservation parent) {
         if (parent != null) return parent;
 
@@ -235,7 +274,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
     };
 
     static def bmiStatus(Double bmi, Integer ageInMonth, String gender) {
-        BMIChart bmiChart = readCSV(OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/BMI_chart.csv");
+        BMIChart bmiChart = readBMICSV(OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/BMI_chart.csv");
         def bmiChartLine = bmiChart.get(gender, ageInMonth);
         if(bmiChartLine != null ) {
             return bmiChartLine.getStatus(bmi);
@@ -312,7 +351,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         return null
     }
 
-    static BMIChart readCSV(String fileName) {
+    static BMIChart readBMICSV(String fileName) {
         def chart = new BMIChart();
         try {
             new File(fileName).withReader { reader ->
@@ -401,4 +440,67 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
             return result
         }
     }
+
+
+    static Map<String, DischargeSummaryTemplate> readDischargeSummaryTemplatesCSV(String fileName) {
+        def dischargeSummaryTemplates = new HashMap<String,DischargeSummaryTemplate>()
+
+        def lscsTemplate = new DischargeSummaryTemplate("LSCS",
+                "Patient recovered well after surgery, received  3  days of IV antibiotics,tolerating full diet,incision line good no soakage and pus collection",
+                "LSCS under SA\n" +
+                        "indication-ANC with CPD & NPOL\n" +
+                        "Baby notes: \n" +
+                        "Full term, male baby,Baby cried immediately after birth, \n" +
+                        "APGAR score _/15, \n" +
+                        "Birth wt:",
+                "Tab-fersisol BD Tab. Cephalexin 500 mg  QID for 5 days.\n" +
+                        "Tab. PCM 500 mg QID  for 3 days.\n" +
+                        "Tab. famotidine 20 mg bd for for 30 days\n" +
+                        "Tab-calcium BD for 30 day"
+        )
+        dischargeSummaryTemplates.put(lscsTemplate.name, lscsTemplate)
+
+        def tbTemplate = new DischargeSummaryTemplate("Tuberculosis",
+                "counselled,sputum sent for sensitivity testing\n" +
+                        "started on AKT (daily HRZE weight based regimen),tolerating it well.\n" +
+                        "screened for diabetes and HIV.\n" +
+                        "advised screening for children.",
+                "A   yrs old male presented with cough with expectoration for month,fever for month ,anorexia for month ,loss of weight since month",
+                "phone on- .   Follow up on - .\n" +
+                        "tab INH 300 mg od \n" +
+                        "cap. RIF 450 mg od\n" +
+                        "tab EMB 800 mg od\n" +
+                        "tab PYZ 1000 mg od for 20 days\n" +
+                        "tab pyridoxine 10 mg od for 20 days\n" +
+                        "chana 2 kg \n" +
+                        "tab.pcm sos..10"
+        )
+        dischargeSummaryTemplates.put(tbTemplate.name, tbTemplate)
+
+//        try {
+//            new File(fileName).withReader { reader ->
+//                def header = reader.readLine();
+//                reader.splitEachLine(",") { tokens ->
+//                    dischargeSummaryTemplates.put(tokens[0], new DischargeSummaryTemplate(tokens[0], tokens[1], tokens[2], tokens[3]));
+//                }
+//            }
+//        } catch (FileNotFoundException e) {
+//        }
+        return dischargeSummaryTemplates;
+    }
+
+    static class DischargeSummaryTemplate {
+        public String name;
+        public String hospitalCourse;
+        public String admissionIndication;
+        public String adviceOnDischarge;
+
+        DischargeSummaryTemplate(String name, String hospitalCourse, String admissionIndication, String adviceOnDischarge){
+            this.name = name;
+            this.hospitalCourse = hospitalCourse;
+            this.admissionIndication = admissionIndication;
+            this.adviceOnDischarge = adviceOnDischarge;
+        }
+    }
+
 }
