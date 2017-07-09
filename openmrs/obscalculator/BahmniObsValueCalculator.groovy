@@ -209,21 +209,17 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
 
     private static void setDischargeSummaryFields(Collection<BahmniObservation> observations, BahmniEncounterTransaction bahmniEncounterTransaction) {
         BahmniObservation parent;
-        BahmniObservation preloadTemplateObservation = find(DischargeSummaryConceptNames.TEMPLATE, observations, null)
-        if (hasValue(preloadTemplateObservation)) {
-            def dischargeSummaryTemplates = readDischargeSummaryTemplatesCSV(OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv");
-            println(preloadTemplateObservation.getValue())
-            println(preloadTemplateObservation.getValue().displayString)
-            def dischargeSummaryTemplate = dischargeSummaryTemplates.get(preloadTemplateObservation.getValue().displayString)
-            parent = obsParent(preloadTemplateObservation, null)
-            Date obsDatetime = getDate(preloadTemplateObservation)
+        BahmniObservation templateObservation = find(DischargeSummaryConceptNames.TEMPLATE, observations, null)
+        if (hasValue(templateObservation)) {
+            def dischargeSummaryTemplates = getDischargeSummaryTemplates();
+            def dischargeSummaryTemplate = dischargeSummaryTemplates.get(templateObservation.getValue().displayString)
+            parent = obsParent(templateObservation, null)
+            Date obsDatetime = getDate(templateObservation)
             setValueIfNotPresent(DischargeSummaryConceptNames.HOSPITAL_COURSE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.hospitalCourse, observations)
             setValueIfNotPresent(DischargeSummaryConceptNames.ADMISSION_INDICATION, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.admissionIndication, observations)
             setValueIfNotPresent(DischargeSummaryConceptNames.ADVICE_ON_DISCHARGE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.adviceOnDischarge, observations)
 
         }
-
-
     }
 
     private
@@ -442,10 +438,11 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
     }
 
 
-    static Map<String, DischargeSummaryTemplate> readDischargeSummaryTemplatesCSV(String fileName) {
+    static Map<String, DischargeSummaryTemplate> getDischargeSummaryTemplates() {
+
         def dischargeSummaryTemplates = new HashMap<String,DischargeSummaryTemplate>()
 
-        def lscsTemplate = new DischargeSummaryTemplate("LSCS",
+        def LSCSTemplate = new DischargeSummaryTemplate("LSCS",
                 "Patient recovered well after surgery, received  3  days of IV antibiotics,tolerating full diet,incision line good no soakage and pus collection",
                 "LSCS under SA\n" +
                         "indication-ANC with CPD & NPOL\n" +
@@ -458,9 +455,9 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                         "Tab. famotidine 20 mg bd for for 30 days\n" +
                         "Tab-calcium BD for 30 day"
         )
-        dischargeSummaryTemplates.put(lscsTemplate.name, lscsTemplate)
+        dischargeSummaryTemplates.put(LSCSTemplate.name, LSCSTemplate)
 
-        def tbTemplate = new DischargeSummaryTemplate("Tuberculosis",
+        def TBTemplate = new DischargeSummaryTemplate("TB",
                 "counselled,sputum sent for sensitivity testing\n" +
                         "started on AKT (daily HRZE weight based regimen),tolerating it well.\n" +
                         "screened for diabetes and HIV.\n" +
@@ -475,8 +472,10 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                         "chana 2 kg \n" +
                         "tab.pcm sos..10"
         )
-        dischargeSummaryTemplates.put(tbTemplate.name, tbTemplate)
+        dischargeSummaryTemplates.put(TBTemplate.name, TBTemplate)
 
+        //TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
+//        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"
 //        try {
 //            new File(fileName).withReader { reader ->
 //                def header = reader.readLine();
