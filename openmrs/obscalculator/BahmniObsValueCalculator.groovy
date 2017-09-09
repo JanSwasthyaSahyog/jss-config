@@ -31,6 +31,9 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         static HOSPITAL_COURSE = "Hospital Course"
         static ADMISSION_INDICATION = "Discharge Summary, Admission Indication"
         static ADVICE_ON_DISCHARGE = "Advice on Discharge"
+        static HISTORY_AND_EXAMINATION_NOTES = "History and Examination Notes"
+        static SURGERIES_AND_PROCEDURES = "Discharge Summary, Surgeries and Procedures"
+        static OPERATIVE_PROCEDURE = "Operative Procedure"
     }
 
     public static enum BmiStatus {
@@ -218,12 +221,22 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
             setValueIfNotPresent(DischargeSummaryConceptNames.HOSPITAL_COURSE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.hospitalCourse, observations)
             setValueIfNotPresent(DischargeSummaryConceptNames.ADMISSION_INDICATION, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.admissionIndication, observations)
             setValueIfNotPresent(DischargeSummaryConceptNames.ADVICE_ON_DISCHARGE, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.adviceOnDischarge, observations)
+            setValueIfNotPresent(DischargeSummaryConceptNames.HISTORY_AND_EXAMINATION_NOTES, parent, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.historyExamination, observations)
+            if(dischargeSummaryTemplate.operativeProcedure != null){
+                BahmniObservation surgeriesAndProcedure = find(DischargeSummaryConceptNames.SURGERIES_AND_PROCEDURES, observations, parent)
+                if(surgeriesAndProcedure == null) {
+                    surgeriesAndProcedure = createObs(DischargeSummaryConceptNames.SURGERIES_AND_PROCEDURES, parent, bahmniEncounterTransaction, obsDatetime)
+                }
+                setValueIfNotPresent(DischargeSummaryConceptNames.OPERATIVE_PROCEDURE, surgeriesAndProcedure, bahmniEncounterTransaction, obsDatetime, dischargeSummaryTemplate.operativeProcedure, observations)
+            }
+
 
         }
     }
 
     private
     static void setValueIfNotPresent(String conceptName, BahmniObservation parent, BahmniEncounterTransaction bahmniEncounterTransaction, Date obsDatetime, String obsValue, observations) {
+        if(obsValue == null) return
         BahmniObservation observation = find(conceptName, observations, null)
         if(! hasValue(observation)) {
             BahmniObservation obs = createObs(conceptName, parent, bahmniEncounterTransaction, obsDatetime) as BahmniObservation
@@ -453,7 +466,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                 "Tab-fersisol BD Tab. Cephalexin 500 mg  QID for 5 days.\n" +
                         "Tab. PCM 500 mg QID  for 3 days.\n" +
                         "Tab. famotidine 20 mg bd for for 30 days\n" +
-                        "Tab-calcium BD for 30 day"
+                        "Tab-calcium BD for 30 day", null, null
         )
         dischargeSummaryTemplates.put(LSCSTemplate.name, LSCSTemplate)
 
@@ -470,9 +483,40 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                         "tab PYZ 1000 mg od for 20 days\n" +
                         "tab pyridoxine 10 mg od for 20 days\n" +
                         "chana 2 kg \n" +
-                        "tab.pcm sos..10"
+                        "tab.pcm sos..10", null, null
         )
         dischargeSummaryTemplates.put(TBTemplate.name, TBTemplate)
+
+        def inguinalHerniaTemplate = new DischargeSummaryTemplate("Inguinal Hernia",
+                "Recovered well after surgery,received antibiotics,GC-Fine,discharged on oral medicines.",
+                "Patient with inguinal hernia need for surgery",
+                "1.Cap.Ampiclox 1 gm QID for 5 Days  \n" +
+                        "2.Tab.Ibuprofen 400 mg TDS for 7 Days \n" +
+                        "3.Tab.Famotidine 20 mg BD for 7 Days \n" +
+                        "4.Tab.Fersifol BD for 30 Days \n" +
+                        "5.Suture Removal after 7 Days",
+                "C/o Swelling in inguino-scrotal region",
+                "Right/Left - Herniotomy / Herniorrhapy / Hernioplasty under LA/Ketamine"
+        )
+
+        dischargeSummaryTemplates.put(inguinalHerniaTemplate.name, inguinalHerniaTemplate)
+
+        def tubalLigationTemplate = new DischargeSummaryTemplate("Tubal Ligation",
+                "Recovered well after surgery,received IV antibiotics,GC-Fine,discharged on oral medicines.",
+                "Willing for tubal ligation",
+                "1.Cap.Cephalexin 500 mg QID for 5 Days\n" +
+                        "2.Tab.Ibuprofen 400 mg TDS for 7 Days\n" +
+                        "3.Tab Famotidine 20 mg BD for 7 Days\n" +
+                        "4.Tab.Fersifol BD for 30 Days\n" +
+                        "5.follow up after 7 Days",
+                "Para.............................., Living................................\n" +
+                        "Tubal Ligation\n" +
+                        "Willing for Tubal Ligation\n" +
+                        "Consent taken from husband-",
+                "Tubal ligation under LA/Ketamine"
+        )
+
+        dischargeSummaryTemplates.put(tubalLigationTemplate.name, tubalLigationTemplate)
 
         //TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
 //        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"
@@ -493,12 +537,16 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         public String hospitalCourse;
         public String admissionIndication;
         public String adviceOnDischarge;
+        public String historyExamination;
+        public String operativeProcedure;
 
-        DischargeSummaryTemplate(String name, String hospitalCourse, String admissionIndication, String adviceOnDischarge){
+        DischargeSummaryTemplate(String name, String hospitalCourse, String admissionIndication, String adviceOnDischarge, String historyExamination, String operativeProcedure){
             this.name = name;
             this.hospitalCourse = hospitalCourse;
             this.admissionIndication = admissionIndication;
             this.adviceOnDischarge = adviceOnDischarge;
+            this.historyExamination = historyExamination;
+            this.operativeProcedure = operativeProcedure;
         }
     }
 
