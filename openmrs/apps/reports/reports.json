@@ -68,7 +68,7 @@
     "name": "Tuberculosis Family Member Screening Template",
     "type": "obsTemplate",
     "config": {
-      "templateName": "Tuberculosis Lab Template",
+      "templateName": "Tuberculosis Family Member Screening Template",
       "applyDateRangeFor": "encounterCreateDate"
     }
   },
