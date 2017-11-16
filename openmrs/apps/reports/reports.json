@@ -261,9 +261,9 @@
   },
   "radiologyCount": {
     "name": "Radiology(X-Ray) Count",
-    "type": "ObsCountByConceptClass",
+    "type": "MRSGeneric",
     "config": {
-      "conceptClassNames": ["Radiology"]
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/radiology_orders_count.sql"
     }
   },
   "abnormalityReportForCriticalTests": {
