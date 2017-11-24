@@ -518,7 +518,62 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
 
         dischargeSummaryTemplates.put(tubalLigationTemplate.name, tubalLigationTemplate)
 
-        //TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
+        def AcuteBronchitisTemplate = new DischargeSummaryTemplate("Acute Bronchitis",
+                "On investigations her CXR was within normal limits.She had mild anemia.Her renal functions,electrolytes,liver functions were within normal limits.We managed her with antibiotics,antipyretics,bronchodilators and supportive treatment.she responded well.she didnt have tachypnea or fever during hospital stay.She was then discharged with stable vitals.", null,
+                "1.Cap.Doxy 100 mg BD for 7 Days\n" + 
+			"2.Salbutamol inhaler 2 puffs BD for 30 Days\n" +
+			"3.Beclomethasone 2 puffs BD for 30 Days",
+                "This elderly female, was admitted with complaints of cough,fever and breathlessness since 5 days.\n" +
+			"HOPI- She was appearntly alright 5 days back when she had cough,dry in nature associated with fever,low grade without chills.She also started experiencing breathlessness ,initially on exertion but latter on rest also,not associated with chest pain.\n" +
+			"No Ho palpiations or pedal edema.\n" +
+			"No Ho hemoptysis or weight loss.\n" +
+			"No Ho jaundice, loose stools.\n" +
+			"No Ho nausea vomitting.\n" +
+			"No Ho Rash or joint pain.\n" +
+			"Past Ho -No ho HTN,DM,TB.\n" +
+			"On general examination patient afebrile pulse of 90/min,blood pressure of 130/80 mmHg,pallor mild,RR-26/min,no icterus,no lymphadenopathy,no clubbing,no cyanosis,no pedal edema.\n" +
+			"Respiratory system-Bilateral breath sounds heard equal.Bilateral rhinchi present.\n" +
+			"Cardiovascular system- no murmur, S1S2 heard.\n" +
+			"Per abdomen - soft non tender,no Hepatospleenomegaly,no organomegaly.\n" +
+			"CNS- Conscious,oriented.", null
+        )
+
+        dischargeSummaryTemplates.put(AcuteBronchitisTemplate.name, AcuteBronchitisTemplate)
+
+	def DKAHHNKTemplate = new DischargeSummaryTemplate("DKA HHNK",
+                "Glucometer shows 'high' insulin. Lab glucose level ___ with urine ketones ___ Diagnosed as DKA/HHNK  Catheterised with 2 large bore IV access 2L fluids (NS) over 1st hour followed by 200cc/hr Inj KCl ____ added to ___ pints after lab electrolyte values showed hypokalemia Insulin started on 0.1 U per hour till ketones cleared i.e. ___ hours As patient was adequately hydrated and ready to eat, shifted to q6h regular insulin __ U with a 2 hr overlap with IV infusion of insulin The next day total insulin dose was divided as 2/3 and 1/3 mixtard with good glycemic control Counselled  regarding compliance and discharged stable.", null,
+                "Inj  insulin mixtard, antibiotics ? , OHA",
+                "The patient is a (XX)-year-old  male with a past medical history significant for diabetes mellitus for x years, who came to the ER with vomiting and diarrhea as well as weakness for one day. The patient denied fevers or chills, headache, chest pain, shortness of breath or abdominal pain. No recent steroid use, no skipped dose of insulin. PAST MEDICAL HISTORY:  Significant for diabetes mellitus. The patient took oral medications for the first _ years and has been on insulin as well as OHA for the last years. VITAL SIGNS: The patient was afebrile. Pulse was __ respiratory rate was __, and blood pressure was _____ O2 saturation was ___ GENERAL: The patient was awake and appeared to be in moderate distress and appeared lethargic. The tongue was parched, and the mucous membranes were dry. HEART: Examination showed a regular rate and rhythm. S1 and S2 present. There were no murmurs, rubs or gallops. LUNGS: Clear to auscultation bilaterally. ABDOMEN: Soft, nontender, and nondistended. EXTREMITIES: Revealed no clubbing, cyanosis or edema.", null
+                
+        )
+	
+	dischargeSummaryTemplates.put(DKAHHNKTemplate.name, DKAHHNKTemplate)
+
+	def AcuteFebrileIllnessTemplate = new DischargeSummaryTemplate("Acute Febrile Illness", null,null,null,
+        	"This elderly female was admitted with complaints of fever,headache since 8 days.\n" +
+			"HOPI- She was appearntly alright 8 days back when she had fever, moderate to high grade, intermittent, associated with chills and headache thrombing in  nature.She also had generalised weakness and bodyache.\n" +
+			"No Ho chest pain cough Dyspnea on exertionpedal edema.\n" +
+			"No Ho hematuria or abdominal colicky pain.\n" +
+			"No Ho jaundice loose stools.\n" +
+			"No Ho nausea vomitting Rash.\n" +
+			"Past Ho -No ho HTN,DM,TB.\n" +
+			"On general examination patient febrile pulse of  90min blood pressure of 110/80 mmHg, pallor mild, no icterus, no lymphadenopathy, no clubbing, no cyanosis, no pedal edema.\n" +
+			"Cardiovascular system- no murmur S1S2 heard.\n" +
+			"Respiratory system normal, B/l vesicular breath sounds present, no crept.\n" +
+			"Per abdomen - soft non tender, no Hepatospleenomegaly, no organomegaly.\n" +
+			"CNS- Conscious,oriented.", null   
+        )
+        dischargeSummaryTemplates.put(AcuteFebrileIllnessTemplate.name,	AcuteFebrileIllnessTemplate)
+	
+	 def COPDAETemplate = new DischargeSummaryTemplate("COPD AE",
+                "He was started on intravenous antibiotics, vigorous respiratory physiotherapy, O2 for ___ days maintaining saturation at 93%, Salbutamol nebulization q6h for ___ days followed by inhalation with spacer, Beclate inhaler, steroids (oral/IV). The patient improved on this regimen. Chest x-ray did not show any CHF. The cortisone was tapered. The patient's oxygenation improved and he was able to be discharged home at SPO2 at room air of ___%.", null, 
+                "Quit smoking/ chula use Prednisone 20 mg 3 times a day for 2 days, 2 times a day for 5 days and then one daily,  Salbutamol inhaler 2puffs TDS  Beclate inhaler 2 puffs BD Can be given a pneumococcal vaccination before discharge.",
+                "A __-year-old male with COPD and history of bronchospasm, who presents with a __-day history of increased cough, respiratory secretions, wheezings, and shortness of breath. Inciting factor identified to be (skipped medicines/infection/comorbid disease) He was seen in the OPD/ER on the day of admission and noted to be dyspneic with audible wheezing and he was admitted for acute asthmatic bronchitis, superimposed upon longstanding COPD.  (S)He currently (dis)contiues to smoke/ cook with chula. At the time of admission, he denied fever, diaphoresis, nausea, chest pain or other systemic symptoms.  PHYSICAL EXAMINATION:  Breath sounds are greatly diminished with rales and rhonchi over all lung fields. CXR shows hyperinflation, flat diaphragm PFT shows obstructive pattern, decreased FEV1, decreased FVC, With ratio of FEV1/FVC <0.7", null 
+        )
+        dischargeSummaryTemplates.put(COPDAETemplate.name, COPDAETemplate)
+	
+
+      // TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
 //        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"
 //        try {
 //            new File(fileName).withReader { reader ->
