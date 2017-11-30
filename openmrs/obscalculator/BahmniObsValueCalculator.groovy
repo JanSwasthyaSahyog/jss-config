@@ -571,7 +571,39 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                 "A __-year-old male with COPD and history of bronchospasm, who presents with a __-day history of increased cough, respiratory secretions, wheezings, and shortness of breath. Inciting factor identified to be (skipped medicines/infection/comorbid disease) He was seen in the OPD/ER on the day of admission and noted to be dyspneic with audible wheezing and he was admitted for acute asthmatic bronchitis, superimposed upon longstanding COPD.  (S)He currently (dis)contiues to smoke/ cook with chula. At the time of admission, he denied fever, diaphoresis, nausea, chest pain or other systemic symptoms.  PHYSICAL EXAMINATION:  Breath sounds are greatly diminished with rales and rhonchi over all lung fields. CXR shows hyperinflation, flat diaphragm PFT shows obstructive pattern, decreased FEV1, decreased FVC, With ratio of FEV1/FVC <0.7", null 
         )
         dischargeSummaryTemplates.put(COPDAETemplate.name, COPDAETemplate)
+
+	def TAHTemplate = new DischargeSummaryTemplate("TAH",
+                "The patient was admitted to the ward and a total abdominal hysterectomy (TAH) with no intraoperative complication was performed on ?/?/2018. The patient tolerated all procedures well. On the xth postoperative day, the patient was afebrile. Vital signs were stable. The patient was tolerating a diet and ambulating without difficulty. The patient was desirous of going home. The patient denied any abdominal pain or flank pain. The patient had minimal incisional wound tenderness. The patient was desirous of going home and was discharged stable.",
+                "ADMISSION DIAGNOSES:\n" +
+			"1. Severe menometrorrhagia unresponsive to medical therapy.\n" +
+			"2. Severe anemia.\n" +
+			"3. Symptomatic fibroid uterus.", null,
+                "This is a ?-year-old, gravida ?, para ? female who presented initially to the office with abnormal menstrual bleeding and , in flow during her period. She also had symptoms of back pain, dysmenorrhea, and dysuria. The symptoms had been worsening over time. The patient was noted also to have increasing pelvic pain over the past 8 months and she was noted to have uterine enlargement upon examination.",  null
+        )
+        dischargeSummaryTemplates.put(TAHTemplate.name, TAHTemplate)
 	
+	
+	def MalariatemplateTemplate = new DischargeSummaryTemplate("MalariaTemplate",
+                "It was diagnosed as malaria on peripheral smear and RDT. The patient had an ultrasound of the abdomen, which was normal.\n" +
+			"Management: \n" +
+			"Vitals were stabilized \n" +
+			"ACT (oral/IV) was started artesunate (4mg/kg/D) for 3 days with Sulfadoxine-pyrimethamine (500/25mg) single dose.\n" +
+			"The patient was symptomatically better by AD 3. Patient was discharged stable on AD ______",
+                "Un/complicated Malaria",
+                "Follow up with the patients primary doctor in 14 days to rule out reactivation/ recrudescence",
+                "The patient is a (XX)-year-old male who was admitted to this facility after he had presented with severe fever with rigors followed by sweating; headache, vomiting. The patient lives in a village in chhattisgarh and does not use bed nets. He reports that there are many mosquitoes around his house. On examination: tachycardia+, patient is febrile, and hepatosplenomegaly +/- The following features were +/- \n" +
+			"Impaired consciousness \n" +
+			"Respiratory distress (acidotic breathing)\n" +
+			"Multiple convulsions \n" +
+			"Circulatory collapse \n" +
+			"Pulmonary edema \n" +
+			"Abnormal bleeding \n" +
+			"Jaundice \n" +
+			"Hemoglobinuria", null
+        )
+
+        dischargeSummaryTemplates.put(MalariatemplateTemplate.name, MalariatemplateTemplate)
+
 
       // TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
 //        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"
