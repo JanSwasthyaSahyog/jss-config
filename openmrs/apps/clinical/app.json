@@ -61,6 +61,9 @@
  "ANC Template": {
         "allowAddMore": true
       },
+ "Bacteriology Detailed Results": {
+        "allowAddMore": true
+      },
 "Wagner Megitt Classification":{
       "isTabular": true
       },
