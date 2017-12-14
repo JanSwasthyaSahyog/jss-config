@@ -47,6 +47,40 @@
                 "showOrder": true,
                 "displayOrder": 2
             },
+"Bacteriology Resultseriology Concept Set": {
+    "translationKey": "Bacteriology",
+    "type": "obsToObsFlowSheet",
+    "displayOrder" : 25,
+    "displayType" : "Half-Page",
+    "rotateInPrint" : false,
+    "headingConceptSource" : "Abbreviation",
+    "dataConceptSource" : "Abbreviation",
+    "dashboardConfig": {
+        "numberOfVisits": 2,
+        "initialCount": 2,
+        "latestCount": 2,
+        "pivotOn": "row",
+        "templateName": "BACTERIOLOGY CONCEPT SET",
+        "groupByConcept": "Specimen Collection Date",
+        "type": "DstExtension",
+        "conceptNames": [
+            "Specimen Id",
+            "Specimen Sample Source",
+            "Bacteriology Site Collection",
+            "Bacteriology Result",
+            "Bacteriology Organisms",
+            "Colony Count",
+            "Control (ATCC)",
+            "DST Results"
+        ],
+        "isEditable": true,
+        "obsDelimiter": "\n"
+    },
+    "expandedViewConfig": {
+        "templateName": "BACTERIOLOGY CONCEPT SET",
+        "groupByConcept": "Specimen Collection Date"
+    }
+},
             "vitals": {
                 "title": "Vitals",
                 "type": "vitals",

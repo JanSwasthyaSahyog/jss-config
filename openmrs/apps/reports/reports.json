@@ -109,6 +109,20 @@
       "templateName": "OB USG Template"
     }
   },
+"echotemplate": {
+    "name": "Echo Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Echo Template"
+    }
+  },
+"bacteriologytab": {
+    "name": "Bacteriology Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "BACTERIOLOGY CONCEPT SET"
+    }
+  },
 "Diabetic Foot Study": {
         "name": "Diabetic Foot Study",
         "type": "observations",
