@@ -435,78 +435,11 @@
     "name": "Program Enrollments",
     "type": "ProgramEnrollmentReport"
   },
-  "ancdata1": {
-    "name": "ANC Data Report",
-    "type": "programObsTemplate",
-    "config": {
-      "templateName": "ANC Template",
-      "patientAttributes": [
-        "primaryRelative"
-      ],
-      "programAttributes": [
-        "Program ID",
-        "High Risk",
-        "High Risk Reason",
-        "High Risk Reason Text"
-      ],
-      "programNames": [
-        "Ante Natal Care Program"
-      ],
-      "addressAttributes": [
-        "city_village",
-        "county_district",
-        "state_province"
-      ]
-    }
-  },
-  "ancTemplate1": {
-    "name": "ANC Template Report",
-    "type": "programObsTemplate",
-    "config": {
-      "templateName": "ANC Template",
-      "programAttributes": [
-        "Program ID",
-        "High Risk",
-        "High Risk Reason",
-        "High Risk Reason Text"
-      ],
-      "programNames": [
-        "Ante Natal Care Program"
-      ],
-      "addressAttributes": [
-        "city_village",
-        "county_district",
-        "state_province"
-      ]
-    }
-  },
-  "ancreport1":{
-    "name": "ANC Template Report data",
-    "type": "observations",
-    "config": {
-      "templateName": "ANC Template",
-      "patientAttributes":["Program ID", "High Risk","High Risk Reason", "High Risk Reason Text"],
-      "patientAddresses": ["city_village","county_district","state_province"],
-      "applyDateRangeFor": "visitStartDate",
-      "ignoreEmptyValues":true,
-      "conceptNamesToFilter": ["ANC Template","Albumin (Routine Urine)"],
-      "programsToFilter":["Ante Natal Care Program"],
-      "excludeColumns": ["Haemoglobin Range Abnormal","Systolic Abnormal","Diastolic Abnormal","Birthdate","Location Name"],
-      "encounterPerRow": true
-    }
-  },
  "jssancprogramreport": {
     "name": "ANC Program Report",
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
-    }
- },
-"ancpatientswitheddreport": {
-    "name": "ANC Patients with EDD Report",
-    "type": "MRSGeneric",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANC_Patients_with_EDD_Report.sql"
     }
  },
  "jssrhdprogram": {
