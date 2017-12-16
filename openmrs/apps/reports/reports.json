@@ -442,6 +442,13 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
     }
  },
+ "ancpatientswitheddandlatestobs": {
+     "name": "ANC Patients with EDD and Latest Observations",
+     "type": "MRSGeneric",
+     "config": {
+       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANC_EDD_Latest_Obs.sql"
+     }
+  },
  "jssrhdprogram": {
     "name": "JSS RHD Program Enrollment Report",
     "type": "MRSGeneric",
