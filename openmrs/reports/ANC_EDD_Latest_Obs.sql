@@ -60,9 +60,9 @@ FROM patient_program pp
 LEFT JOIN patient_identifier pi ON pp.patient_id=pi.patient_id AND pp.voided IS FALSE
 JOIN person_name pn ON pi.patient_id = pn.person_id 
 JOIN person p ON pi.patient_id = p.person_id 
-JOIN person_attribute pa ON pi.patient_id = pa.person_id 
+JOIN person_attribute pa ON pi.patient_id = pa.person_id AND pa.person_attribute_type_id=14 /* person_attribute_type_id=14 == "primaryReleative"[sic] */
 JOIN person_address paddress ON pi.patient_id = paddress.person_id 
-JOIN obs edd ON pp.patient_id = edd.person_id AND edd.concept_id = 5532 AND edd.voided IS FALSE
+JOIN obs edd ON pp.patient_id = edd.person_id AND edd.concept_id = 5532 AND edd.voided IS FALSE /* concept_id = 5532 == "EDD" */
 LEFT JOIN obs o ON pp.patient_id=o.person_id AND o.voided IS FALSE 
 JOIN concept_name obs_fscn on o.concept_id=obs_fscn.concept_id AND obs_fscn.concept_name_type="FULLY_SPECIFIED" AND obs_fscn.voided IS FALSE
    AND obs_fscn.name IN ('ANC,Cluster',
