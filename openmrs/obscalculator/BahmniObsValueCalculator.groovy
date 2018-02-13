@@ -456,17 +456,24 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         def dischargeSummaryTemplates = new HashMap<String,DischargeSummaryTemplate>()
 
         def LSCSTemplate = new DischargeSummaryTemplate("LSCS",
-                "Patient recovered well after surgery, received  3  days of IV antibiotics,tolerating full diet,incision line good no soakage and pus collection",
+                "Post op period was uneventful,received 3 days of IV antibiotics and then Oral antibiotic along with analgesics.Foley's catheter removal done on                         POD - .Patient recovered well after surgery,tolerating full diet,at present surgical wound appears healthy,afebrile.Hence discharged in stable condition with following advice.Baby accepting feeds,passed stool and urine",
                 "LSCS under SA\n" +
-                        "indication-ANC with CPD & NPOL\n" +
+                        "Indication-ANC with CPD & NPOL \n" +
                         "Baby notes: \n" +
-                        "Full term, male baby,Baby cried immediately after birth, \n" +
-                        "APGAR score _/15, \n" +
-                        "Birth wt:",
-                "Tab-fersisol BD Tab. Cephalexin 500 mg  QID for 5 days.\n" +
-                        "Tab. PCM 500 mg QID  for 3 days.\n" +
-                        "Tab. famotidine 20 mg bd for for 30 days\n" +
-                        "Tab-calcium BD for 30 day", null, null
+                        "Full term / Preterm,Baby cried immediately after birth, \n" +
+                        "Date of Birth: \n" +
+			"Time of Birth: \n" +
+			"Sex: \n" +
+                        "Birth wt: \n" +
+			"APGAR score at 1 min - _/10, at 5 min - _/10",
+                "Tab.Cephalexin 500 mg  QID for 5 days.\n" +
+                        "Tab. PCM 500 mg QID  for 5 days then sos 10.\n" +
+                        "Tab. Famotidine 20 mg bd for 5 days \n" +
+			"Tab. Fersifol BD for 30 days \n" +
+                        "Tab. Calcium BD for 30 day \n" +
+			"Immunization for the baby", 
+		"-- yrs old GPLAD at ---term gestation,presented with labour pain,and was taken for LSCS in view of -",
+	        "LSCS under SA"
         )
         dischargeSummaryTemplates.put(LSCSTemplate.name, LSCSTemplate)
 
@@ -573,12 +580,18 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
         dischargeSummaryTemplates.put(COPDAETemplate.name, COPDAETemplate)
 
 	def TAHTemplate = new DischargeSummaryTemplate("TAH",
-                "The patient was admitted to the ward and a total abdominal hysterectomy (TAH) with no intraoperative complication was performed on ?/?/2018. The patient tolerated all procedures well. On the xth postoperative day, the patient was afebrile. Vital signs were stable. The patient was tolerating a diet and ambulating without difficulty. The patient was desirous of going home. The patient denied any abdominal pain or flank pain. The patient had minimal incisional wound tenderness. The patient was desirous of going home and was discharged stable.",
-                "ADMISSION DIAGNOSES:\n" +
-			"1. Severe menometrorrhagia unresponsive to medical therapy.\n" +
-			"2. Severe anemia.\n" +
-			"3. Symptomatic fibroid uterus.", null,
-                "This is a ?-year-old, gravida ?, para ? female who presented initially to the office with abnormal menstrual bleeding and , in flow during her period. She also had symptoms of back pain, dysmenorrhea, and dysuria. The symptoms had been worsening over time. The patient was noted also to have increasing pelvic pain over the past 8 months and she was noted to have uterine enlargement upon examination.",  null
+                "Post op period was uneventful,received 3 days of IV antibiotics and then Oral antibiotic along with analgesics.Foley's catheter removal done on POD 7- .Vault check done - healthy and suture removal done on POD 7.Patient recovered well after surgery,tolerating full diet,at present surgical wound appears healthy,afebrile.Hence discharged in stable condition with following advice.",
+                "For surgery",
+                "Tab. Cephalexin 500 mg QID for 5 days.\n" + 
+			"Tab. PCM 500 mg QID for 5 days then sos 10\n" +
+			"Tab. Famotidine 20 mg bd for 5 days\n" +
+			"Tab. Fersisol BD for 30 days Tab.\n" + 
+			"Tab. Calcium BD for 30 days",
+		"--yr old lady with no known comorbidities / HTN / DM / presented with c/o since \n" +
+			"On examination : \n" +
+			"Routine investigations done as mentioned,was diagnosed as - fibroid uterus / PID \n"+ 
+			"Hence was electively posted for surgery.",
+		"Total abdominal hysterectomy under SA",
         )
         dischargeSummaryTemplates.put(TAHTemplate.name, TAHTemplate)
 	
