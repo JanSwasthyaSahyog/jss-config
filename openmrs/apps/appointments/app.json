@@ -19,6 +19,8 @@
     "enableServiceTypes": true,
     "enableCalendarView": true,
     "isServiceOnAppointmentEditable": false,
+    "patientSearchUrl": "/bahmnicore/search/patient/lucene?loginLocationUuid={{loginLocationUuid}}&identifier={{searchValue}}",
+    "minCharLengthToTriggerPatientSearch": 5,
     "colorsForAppointmentService": [
       "#006400",
       "#DC143C",
