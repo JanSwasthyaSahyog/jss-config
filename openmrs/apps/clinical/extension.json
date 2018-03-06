@@ -65,7 +65,7 @@
     },
     "label": "Active",
     "order": 1,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinicalapp"
   },
   "bahmniBillingPatientsSearchActivePatients": {
     "id": "bahmni.billing.patients.search.activePatients",
@@ -92,7 +92,7 @@
     },
     "label": "Active",
     "order": 2,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinicalapp"
   },
   "bahmniClinicalPatientsSearchHighRiskPatients": {
     "id": "bahmni.clinical.patients.search.allPatientshighrisk",
@@ -108,7 +108,7 @@
     },
     "label": "High Risk",
     "order": 3,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinicalapp"
   },
   "bahmniBillingPatientsSearchTodaysPatientsByProvider": {
     "id": "bahmni.billing.patients.search.myPatients",
@@ -133,7 +133,7 @@
     },
     "label": "All",
     "order": 3,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinicalapp"
   },
   "bahmniBillingPatientsSearchAll": {
     "id": "bahmni.billing.patients.search.allPatients",
