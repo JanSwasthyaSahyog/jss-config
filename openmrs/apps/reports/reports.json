@@ -27,11 +27,25 @@
       "templateName": "Diabetes Counselling Template"
     }
   },
+ "newadmissions": {
+    "name": "New Admission Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/New_Admissions.sql"
+    }
+ },
  "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+    }
+ },
+ "TLRecords": {
+    "name": "TL Records Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TL_Records_Report.sql"
     }
  },
   "tuberculosisIntakeData": {
