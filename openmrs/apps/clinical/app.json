@@ -58,6 +58,60 @@
       "Follow up Date": {
         "allowFutureDates": true
       },
+     "Tuberculosis, Sputum Sample Collection Date": {
+        "required": true
+       },
+     "Tuberculosis, AFB (Zn Stain)": {
+        "required": true
+       },
+     "Tuberculosis, Sample Type": {
+        "required": true
+       },
+      "Tuberculosis, Sample": {
+        "required": true
+       },
+      "Tuberculosis, Tuberculosis, Sample": {
+        "required": true
+       },
+      "Tuberculosis, Testing Centre": {
+        "required": true
+       },
+     "Tuberculosis, Test Type": {
+        "required": true
+       },
+     "Tuberculosis, Culture Report": {
+        "required": true
+       },
+     "Tuberculosis,CBNAAT Test Result": {
+        "required": true
+       },
+      "Tuberculosis, Rifampicin": {
+        "required": true
+       },
+      "Tuberculosis, Isoniazid": {
+        "required": true
+       },
+      "Tuberculosis, Ethambutol": {
+        "required": true
+       },
+      "Tuberculosis, Streptomycin": {
+        "required": true
+       },
+      "Tuberculosis, Kanamycin": {
+        "required": true
+       },
+      "Tuberculosis, Ethionamide": {
+        "required": true
+       },
+      "Tuberculosis, PAS": {
+        "required": true
+       },
+      "Tuberculosis, Ofloxacin": {
+        "required": true
+       },
+      "Tuberculosis, Test Report Date": {
+        "required": true
+       },
  "ANC Template": {
         "allowAddMore": true
       },
