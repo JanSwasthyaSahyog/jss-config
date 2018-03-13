@@ -76,37 +76,7 @@
       "Tuberculosis, Testing Centre": {
         "required": true
        },
-     "Tuberculosis, Test Type": {
-        "required": true
-       },
-     "Tuberculosis, Culture Report": {
-        "required": true
-       },
-     "Tuberculosis,CBNAAT Test Result": {
-        "required": true
-       },
-      "Tuberculosis, Rifampicin": {
-        "required": true
-       },
-      "Tuberculosis, Isoniazid": {
-        "required": true
-       },
-      "Tuberculosis, Ethambutol": {
-        "required": true
-       },
-      "Tuberculosis, Streptomycin": {
-        "required": true
-       },
-      "Tuberculosis, Kanamycin": {
-        "required": true
-       },
-      "Tuberculosis, Ethionamide": {
-        "required": true
-       },
-      "Tuberculosis, PAS": {
-        "required": true
-       },
-      "Tuberculosis, Ofloxacin": {
+      "Tuberculosis, Test Type": {
         "required": true
        },
       "Tuberculosis, Test Report Date": {
