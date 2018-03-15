@@ -46,8 +46,13 @@
                 "showCertainty": true,
                 "showOrder": true,
                 "displayOrder": 2
+    	   },
+           "conditions": {
+                "title":"Conditions",
+                "type": "conditionsList",
+                "displayOrder": 26
             },
-"Bacteriology Resultseriology Concept Set": {
+    "Bacteriology Resultseriology Concept Set": {
     "translationKey": "Bacteriology",
     "type": "obsToObsFlowSheet",
     "displayOrder" : 25,
