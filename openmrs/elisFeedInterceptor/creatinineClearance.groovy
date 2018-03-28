@@ -1,8 +1,7 @@
+package org.bahmni.module.elisatomfeedclient.api.elisFeedInterceptor
+
 import org.bahmni.module.bahmnicore.service.impl.BahmniBridge
 import org.openmrs.*
-import org.bahmni.module.elisatomfeedclient.api.elisFeedInterceptor.ElisFeedEncounterInterceptor;import java.util.Locale
-import java.util.Set
-import org.openmrs.api.OrderContext;
 import org.openmrs.api.context.Context;
 import org.openmrs.api.db.hibernate.DbSessionFactory;
 import org.hibernate.FlushMode;
@@ -21,73 +20,119 @@ public class CreatinineUpdate implements ElisFeedEncounterInterceptor {
         FlushMode flushMode = sessionFactory.getCurrentSession().getFlushMode();
         sessionFactory.getCurrentSession().setFlushMode(FlushMode.MANUAL);
         try {
-            Obs creatinineObs = getCreatinineObs(encounters);
+            addCreatinineClearanceObs(encounters);
         } finally {
             sessionFactory.getCurrentSession().setFlushMode(flushMode)
         }
 
     }
 
-    private Obs getCreatinineObs(Set<Encounter> encounters) {
+    private void addCreatinineClearanceObs(Set<Encounter> encounters) {
         for (Encounter encounter : encounters) {
-            for (Obs obs : encounter.getObs()) {
-                if (obs.getOrder() != null && obs.getConcept().getFullySpecifiedName(Locale.ENGLISH).getName().equals(CREATININE_TEST_NAME)
-                        && obs.getOrder().getConcept().getUuid().equals(obs.getConcept().getUuid())) {
-
-                    Concept creatinineClearanceRateConcept = BahmniBridge.create().getConcept(CREATINIE_CLEARANCE_TEST_NAME);
-                    Order order = new Order();
-                    order.setOrderType(obs.getOrder().getOrderType());
-                    order.setConcept(creatinineClearanceRateConcept);
-                    order.setOrderer(obs.getOrder().getOrderer());
-                    order.setCareSetting(obs.getOrder().getCareSetting());
-                    order.setAccessionNumber(obs.getAccessionNumber());
-                    order.setEncounter(encounter);
-                    order.setPatient(obs.getOrder().getPatient());
-encounter.addOrder(order);
-                    Obs creatinineClearanceObs = getObs(obs, creatinineClearanceRateConcept,order);
-                    if(creatinineClearanceObs != null){
-		   	Obs creatinineClearanceObsOne = getObs(obs, creatinineClearanceRateConcept,order);
-                        creatinineClearanceObs.setValueNumeric(null);
-                        creatinineClearanceObs.addGroupMember(creatinineClearanceObsOne);
-                        
-                        Obs creatinineClearanceObsTwo = getObs(obs, creatinineClearanceRateConcept,order);
-                        creatinineClearanceObsOne.setValueNumeric(null);
-                        creatinineClearanceObsOne.addGroupMember(creatinineClearanceObsTwo)
-                        
-                        encounter.addObs(creatinineClearanceObs);
-                        encounter.addObs(creatinineClearanceObsOne);
-                        encounter.addObs(creatinineClearanceObsTwo);
-		    }
-Context.getEncounterService().saveEncounter(encounter);
-                    	return creatinineClearanceObs;
-                }
-            }
+            processEncounter(encounter)
         }
-        return null;
     }
 
-    private Obs getObs(Obs obs, Concept creatinineClearanceRateConcept, Order order) {
+    private void processEncounter(Encounter encounter) {
+        println "CreatinineClearanceGroovy: Came to process encounter";
+        Obs creatinineObs = getObs(encounter, CREATININE_TEST_NAME)
 
-        this.bahmniBridge = BahmniBridge.create().forPatient(obs.getPerson().getUuid());
-        Obs weighttval=bahmniBridge.latestObs(WEIGHT_CONCEPT_NAME);
-	if (weighttval == null)
-		return null;
-        Integer personage = obs.getPerson().getAge();
-        String gender = obs.getPerson().getGender();
-        double CreatinineClearanceRate = 0.0;
-
-        if (gender.equals('M')) {
-            CreatinineClearanceRate = (double)Math.round((((140 - personage) * weighttval.getValueNumeric()) / (72 * (obs.getValueNumeric())))* 100.0) / 100.0;
-        } else if (gender.equals('F')) {
-            CreatinineClearanceRate = (double)Math.round((((140 - personage) * weighttval.getValueNumeric()) / (72 * (obs.getValueNumeric()))) * 0.85* 100.0) / 100.0;
+        if (creatinineObs == null){
+            println "CreatinineClearanceGroovy: Found creatinine Obs null";
+            return;
         }
 
+        println "CreatinineClearanceGroovy: Found Creatinine Obs";
+        this.bahmniBridge = BahmniBridge.create().forPatient(creatinineObs.getPerson().getUuid());
+        Obs weightObs= bahmniBridge.latestObs(WEIGHT_CONCEPT_NAME);
+        if (weightObs == null) {
+            println "CreatinineClearanceGroovy: Found Weight Obs null";
+            return;
+        }
 
+        println "CreatinineClearanceGroovy: Found Weight Obs";
+        double creatinineClearanceRate = calculateCreatinineClearanceRate(creatinineObs, weightObs);
+        println "CreatinineClearanceGroovy: Calculated creatinineClearanceRate "+creatinineClearanceRate;
+
+        Obs creatinineClearanceObs = getObs(encounter, CREATINIE_CLEARANCE_TEST_NAME);
+
+        if(creatinineClearanceObs!= null && creatinineClearanceObs.getValueNumeric().equals(creatinineClearanceRate)){
+            println "CreatinineClearanceGroovy: Found same value";
+            return;
+        }
+
+        if(creatinineClearanceObs!= null){
+            //to handle if creatinine value is updated
+            creatinineClearanceObs.setValueNumeric(creatinineClearanceRate);
+            println "CreatinineClearanceGroovy: set value";
+        }
+        else {
+            println "CreatinineClearanceGroovy: Came to create new creatinine clearance Obs";
+            Concept creatinineClearanceRateConcept = BahmniBridge.create().getConcept(CREATINIE_CLEARANCE_TEST_NAME);
+            Order order = createOrder(creatinineObs, creatinineClearanceRateConcept)
+            order.setEncounter(encounter);
+            encounter.addOrder(order);
+            creatinineClearanceObs = createObs(creatinineClearanceRateConcept, order);
+            println "Setting value "+creatinineClearanceRate;
+
+
+            Obs creatinineClearanceObsOne = createObs(creatinineClearanceRateConcept, order);
+            creatinineClearanceObsOne.setValueNumeric(null);
+            creatinineClearanceObs.addGroupMember(creatinineClearanceObsOne);
+
+            Obs creatinineClearanceObsTwo = createObs(creatinineClearanceRateConcept, order);
+            creatinineClearanceObsTwo.setValueNumeric(creatinineClearanceRate);
+            creatinineClearanceObsOne.addGroupMember(creatinineClearanceObsTwo)
+
+            println "Value "+creatinineClearanceObsTwo.getValueNumeric();
+            encounter.addObs(creatinineClearanceObs);
+            encounter.addObs(creatinineClearanceObsOne);
+            encounter.addObs(creatinineClearanceObsTwo);
+        }
+        println "CreatinineClearanceGroovy: About to save the encounter";
+        Context.getEncounterService().saveEncounter(encounter);
+    }
+
+    private static Obs getObs(Encounter encounter, String conceptName) {
+        Obs obsForConcept = null;
+        for (Obs obs : encounter.getObs()) {
+            if (obs.getOrder() != null && obs.getConcept().getFullySpecifiedName(Locale.ENGLISH).getName().equals(conceptName)
+                    && obs.getOrder().getConcept().getUuid().equals(obs.getConcept().getUuid())) {
+                obsForConcept = obs;
+            }
+        }
+        return obsForConcept;
+    }
+
+    private static Order createOrder(Obs obs, Concept creatinineClearanceRateConcept) {
+        Order order = new Order();
+        order.setOrderType(obs.getOrder().getOrderType());
+        order.setConcept(creatinineClearanceRateConcept);
+        order.setOrderer(obs.getOrder().getOrderer());
+        order.setCareSetting(obs.getOrder().getCareSetting());
+        order.setAccessionNumber(obs.getAccessionNumber());
+        order.setPatient(obs.getOrder().getPatient());
+        return order;
+    }
+
+    private static Obs createObs(Concept creatinineClearanceRateConcept, Order order) {
         Obs creatinineClearanceObs = new Obs();
         creatinineClearanceObs.setConcept(creatinineClearanceRateConcept);
-        creatinineClearanceObs.setValueNumeric(CreatinineClearanceRate);
         creatinineClearanceObs.setOrder(order);
         return creatinineClearanceObs;
+    }
+
+    private static double calculateCreatinineClearanceRate(Obs creatinineObs, Obs weightObs) {
+        Integer personage = creatinineObs.getPerson().getAge();
+        String gender = creatinineObs.getPerson().getGender();
+        double creatinineClearanceRate = 0.0;
+
+        if (gender.equals('M')) {
+            creatinineClearanceRate = (double) Math.round((((140 - personage) * weightObs.getValueNumeric()) / (72 * (creatinineObs.getValueNumeric()))) * 100.0) / 100.0;
+        } else if (gender.equals('F')) {
+            creatinineClearanceRate = (double) Math.round((((140 - personage) * weightObs.getValueNumeric()) / (72 * (creatinineObs.getValueNumeric()))) * 0.85 * 100.0) / 100.0;
+        }
+        return creatinineClearanceRate;
     }
 
 }
