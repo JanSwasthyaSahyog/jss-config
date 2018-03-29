@@ -34,46 +34,36 @@ public class CreatinineUpdate implements ElisFeedEncounterInterceptor {
     }
 
     private void processEncounter(Encounter encounter) {
-        println "CreatinineClearanceGroovy: Came to process encounter";
         Obs creatinineObs = getObs(encounter, CREATININE_TEST_NAME)
 
         if (creatinineObs == null){
-            println "CreatinineClearanceGroovy: Found creatinine Obs null";
             return;
         }
 
-        println "CreatinineClearanceGroovy: Found Creatinine Obs";
         this.bahmniBridge = BahmniBridge.create().forPatient(creatinineObs.getPerson().getUuid());
         Obs weightObs= bahmniBridge.latestObs(WEIGHT_CONCEPT_NAME);
         if (weightObs == null) {
-            println "CreatinineClearanceGroovy: Found Weight Obs null";
             return;
         }
 
-        println "CreatinineClearanceGroovy: Found Weight Obs";
         double creatinineClearanceRate = calculateCreatinineClearanceRate(creatinineObs, weightObs);
-        println "CreatinineClearanceGroovy: Calculated creatinineClearanceRate "+creatinineClearanceRate;
 
         Obs creatinineClearanceObs = getObs(encounter, CREATINIE_CLEARANCE_TEST_NAME);
 
         if(creatinineClearanceObs!= null && creatinineClearanceObs.getValueNumeric().equals(creatinineClearanceRate)){
-            println "CreatinineClearanceGroovy: Found same value";
             return;
         }
 
         if(creatinineClearanceObs!= null){
             //to handle if creatinine value is updated
             creatinineClearanceObs.setValueNumeric(creatinineClearanceRate);
-            println "CreatinineClearanceGroovy: set value";
         }
         else {
-            println "CreatinineClearanceGroovy: Came to create new creatinine clearance Obs";
             Concept creatinineClearanceRateConcept = BahmniBridge.create().getConcept(CREATINIE_CLEARANCE_TEST_NAME);
             Order order = createOrder(creatinineObs, creatinineClearanceRateConcept)
             order.setEncounter(encounter);
             encounter.addOrder(order);
             creatinineClearanceObs = createObs(creatinineClearanceRateConcept, order);
-            println "Setting value "+creatinineClearanceRate;
 
 
             Obs creatinineClearanceObsOne = createObs(creatinineClearanceRateConcept, order);
@@ -84,12 +74,10 @@ public class CreatinineUpdate implements ElisFeedEncounterInterceptor {
             creatinineClearanceObsTwo.setValueNumeric(creatinineClearanceRate);
             creatinineClearanceObsOne.addGroupMember(creatinineClearanceObsTwo)
 
-            println "Value "+creatinineClearanceObsTwo.getValueNumeric();
             encounter.addObs(creatinineClearanceObs);
             encounter.addObs(creatinineClearanceObsOne);
             encounter.addObs(creatinineClearanceObsTwo);
         }
-        println "CreatinineClearanceGroovy: About to save the encounter";
         Context.getEncounterService().saveEncounter(encounter);
     }
 
