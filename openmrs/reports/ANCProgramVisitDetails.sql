@@ -50,8 +50,14 @@ GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Gravida', coalesce(o.value_numeric,  o
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'Posture', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Posture',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Gestation', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gestation',
   GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Fundal Height', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Fundal Height',
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Position', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Position',  
-  GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Fetal Heart Sound', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'FHS'
+ GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Position', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Position',  
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC, Fetal Heart Sound', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'FHS',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Delivery Outcome', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Delivery Outcome',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Outcome Date', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Outcome Date',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Place of Delivery Outcome', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Place of Delivery Outcome',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Performed By', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Performed By',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Weight of Baby', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Weight of Baby',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Gender of Baby', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gender of Baby'
 FROM obs o
   JOIN concept obs_concept ON obs_concept.concept_id=o.concept_id AND obs_concept.retired is false
   JOIN concept_name obs_fscn on o.concept_id=obs_fscn.concept_id AND obs_fscn.concept_name_type="FULLY_SPECIFIED" AND obs_fscn.voided is false
@@ -80,7 +86,13 @@ FROM obs o
    'ANC, Gestation',
    'ANC, Fundal Height',
    'ANC, Position',
-   'ANC, Fetal Heart Sound')
+   'ANC, Fetal Heart Sound',
+   'ANC Delivery Outcome',
+   'ANC Outcome Date',
+   'ANC Place of Delivery Outcome',
+   'ANC Performed By',
+   'ANC Weight of Baby',
+   'ANC Gender of Baby')
   LEFT JOIN concept_name obs_scn on o.concept_id=obs_scn.concept_id AND obs_scn.concept_name_type="SHORT" AND obs_scn.voided is false
   JOIN person p ON p.person_id = o.person_id AND p.voided is false
   JOIN patient_identifier pi ON p.person_id = pi.patient_id AND pi.voided is false
