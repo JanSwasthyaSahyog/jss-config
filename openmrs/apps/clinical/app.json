@@ -82,6 +82,18 @@
       "Tuberculosis, Test Report Date": {
         "required": true
        },
+      "Date and Time of Death": {
+        "required": true
+       },
+      "Immediate cause": {
+        "required": true
+       },
+      "Underlying Disease": {
+        "required": true
+       },
+      "Associated Conditions": {
+        "required": true
+       },
  "ANC Template": {
         "allowAddMore": true
       },
