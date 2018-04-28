@@ -137,37 +137,6 @@
       "templateName": "BACTERIOLOGY CONCEPT SET"
     }
   },
-"Diabetic Foot Study": {
-        "name": "Diabetic Foot Study",
-        "type": "observations",
-        "config": {
-            "patientAttributes": [
-                "caste",
-                "occupation"
-             ],
-
-         "patientAddresses": ["city_village","address3","county_District"],
-
-            "showVisitInfo": true,
-            "showProvider": true,
-            "conceptNamesToFilter": ["HEIGHT","WEIGHT","BMI","Heamoglobin","Total Leucocyte Count (Blood)","Polymorph","Lymphocyte","Eosinophil","Monocyte","Basophil","Random Blood Sugar","Fasting Blood Sugar","PP2BS","Hb1AC","ESR","Creatinine","Diabetic Foot Study, Duration of DM","Use of Insulin","History of Smoking","Positive Symptoms(Burning/Tingling/Shooting /Sharp Sensation) Sensation in feet","Negative Symptoms(Numbness/feels/feet dead)","Use of MCR Sandals at present","Diabetic Foot Study, Duration of Use of MCR Sandals","No of Total Amputations","Left Foot","Right Foot","1st Metatarsal Head Left","1st Metatarsal Head Right","2nd Metatarsal Head Left","2nd Metatarsal Head Right","5th Metatarsal Head Left","5th Metatarsal Head Right","Plantar Surface of Distal Hallux Left","Plantar Surface of Distal Hallux Right","Vibration Sensation Status Left","Vibration Sensation Status Right","Pinprick Sensation Status Left","Pinprick Sensation Status Right","Ankle Reflex Status Left","Ankle Reflex Status Right","Dorsalis Pedis Artery Left","Dorsalis Pedis Artery Right","Ankle systolic pressure Left","Ankle systolic pressure Right","Brachial systolic pressure Left","Brachial systolic pressure Right","Skin Color / Cracking / Sweating Left","Skin Color / Cracking / Sweating Right","Claw Toes / Hammer Toes Left","Claw Toes / Hammer Toes Right","Charcoat Joint Left","Charcoat Joint Right","Muscle Wasting (guttering between muscles) left","Muscle Wasting (guttering between muscles) right","Calluses Left","Calluses Right","Blisters Left","Blisters Right","Nail Infection Left","Nail Infection Right","Prominent Metatarsal Head Left","Prominent Metatarsal Head Right"],
-            "conceptNameDisplayFormat": "shortNamePreferred",
-
-            "conceptClassesToFilter": [],
-            "locationTagsToFilter": [],
-            "programsToFilter": [],
-            "applyDateRangeFor": "obsDate",
-            "encounterPerRow": true,
-            "forDataAnalysis": true,
-            "visitTypesToFilter": [
-                "PHARMACY VISIT",
-                "OPD"
-            ],
-            "macroTemplatePath": "/var/www/bahmni_config/openmrs/apps/reports/macroTemplates/Diabetic_Foot_Study_Macro_Template.xls"
-        }
-    },
-
-
   "BreastCancerData": {
     "name": "Breast Cancer Template Report",
     "type": "obsTemplate",
@@ -612,33 +581,18 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
   },
- "diabetesobsCannedReport": {
- "name": "Diabetes Study Report",
- "type": "obsCannedReport",
- "config": {
-      "patientAttributes": ["caste","class","bloodGroup","occupation","education","smoking","alcohol","landHolding","rationCard","familyIncome","foodSecurity","primaryContact","Telephone Number"],
- "applyDateRangeFor": "ProgramEnrollment",
- "addressAttributes": ["postal_code", "city_village","address3","county_District"],
- "conceptNames": [
-        "WEIGHT",
-        "Height",
-        "Pulse",
-        "Systolic",
-        "BMI",
-        "BMI Status",
-        "Diabetes, Skin fold Thickness",
-        "Creatinine",
-        "Haemoglobin",
-        "Fasting Blood Sugar",
-        "RBS",
-        "FBS",
-        "PP2BS",
-        "Serum",
-        "Hb1AC"
-      ],
-    "visitIndependentConcept": ["Parallel Urine Sugar (30 mins)"],
-    "enrolledProgram" :"JSS Diabetes Program",
-    "showObsOnlyForProgramDuration": false
-   }
- }
+  "CBNAATProspectiveStudyQ2": {
+    "name": "CBNAAT Prospective Study 02",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
+    }
+  },
+"diabetesFootStudy": {
+    "name": "Diabetes foot study",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/diabetes_foot_study.sql"
+    }
+  }
 }
