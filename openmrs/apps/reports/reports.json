@@ -27,6 +27,13 @@
       "templateName": "Diabetes Counselling Template"
     }
   },
+"jssdiabetesprogram": {
+    "name": "JSS Diabetes Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+    }
+ },
  "newadmissions": {
     "name": "New Admission Report",
     "type": "MRSGeneric",
@@ -34,11 +41,11 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/New_Admissions.sql"
     }
  },
- "jssdiabetesprogram": {
-    "name": "JSS Diabetes Program Enrollment Report",
+ "DeathReport": {
+    "name": "Death Report",
     "type": "MRSGeneric",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Death_Report.sql"
     }
  },
  "TLRecords": {
