@@ -85,7 +85,7 @@
       "Date and Time of Death": {
         "required": true
        },
-      "Immediate cause": {
+      "Immediate Cause": {
         "required": true
        },
       "Underlying Disease": {

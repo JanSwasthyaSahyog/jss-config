@@ -323,6 +323,6 @@ FROM obs o
 
 WHERE o.voided IS FALSE
       AND program.name = 'Diabetic Foot Study'
-      AND pp.date_enrolled BETWEEN '2017-06-01' AND '2017-06-30'
+      AND pp.date_enrolled BETWEEN '#startDate#' and '#endDate#'
       AND cast(o.obs_datetime AS DATE) BETWEEN pp.date_enrolled and now()
 GROUP BY o.person_id, date(v.date_started);
