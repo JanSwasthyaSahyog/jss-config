@@ -136,5 +136,16 @@
          "icon": "fa fa-terminal",
          "order": 15,
         "requiredPrivilege": "app:admin"
-    }
+    },
+    "resources": {
+        "id": "bahmni.provider.resources",
+        "extensionPointId": "org.bahmni.home.dashboard",
+        "type": "link",
+        "label": "Resources",
+        "url": "../resources/index.html",
+        "icon": "fa fa-newspaper-o",
+        "order": 14,
+        "requiredPrivilege": "app:clinical"
+   }
 }
+
