@@ -315,7 +315,12 @@
      "Tuberculosis, Extrapulmonary Site": {
         "multiSelect": true
       },
-
+      "High Risk Last Pregnancy": {
+        "multiSelect": true
+      },
+      "High Risk This Pregnancy": {
+        "multiSelect": true
+      },
 
       "Tuberculosis Intake Template": {
         "computeDrugs": true,

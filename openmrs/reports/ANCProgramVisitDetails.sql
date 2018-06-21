@@ -58,7 +58,9 @@ GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Outcome Date', coalesce(o.value_nu
 GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Place of Delivery Outcome', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Place of Delivery Outcome',
 GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Performed By', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Performed By',
 GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Weight of Baby', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Weight of Baby',
-GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Gender of Baby', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gender of Baby'
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'ANC Gender of Baby', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Gender of Baby',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'High Risk Last Pregnancy', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'Last Pregnancy',
+GROUP_CONCAT(DISTINCT(IF(obs_fscn.name = 'High Risk This Pregnancy', coalesce(o.value_numeric,  o.value_text, o.value_datetime, coded_scn.name, coded_fscn.name), NULL)) ORDER BY o.obs_id DESC) AS 'This Pregnancy'
 FROM obs o
   JOIN concept obs_concept ON obs_concept.concept_id=o.concept_id AND obs_concept.retired is false
   JOIN concept_name obs_fscn on o.concept_id=obs_fscn.concept_id AND obs_fscn.concept_name_type="FULLY_SPECIFIED" AND obs_fscn.voided is false
@@ -94,7 +96,9 @@ FROM obs o
    'ANC Place of Delivery Outcome',
    'ANC Performed By',
    'ANC Weight of Baby',
-   'ANC Gender of Baby')
+   'ANC Gender of Baby',
+   'High Risk Last Pregnancy',
+   'High Risk This Pregnancy')
   LEFT JOIN concept_name obs_scn on o.concept_id=obs_scn.concept_id AND obs_scn.concept_name_type="SHORT" AND obs_scn.voided is false
   JOIN person p ON p.person_id = o.person_id AND p.voided is false
   JOIN patient_identifier pi ON p.person_id = pi.patient_id AND pi.voided is false
