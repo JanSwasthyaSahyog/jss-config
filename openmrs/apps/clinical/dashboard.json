@@ -547,8 +547,8 @@
                 "title": "BP",
                 "config": {
                     "yAxisConcepts": [
-                        "Systolic",
-                        "Diastolic"
+                        "Systolic Data",
+                        "Diastolic Data"
                     ],
                     "xAxisConcept": "observationDateTime",
                     "numberOfVisits": 10
@@ -573,12 +573,24 @@
                 "title": "Pulse",
                 "config": {
                     "yAxisConcepts": [
-                        "Pulse"
+                        "Pulse Data"
                     ],
                     "xAxisConcept": "observationDateTime",
                     "numberOfVisits": 10
                 },
                 "displayOrder": 3
+            },
+	    "urineoutput": {
+                "type": "observationGraph",
+                "title": "Urine Output Data",
+                "config": {
+                    "yAxisConcepts": [
+                        "Urine Output"
+                    ],
+                    "xAxisConcept": "observationDateTime",
+                    "numberOfVisits": 10
+                },
+                "displayOrder": 5
             },
             "growthChart": {
                 "type": "observationGraph",
