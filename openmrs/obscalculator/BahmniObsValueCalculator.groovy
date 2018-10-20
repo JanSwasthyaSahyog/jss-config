@@ -617,6 +617,58 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
 
         dischargeSummaryTemplates.put(MalariatemplateTemplate.name, MalariatemplateTemplate)
 
+	 def NormalDeliveryTemplate = new DischargeSummaryTemplate("NormalDelivery",
+                "Breast Feeding Established.\n" +
+                        "Baby Screened for obvious congenital malformations \n" +
+			"Contraception advice given \n" +
+                        "Counselling for danger signs done \n" +
+			"Hb \n" +
+			"TC/DC \n" +
+			"P.S.for M.P. \n" +
+			"P.S.for anemia \n" +
+			"Others : HbsAg - Postive / Negative \n" +
+			"HIV - Postive / Negative \n" +
+			"VDRL - Postive / Negative \n" +
+			"Sickly - Postive / Negative \n" +
+			"Urine:",
+                "Full Term / Preterm Normal / Assisted Delivery \n" +
+			"With / Without Complications -",
+                "Breast Feed 2 hrly \n" +
+			"Immunize in nearby govt facility \n" +
+			"Episiotomy care as advised \n" +
+			"Medicine \n" +
+			"1.Cap.Ampiclox 1gm QID 5 Days \n" +
+			"2.Tab.Fersifol BD 30 Days \n" +
+			"3.Tab.Calcium BD 30 Days",
+                "G P A L , H/O _____ Months amenorrhoea,presented in early /active labour.",
+                "Normal Vaginal Delivery with / without Episiotomy \n" +
+			"Assisted  Forceps / Vaccum Vaginal Delivery \n" + 
+			"Baby Notes - \n" +
+			"DOB ->      ,TOB ->        ,Gender -> Male/Female,weight ->___kg, APGAR Score at 1min __/10 at 5min _/10"
+        )
+
+        dischargeSummaryTemplates.put(NormalDeliveryTemplate.name, NormalDeliveryTemplate)
+
+        def ChemotherapytemplateTemplate = new DischargeSummaryTemplate("Chemotherapytemplate",
+                "X years old Man/Lady KCO Ca. (Name of Carcinoma) was admitted electively for receiving X \n" +
+                        "Cycle Chemotherapy.\n" +
+                        "Patient received following Agents \n" +
+                        "1.Inj.\n" +
+                        "2.Inj.\n" +
+                        "With preloading & Anti-emetics. Patient received chemotherapy under full supervision & did not develop any Anaphylaxis or Vomiting or any other systemic complaint during period of Chemotherapy.\n" +
+                        "Patient is discharged in better condition & planned to follow-up after X weeks for next cycle.",
+		"Ca. ____________. Status: post (Name of Surgery) with previous (X) cycles of Chemotherapy Received.",
+                "1.Tab. CPZ BD for 5 days \n" +
+                        "2.Tab. ondansetron 4 mg BD for 5 days \n" +
+                        "3.Tab. Fersifol 1 BD for 3 weeks \n" +
+                        "4.Tab. Becadex 1 BD for 3 weeks \n" +
+                        "5.Aamla 2 \n" +
+                        "6.Nutrition as explained.",null,null
+	)
+        dischargeSummaryTemplates.put(ChemotherapytemplateTemplate.name, ChemotherapytemplateTemplate)
+
+
+
 
       // TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
 //        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"
