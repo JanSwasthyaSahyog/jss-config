@@ -27,6 +27,13 @@
       "templateName": "Diabetes Counselling Template"
     }
   },
+"DailyPatientLog": {
+    "name": "Daily Patient Log",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Daily Patient Log"
+    }
+  },
 "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
@@ -141,7 +148,8 @@
     "name": "Bacteriology Report",
     "type": "obsTemplate",
     "config": {
-      "templateName": "BACTERIOLOGY CONCEPT SET"
+      "templateName": "BACTERIOLOGY CONCEPT SET",
+      "applyDateRangeFor": "encounterCreateDate"
     }
   },
   "BreastCancerData": {
@@ -594,8 +602,8 @@
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
-  },
-"diabetesFootStudy": {
+ },
+ "diabetesFootStudy": {
     "name": "Diabetes foot study",
     "type": "MRSGeneric",
     "config": {
