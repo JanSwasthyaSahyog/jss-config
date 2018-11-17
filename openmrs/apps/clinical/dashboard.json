@@ -39,24 +39,38 @@
                 },
                 "displayOrder": 1
             },
+           "navigationLinksControl": {
+                "title":"Navigation Links Control",
+                "translationKey": "DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
+                "type": "navigationLinksControl",
+                "displayOrder": 2,
+                "showLinks" : ["home","registration"],
+                "customLinks": [
+                    {
+                        "translationKey": "Print latest prescription",
+                        "url": "../clinical/#/default/patient/{{patientUuid}}/latest-prescription-print"
+                    }
+                ]
+            }
+        }
+    },
             "diagnosis": {
                 "title": "Diagnosis",
                 "type": "diagnosis",
                 "showDetailsButton": false,
                 "showCertainty": true,
                 "showOrder": true,
-                "displayOrder": 2
+                "displayOrder": 3
     	   },
            "conditions": {
                 "title":"Conditions",
                 "type": "conditionsList",
-                "displayOrder": 26
+                "displayOrder": 27
             },
     "Bacteriology Resultseriology Concept Set": {
     "translationKey": "Bacteriology",
     "type": "obsToObsFlowSheet",
-    "displayOrder" : 25,
-    "displayType" : "Half-Page",
+    "displayOrder" : 26,
     "rotateInPrint" : false,
     "headingConceptSource" : "Abbreviation",
     "dataConceptSource" : "Abbreviation",
@@ -114,7 +128,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 3
+                "displayOrder": 4
             },
             "labResults": {
                 "title": "Lab Results",
@@ -131,7 +145,7 @@
                 "expandedViewConfig": {
                     "numberOfVisits": 10
                 },
-                "displayOrder": 4
+                "displayOrder": 5
             },
             "treatments": {
                 "title": "Treatments",
@@ -155,12 +169,12 @@
                     "showOtherActive": true,
                     "showDetailsButton": false
                 },
-                "displayOrder": 5
+                "displayOrder": 6
             },
             "radiology": {
                 "title": "Radiology",
                 "type": "radiology",
-                "displayOrder": 6
+                "displayOrder": 7
             },
             "allPACSOrders":{
                 "orderType": "Radiology Order",
@@ -180,12 +194,12 @@
                     "maximumNoOfVisits": 10,
                     "groupByVisits": true
                 },
-                "displayOrder": 7
+                "displayOrder": 9
             },
             "admissionDetails": {
                 "title": "Admission Details",
                 "type": "admissionDetails",
-                "displayOrder": 9
+                "displayOrder": 10
             },
             "generalFindings": {
                 "title": "General Findings",
@@ -204,7 +218,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 10
+                "displayOrder": 11
             },
             "obsGynaeFindings": {
                 "title": "Obs/Gynae Findings",
@@ -223,7 +237,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 11
+                "displayOrder": 12
             },
             "surgeriesProcedures": {
                 "title": "Surgeries/Procedures",
@@ -242,7 +256,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 12
+                "displayOrder": 13
             },
             "breastCancer": {
                 "title": "Breast Cancer",
@@ -263,7 +277,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 13
+                "displayOrder": 14
             },
             "diabetes": {
                 "title": "Diabetes",
@@ -317,7 +331,7 @@
                         }
                     }
                 },
-                "displayOrder": 14
+                "displayOrder": 15
             },
             "tuberculosis": {
                 "title": "Tuberculosis",
@@ -380,7 +394,7 @@
                         ]
                     }
                 },
-                "displayOrder": 15
+                "displayOrder": 16
             },
             "psychiatry": {
                 "title": "Psychiatry",
@@ -400,7 +414,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 16
+                "displayOrder": 17
             },
             "cervicalCancer": {
                 "title": "Cervical Cancer",
@@ -419,7 +433,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 17
+                "displayOrder": 18
             },
             "gastricCancer": {
                 "title": "Gastric Cancer",
@@ -438,7 +452,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 18
+                "displayOrder": 19
             },
             "colonCancer": {
                 "title": "Colon Cancer",
@@ -457,7 +471,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 19
+                "displayOrder": 20
             },
             "oralCancer": {
                 "title": "Oral Cancer",
@@ -476,12 +490,12 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 20
+                "displayOrder": 21
             },
             "programs": {
                 "title": "Programs",
                 "type": "programs",
-                "displayOrder": 21
+                "displayOrder": 22
              },
             "smartCard": {
                 "title": "Smart Card",
@@ -499,7 +513,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 22
+                "displayOrder": 23
             },
             "Cardiology": {
                 "title": "Caridology",
@@ -517,7 +531,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 23
+                "displayOrder": 24
             },
             "formDisplaySummary":{
                 "title": "Templates Filled",
@@ -526,11 +540,9 @@
                     "title": null,
                     "maximumNoOfVisits": 10
                 },
-                "formGroup":["Obstetrics","Gynaecology","Discharge Summary","Diabetes Intake Template","Diabetes Followup Template","Diabetes Counselling Template","Operation Notes Template","Blood Transfusion Template","Tuberculosis Intake Template","Tuberculosis Followup Template","Tuberculosis Lab Template","Tuberculosis Village Program Followup Template","Tuberculosis Family Member Screening Template","Breast Cancer Intake Template","Breast Cancer Followup Template","Cervical Cancer Template","Gastric Cancer Template","Colon Cancer Template","Oral Cancer Template","Psychiatry Intake Template","Psychiatry Followup Template","Hypertension Intake Template","Smart card Template","Echo Template","ANC Template","Cardiology template","RMRCT Form","RNTCP Form","Referral Form","Sickle Cell Disease Intake Template","Sickle Cell Disease Followup Template","CBNAAT Prospective Study – Q1 Template","CBNAAT Prospective Study – Q2 Template","Diabetic Foot Study Template","OB USG Template","ECG Template","RSBY Template"],
-                "displayOrder": 24
-            }
-        }
-    },
+                "formGroup":["Obsetrics","Gynaecology","Discharge Summary","Diabetes Intake Template","Diabetes Followup Template","Diabetes Counselling Template","Operation Notes Template","Blood Transfusion Template","Tuberculosis Intake Template","Tuberculosis Followup Template","Tuberculosis Lab Template","Tuberculosis Village Program Followup Template","Tuberculosis Family Member Screening Template","Breast Cancer Intake Template","Breast Cancer Followup Template","Cervical Cancer Template","Gastric Cancer Template","Colon Cancer Template","Oral Cancer Template","Psychiatry Intake Template","Psychiatry Followup Template","Hypertension Intake Template","Smart card Template","Echo Template","ANC Template","Cardiology template","RMRCT Form","RNTCP Form","Referral Form","Sickle Cell Disease Intake Template","Sickle Cell Disease Followup Template","CBNAAT Prospective Study – Q1 Template","CBNAAT Prospective Study – Q2 Template","Diabetic Foot Study Template","OB USG Template","ECG Template","RSBY Template"],
+                "displayOrder": 25
+            },
     "trends": {
         "dashboardName": "Trends",
         "maxRecentlyViewedPatients": 10,
