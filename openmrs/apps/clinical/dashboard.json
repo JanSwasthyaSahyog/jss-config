@@ -39,38 +39,23 @@
                 },
                 "displayOrder": 1
             },
-           "navigationLinksControl": {
-                "title":"Navigation Links Control",
-                "translationKey": "DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
-                "type": "navigationLinksControl",
-                "displayOrder": 2,
-                "showLinks" : ["home","registration"],
-                "customLinks": [
-                    {
-                        "translationKey": "Print latest prescription",
-                        "url": "../clinical/#/default/patient/{{patientUuid}}/latest-prescription-print"
-                    }
-                ]
-            }
-        }
-    },
             "diagnosis": {
                 "title": "Diagnosis",
                 "type": "diagnosis",
                 "showDetailsButton": false,
                 "showCertainty": true,
                 "showOrder": true,
-                "displayOrder": 3
+                "displayOrder": 4
     	   },
            "conditions": {
                 "title":"Conditions",
                 "type": "conditionsList",
-                "displayOrder": 27
+                "displayOrder": 15
             },
     "Bacteriology Resultseriology Concept Set": {
     "translationKey": "Bacteriology",
     "type": "obsToObsFlowSheet",
-    "displayOrder" : 26,
+    "displayOrder" : 28,
     "rotateInPrint" : false,
     "headingConceptSource" : "Abbreviation",
     "dataConceptSource" : "Abbreviation",
@@ -128,7 +113,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 4
+                "displayOrder": 3
             },
             "labResults": {
                 "title": "Lab Results",
@@ -145,7 +130,7 @@
                 "expandedViewConfig": {
                     "numberOfVisits": 10
                 },
-                "displayOrder": 5
+                "displayOrder": 6
             },
             "treatments": {
                 "title": "Treatments",
@@ -169,12 +154,12 @@
                     "showOtherActive": true,
                     "showDetailsButton": false
                 },
-                "displayOrder": 6
+                "displayOrder": 5
             },
             "radiology": {
                 "title": "Radiology",
                 "type": "radiology",
-                "displayOrder": 7
+                "displayOrder": 8
             },
             "allPACSOrders":{
                 "orderType": "Radiology Order",
@@ -184,7 +169,7 @@
                     "pacsImageUrl":"/oviyam2/viewer.html?patientID={{patientID}}&studyUID=1.2.826.0.1.3680043.9.6039.{{orderNumber}}.1",
                     "numberOfVisits":20
                 },
-                "displayOrder": 8
+                "displayOrder": 10
             },
             "visits": {
                 "title": "Visits",
@@ -194,12 +179,12 @@
                     "maximumNoOfVisits": 10,
                     "groupByVisits": true
                 },
-                "displayOrder": 9
+                "displayOrder": 7
             },
             "admissionDetails": {
                 "title": "Admission Details",
                 "type": "admissionDetails",
-                "displayOrder": 10
+                "displayOrder": 9
             },
             "generalFindings": {
                 "title": "General Findings",
@@ -218,7 +203,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 11
+                "displayOrder": 18
             },
             "obsGynaeFindings": {
                 "title": "Obs/Gynae Findings",
@@ -237,7 +222,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 12
+                "displayOrder": 11
             },
             "surgeriesProcedures": {
                 "title": "Surgeries/Procedures",
@@ -256,7 +241,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 13
+                "displayOrder": 14
             },
             "breastCancer": {
                 "title": "Breast Cancer",
@@ -277,7 +262,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 14
+                "displayOrder": 13
             },
             "diabetes": {
                 "title": "Diabetes",
@@ -331,7 +316,7 @@
                         }
                     }
                 },
-                "displayOrder": 15
+                "displayOrder": 16
             },
             "tuberculosis": {
                 "title": "Tuberculosis",
@@ -394,7 +379,7 @@
                         ]
                     }
                 },
-                "displayOrder": 16
+                "displayOrder": 25
             },
             "psychiatry": {
                 "title": "Psychiatry",
@@ -414,7 +399,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 17
+                "displayOrder": 12
             },
             "cervicalCancer": {
                 "title": "Cervical Cancer",
@@ -433,7 +418,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 18
+                "displayOrder": 17
             },
             "gastricCancer": {
                 "title": "Gastric Cancer",
@@ -452,7 +437,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 19
+                "displayOrder": 20
             },
             "colonCancer": {
                 "title": "Colon Cancer",
@@ -471,7 +456,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 20
+                "displayOrder": 19
             },
             "oralCancer": {
                 "title": "Oral Cancer",
@@ -490,12 +475,12 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 21
+                "displayOrder": 22
             },
             "programs": {
                 "title": "Programs",
                 "type": "programs",
-                "displayOrder": 22
+                "displayOrder": 21
              },
             "smartCard": {
                 "title": "Smart Card",
@@ -513,7 +498,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 23
+                "displayOrder": 24
             },
             "Cardiology": {
                 "title": "Caridology",
@@ -531,7 +516,7 @@
                         "labConcepts": []
                     }
                 },
-                "displayOrder": 24
+                "displayOrder": 23
             },
             "formDisplaySummary":{
                 "title": "Templates Filled",
@@ -541,8 +526,23 @@
                     "maximumNoOfVisits": 10
                 },
                 "formGroup":["Obsetrics","Gynaecology","Discharge Summary","Diabetes Intake Template","Diabetes Followup Template","Diabetes Counselling Template","Operation Notes Template","Blood Transfusion Template","Tuberculosis Intake Template","Tuberculosis Followup Template","Tuberculosis Lab Template","Tuberculosis Village Program Followup Template","Tuberculosis Family Member Screening Template","Breast Cancer Intake Template","Breast Cancer Followup Template","Cervical Cancer Template","Gastric Cancer Template","Colon Cancer Template","Oral Cancer Template","Psychiatry Intake Template","Psychiatry Followup Template","Hypertension Intake Template","Smart card Template","Echo Template","ANC Template","Cardiology template","RMRCT Form","RNTCP Form","Referral Form","Sickle Cell Disease Intake Template","Sickle Cell Disease Followup Template","CBNAAT Prospective Study – Q1 Template","CBNAAT Prospective Study – Q2 Template","Diabetic Foot Study Template","OB USG Template","ECG Template","RSBY Template"],
-                "displayOrder": 25
+                "displayOrder": 26
             },
+            "navigationLinksControl": {
+                "title":"Navigation Links Control",
+                "translationKey": "DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
+                "type": "navigationLinksControl",
+                "displayOrder": 2,
+                "showLinks" : ["home","registration"],
+                "customLinks": [
+                    {
+                        "translationKey": "Print latest prescription",
+                        "url": "../clinical/#/default/patient/{{patientUuid}}/latest-prescription-print"
+                    }
+                ]
+            }
+        }
+    },
     "trends": {
         "dashboardName": "Trends",
         "maxRecentlyViewedPatients": 10,

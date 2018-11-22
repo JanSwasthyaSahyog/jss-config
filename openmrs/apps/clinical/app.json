@@ -391,8 +391,8 @@
         "answersConceptName": "Surgical Procedure Answers",
         "autocomplete": true
       },
-      "RSBY Package Data": {
-        "codedConceptName":"RSBY Package List",
+      "Ayushman Bharat Package Data": {
+        "codedConceptName":"Ayushman Bharat Package List",
         "autocomplete": true
       },
       "Gynaecology, P/S (per speculum) - Cervix": {
