@@ -223,9 +223,93 @@
         }
       }
     }
+  },
+ "opdSummary": {
+    "title": "OPD Summary",
+    "printing": {
+      "title": "Jan Swasthya Sahyog Community Health Centre",
+      "header": "OPD Summary",
+      "logo": "../images/jss-icon.png"
+    },
+    "sections": {
+      "patientInformation": {
+        "type": "patientInformation",
+        "config": {
+          "addressFields": [
+            "cityVillage",
+            "address2",
+            "address3",
+            "countyDistrict"
+          ],
+          "title": "PatientInformation",
+          "patientAttributes": []
+        },
+        "displayOrder": 1
+      },
+      "diagnoses": {
+        "type": "diagnosis",
+        "config": {
+          "title": "Diagnoses",
+          "showCertainty": false,
+          "showOrder": false,
+          "showDetailsButton": true
+        },
+        "displayOrder": 2
+      },
+      "conditions": {
+        "type": "conditionsList",
+        "displayOrder": 3,
+        "config": {
+            "title": "Conditions"
+         }
+       },
+      "labInvestigations": {
+        "type": "investigationResult",
+        "config": {
+          "title": "Lab Investigations",
+          "showChart": true,
+          "showTable": false,
+          "showNormalLabResults": true,
+          "showCommentsExpanded": true,
+          "showAccessionNotes": true,
+          "numberOfVisits": 1,
+          "initialAccessionCount": 1,
+          "latestAccessionCount": 1
+        },
+        "displayOrder": 4
+      },
+      "treatments": {
+        "type": "treatment",
+        "config": {
+          "translationKey": "Treatments",
+          "showFlowSheet": false,
+          "showListView": true,
+          "showOtherActive": true,
+          "showDetailsButton": false,
+          "showRoute": true,
+          "showDrugForm": true
+        },
+        "displayOrder": 5
+      },
+     "treatmentPlan": {
+        "type": "observation",
+        "title": "Treatment Plan",
+        "config": {
+          "conceptNames": [
+            "OPD Summary, Treatment Plan"
+          ],
+          "scope": "latest"
+          },
+          "displayOrder": 7
+      },
+     "followUp": {
+        "type": "custom",
+        "displayOrder": 6,
+        "config": {
+          "title": "Follow Up",
+          "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
+        }
+      }
+    }
   }
 }
-
-
-
-
