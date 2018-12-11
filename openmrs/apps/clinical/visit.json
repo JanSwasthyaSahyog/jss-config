@@ -224,7 +224,92 @@
       }
     }
   },
- "opdSummary": {
+ "OperationNotes": {
+    "title": "Operation Notes",
+    "printing": {
+      "title": "Jan Swasthya Sahyog,Ganiyari",
+      "header": "Operation Notes",
+      "logo": "../images/jss-icon.png"
+    },
+    "sections": {
+      "patientInformation": {
+        "type": "patientInformation",
+        "config": {
+          "addressFields": [
+            "cityVillage",
+            "address2",
+            "address3",
+            "countyDistrict"
+          ],
+          "title": "PatientInformation",
+          "patientAttributes": []
+        },
+        "displayOrder": 0
+      },
+      "clinicalNotes": {
+        "type": "observation",
+        "title": "Clinical Notes",
+        "config": {
+          "conceptNames": [
+            "Date of Surgery",
+            "Surgical Indication",
+            "Surgical Procedure Data",
+            "Coded Operating Surgeon",
+            "Other Operating Surgeon",
+            "Coded Operating Assistant Surgeon",
+            "Coded Operation Anesthetist",
+            "Scrub Nurse",
+            "Anesthesia Administered",
+	    "Other Operation Notes"
+          ],
+          "scope": "latest",
+          "numberOfVisits": "1"
+        },
+        "displayOrder": 1
+      }
+     }
+  },
+  "BacteriologyConceptSet": {
+    "title": "Culture and Drug Sensitivity Report",
+    "printing": {
+      "title": "MICROBIOLOGY CULTURE AND DRUG SENSITIVITY REPORT",
+      "header": "Jan Swasthya Sahyog,Ganiyari",
+      "logo": ""
+    },
+    "sections": {
+      "patientInformation": {
+        "type": "patientInformation",
+        "config": {
+          "addressFields": [
+            "cityVillage",
+            "address2",
+            "address3",
+            "countyDistrict"
+          ],
+          "title": "PatientInformation",
+          "patientAttributes": []
+        },
+        "displayOrder": 0
+      },
+      "REPORT": {
+        "type": "observation",
+        "title": "REPORT",
+        "config": {
+          "conceptNames": [
+            "Specimen Collection Date",
+            "Specimen Sample Source NonCoded",
+            "Specimen Sample Source",
+            "Specimen Id",
+            "Bacteriology Additional Attributes"
+          ],
+          "scope": "latest",
+          "numberOfVisits": "1"
+        },
+        "displayOrder": 1
+      }
+     }
+  },
+  "opdSummary": {
     "title": "OPD Summary",
     "printing": {
       "title": "Jan Swasthya Sahyog Community Health Centre",
