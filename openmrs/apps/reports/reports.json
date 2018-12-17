@@ -130,6 +130,13 @@
       "templateName": "Discharge Summary"
     }
   },
+ "BirthTemplate": {
+    "name": "Birth Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Birth Template"
+    }
+  },
 "obusgtemplate": {
     "name": "OB USG Template",
     "type": "obsTemplate",

@@ -94,6 +94,9 @@
       "Associated Conditions": {
         "required": true
        },
+    "Birth Information": {
+	"allowAddMore": true
+      },
  "ANC Template": {
         "allowAddMore": true
       },
