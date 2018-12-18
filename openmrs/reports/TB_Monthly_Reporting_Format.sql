@@ -1,8 +1,8 @@
-
 select pi.identifier RegistrationNumber,DATE(pi.date_created) RegistrationDate,pn.given_name PatientName,pn.family_name LastName,pr.value FathersName,
-person.birthdate,DATEDIFF(curdate(),person.birthdate) /365 Age,person.gender,pa.city_village village,pa.address3 Tehshil,pa.county_district District,
-pa.state_province State,mobile.value PhoneNumber,DATE(pp.date_enrolled) DateOfTBDiagnosis,cast.value Cast,class.name Class,hight.value_numeric Height,wieght.value_numeric Weight,BMI.value_numeric BMI,totname.name TypeOfTuberclusis,pttname.name PatientType,bodname.name BasicOfDiagnosis,
-tsname.name TreatmentPlan,DATE(doti.date_created) IntekEnterDate
+person.Birthdate,DATEDIFF(curdate(),person.birthdate) /365 Age,person.Gender,pa.city_village Village,pa.address3 Tehshil,pa.county_district District,
+pa.state_province State,mobile.value PhoneNumber,DATE(pp.date_enrolled) DateOfTBDiagnosis,cast.value Cast,class.name Class,hight.value_numeric Height,
+wieght.value_numeric Weight,BMI.value_numeric BMI,DATE(pp.date_enrolled) ProgramEnrollDate, prog_attr_result.programID,totname.name TypeOfTuberclusis,pttname.name PatientType,bodname.name BasicOfDiagnosis,
+tsname.name TreatmentPlan,DATE(doti.date_created) IntekTemplateEnterDate
 from patient_program pp
 left join patient_identifier pi on pp.patient_id = pi.patient_id
 left join person_name pn ON pp.patient_id = pn.person_id
@@ -28,5 +28,13 @@ left join obs bod ON ( pi.patient_id = bod.person_id AND bod.concept_id = 4197)
 left join concept_name bodname ON (bodname.concept_id = bod.value_coded AND bodname.concept_name_type = 'FULLY_SPECIFIED')
 left join obs ts ON ( pi.patient_id = ts.person_id AND ts.concept_id = 4198)
 left join concept_name tsname ON (tsname.concept_id = ts.value_coded AND tsname.concept_name_type = 'FULLY_SPECIFIED')
+LEFT JOIN ( SELECT                       
+ patient_program_id,
+                           GROUP_CONCAT(DISTINCT(IF(pg_at.name = 'Program ID', coalesce(pg_attr_cn.concept_short_name, pg_attr_cn.concept_full_name, pg_attr.value_reference), NULL))) AS 'programID'
+                           FROM program_attribute_type pg_at
+                                       LEFT JOIN patient_program_attribute pg_attr ON pg_attr.attribute_type_id = pg_at.program_attribute_type_id AND pg_attr.voided = false AND pg_at.name in('Program ID')
+                                       LEFT JOIN concept_view pg_attr_cn ON pg_attr.value_reference = pg_attr_cn.concept_id AND pg_at.datatype LIKE "%Concept%"
+                            GROUP BY patient_program_id ) prog_attr_result ON prog_attr_result.patient_program_id = pp.patient_program_id 
 where pp.program_id = 10 and pp.date_enrolled between '#startDate#' and '#endDate#'
 GROUP BY pi.identifier;
+
