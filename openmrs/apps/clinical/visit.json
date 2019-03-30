@@ -269,6 +269,53 @@
       }
      }
   },
+  "EchoNotes": {
+    "title": "Echo Notes",
+    "printing": {
+      "title": "Jan Swasthya Sahyog,Ganiyari",
+      "header": "Echo Report",
+      "logo": "../images/jss-icon.png"
+    },
+    "sections": {
+      "patientInformation": {
+        "type": "patientInformation",
+        "config": {
+          "addressFields": [
+            "cityVillage",
+            "address2",
+            "address3",
+            "countyDistrict"
+          ],
+          "title": "PatientInformation",
+          "patientAttributes": []
+        },
+        "displayOrder": 0
+      },
+      "clinicalNotes": {
+        "type": "observation",
+        "title": "Clinical Notes",
+        "config": {
+          "conceptNames": [
+            "M Mode Measurements",
+	    "Doppler",
+            "Colour Flow",
+            "2D exam",
+            "Ao",
+            "Echo LA",
+            "Valvular Abnormality",
+            "Echo, Pericardial Effusion",
+            "Extracardiac Findings",
+            "Echo Conclusion",
+            "Echo Recommendation",
+	    "Video Link"
+          ],
+          "scope": "latest",
+          "numberOfVisits": "1"
+        },
+        "displayOrder": 1
+	 }
+     }
+  },
   "BacteriologyConceptSet": {
     "title": "Culture and Drug Sensitivity Report",
     "printing": {
