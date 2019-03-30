@@ -27,13 +27,6 @@
       "templateName": "Diabetes Counselling Template"
     }
   },
-"DailyPatientLog": {
-    "name": "Daily Patient Log",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Daily Patient Log"
-    }
-  },
 "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
@@ -132,9 +125,9 @@
   },
  "BirthTemplate": {
     "name": "Birth Template",
-    "type": "obsTemplate",
+    "type": "MRSGeneric",
     "config": {
-      "templateName": "Birth Template"
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Birth_Template_Report.sql"
     }
   },
 "obusgtemplate": {
