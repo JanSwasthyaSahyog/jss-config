@@ -643,11 +643,18 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
  },
- "juhi Thesis": {
-    "name": "Juhi Thesis",
+ "medicalComplicatedPregnancyIntakeTemplate": {
+    "name": "Medical Complicated Pregnancy Intake Template",
     "type": "obsTemplate",
     "config": {
-      "templateName": "Juhi Thesis"
+      "templateName": "Medical Complicated Pregnancy Intake Template"
+    }
+  },
+  "medicalComplicatedPregnancyFollowupTemplate": {
+    "name": "Medical Complicated Pregnancy Followup Template",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Medical Complicated Pregnancy Followup Template"
     }
   },
   "proformaforDescriptiveStudyOnEmpyema": {
@@ -662,6 +669,13 @@
     "type": "obsTemplate",
     "config": {
       "templateName": "HER2 NEU Gastric Cancer"
+    }
+ },
+ "surgicalSiteInfectionTemplate": {
+    "name": "Surgical Site Infection",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Surgical Site Infection Template"
     }
  },
  "diabetesFootStudy": {
