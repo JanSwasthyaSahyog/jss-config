@@ -79,7 +79,9 @@
     },
     "fieldValidation" : {
                 "primaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
-                "secondaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"}
+                "secondaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
+		"aadharCardNo" : {"pattern" : "[0-9]{12}", "errorMessage" : "Should be 12 characters"},
+		"AyushmanId" : {"pattern" : "[a-zA-Z0-9]{8,12}", "errorMessage" : "Should be 8 to 12 characters"}
     },
     "patientSearch": {
       "address": {
@@ -87,10 +89,10 @@
         "placeholder": "Enter Village",
         "field": "city_village"
       },
-      "programAttributes": {
-        "label": "Program ID",
-        "placeholder": "Program ID",
-        "field": "Program ID"
+      "customAttributes": {
+        "label": "AADHAR",
+        "placeholder": "Enter Card Number",
+        "fields": ["aadharcardNo"]
       }
     }
   }
