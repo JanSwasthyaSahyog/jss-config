@@ -51,39 +51,6 @@
       "CDST Form, Drugs used in his treatment": {
         "multiSelect": true
       },
-      "Signs": {
-	"multiSelect": true
-      },
-      "Plan of Treatment": {
-         "multiSelect": true
-      },
-      "Danger sign and Symptoms": {
-        "multiSelect": true
-      },
-      "Present Pregnancy with Diagnosed Complications": {
-        "multiSelect": true
-      },
-      "History of Prior Chemo Radio Therapy": {
-        "multiSelect": true
-      },
-      "Comorbidities (if any)": {
-        "multiSelect": true
-      },
-      "Associated Risk Factors": {
-        "multiSelect": true
-      },
-      "Any Symptoms": {
-        "multiSelect": true
-      },
-      "Procedure Detail": {
-        "allowAddMore": true
-      },
-      "Follow Up": {
-        "allowAddMore": true
-      },
-      "Previous Antibiotics Used Or Report": {
-	"required": true
-      },
       "Discharge Summary": {
         "showPreviousButton": true,
         "numberOfVisits": 1
@@ -91,9 +58,6 @@
       "Follow up Date": {
         "allowFutureDates": true
       },
-     "APPOINTMENT_DATE": {
-	"allowFutureDates": true
-     },
      "Tuberculosis, Sputum Sample Collection Date": {
         "required": true
        },
@@ -433,13 +397,6 @@
       "Ayushman Bharat Package Data": {
         "codedConceptName":"Ayushman Bharat Package List",
         "autocomplete": true
-      },
-      "Pain Study Intevention Data": {
-        "codedConceptName":"Pain Study Intevention List",
-        "autocomplete": true
-      },
-      "Pain Study Followup Date":{
-        "allowFutureDates": true
       },
       "Gynaecology, P/S (per speculum) - Cervix": {
         "grid": true

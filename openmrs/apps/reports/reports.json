@@ -13,13 +13,6 @@
       "templateName": "Diabetes Intake Template"
     }
   },
-  "ecgreport": {
-    "name": "ECG Report",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "ECG Report"
-    }
-  },
   "diabetesFollowupData": {
     "name": "Diabetes Followup Data",
     "type": "obsTemplate",
@@ -151,14 +144,7 @@
       "templateName": "Echo Template"
     }
   },
-  "lowbackache": {
-    "name": "Low Back Ache",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "PROFORMA FOR EVALUATION OF LOW BACK ACHE"
-    }
-  },
-  "bacteriologytab": {
+"bacteriologytab": {
     "name": "Bacteriology Report",
     "type": "obsTemplate",
     "config": {
@@ -223,20 +209,6 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/PatientInformation.sql"
     }
   },
-  "AyushmanBharatTemplate": {
-    "name": "Ayushman Bharat Template",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Ayushman Bharat Template"
-    }
-  },
-  "CommunityProgramReferralForm": {
-    "name": "Community Program Referral Form",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Community Program Referral Form"
-    }
-  },
   "diagnosisCount": {
     "name": "Diagnosis Count",
     "type": "diagnosisCount",
@@ -298,13 +270,6 @@
   "testCount": {
     "name": "Tests count",
     "type": "TestCount"
-  },
-  "painStudy": {
-    "name": "Pain Study Report",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Pain Study Template"
-    }
   },
   "radiologyCount": {
     "name": "Radiology(X-Ray) Count",
@@ -443,6 +408,13 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/abnormal_criticality_with_village_telephone.sql"
     }
   },
+  "referredOutTests": {
+    "name": "Referred Out Tests",
+    "type": "ElisGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/referred_out_tests_elis.sql"
+    }
+  },
   "referraltemp": {
     "name": "Referral Report",
     "type": "MRSGeneric",
@@ -523,8 +495,6 @@
         "Height",
         "BMI",
         "BMI Status",
-	"Tuberculosis, Symptoms & Duration",
-	"Tuberculosis, Other Symptoms",
         "Tuberculosis, History of TB Contact",
         "Tuberculosis, Family member died of TB",
 	"Tuberculosis, Duration since last treatment",
@@ -539,22 +509,12 @@
         "Tuberculosis, Basis of Diagnosis",
 	"Tuberculosis, Comorbidity",
         "Tuberculosis, Treatment Plan",
+	"Tuberculosis, Adverse Effects",
+	"Tuberculosis, Output of Treatment",
 	"Tuberculosis, Next Followup Visit",
-	"Tuberculosis, Plan for next visit",
-	"Tuberculosis, Number of Adult Family Members with Symptoms",
-	"Tuberculosis, Number of Under 5 Years Children in the Family",
         "Tuberculosis, Need of Admission",
 	"Discharge Summary, Admission Indication",
-	"Tuberculosis, Sputum Sample Collection Date",
 	"Tuberculosis, AFB (Zn Stain)",
-	"Tuberculosis, Sample Type",
-	"Tuberculosis, Sample",
-	"Tuberculosis, Testing Centre",
-	"Tuberculosis, Test Type",
-	"Tuberculosis, Culture Report",
-	"Tuberculosis,CBNAAT Test Result",
-	"Tuberculosis, Drugs Resistance Result",
-	"Tuberculosis, Test Report Date",
 	"Haemoglobin",
         "FBS",
         "RBS",
@@ -641,41 +601,6 @@
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
-    }
- },
- "medicalComplicatedPregnancyIntakeTemplate": {
-    "name": "Medical Complicated Pregnancy Intake Template",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Medical Complicated Pregnancy Intake Template"
-    }
-  },
-  "medicalComplicatedPregnancyFollowupTemplate": {
-    "name": "Medical Complicated Pregnancy Followup Template",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Medical Complicated Pregnancy Followup Template"
-    }
-  },
-  "proformaforDescriptiveStudyOnEmpyema": {
-    "name": "Proforma for Descriptive Study On Empyema",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Proforma for Descriptive Study On Empyema"
-    }
-  },
-  "her2NeuGastricCancer": {
-    "name": "HER2 NEU Gastric Cancer Report",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "HER2 NEU Gastric Cancer"
-    }
- },
- "surgicalSiteInfectionTemplate": {
-    "name": "Surgical Site Infection",
-    "type": "obsTemplate",
-    "config": {
-      "templateName": "Surgical Site Infection Template"
     }
  },
  "diabetesFootStudy": {
