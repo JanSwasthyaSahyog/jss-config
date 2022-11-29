@@ -36,7 +36,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
     }
  },
  "newadmissions": {
@@ -44,7 +44,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/New_Admissions.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/New_Admissions.sql"
     }
  },
  "DeathReport": {
@@ -52,7 +52,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Death_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Death_Report.sql"
     }
  },
  "TLRecords": {
@@ -60,7 +60,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TL_Records_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/TL_Records_Report.sql"
     }
  },
   "tuberculosisIntakeData": {
@@ -111,7 +111,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
     }
   },
  "Sicklecelldiseaseintake": {
@@ -145,7 +145,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Birth_Template_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Birth_Template_Report.sql"
     }
   },
 "obusgtemplate": {
@@ -219,7 +219,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/noncoded_diagnoses.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/noncoded_diagnoses.sql"
     }
   },
   "CodedAndnonCodedDiagnosesEntered": {
@@ -227,7 +227,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/coded_noncoded_diagnoses.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/coded_noncoded_diagnoses.sql"
     }
   },
   "PatientsInformation": {
@@ -235,7 +235,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/PatientInformation.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/PatientInformation.sql"
     }
   },
   "diagnosisCount": {
@@ -313,7 +313,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/radiology_orders_count.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/radiology_orders_count.sql"
     }
   },
   "abnormalityReportForCriticalTests": {
@@ -447,7 +447,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/abnormal_criticality_with_village_telephone.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/abnormal_criticality_with_village_telephone.sql"
     }
   },
   "referredOutTests": {
@@ -455,7 +455,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/referred_out_tests_elis.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/referred_out_tests_elis.sql"
     }
   },
   "referraltemp": {
@@ -463,7 +463,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/referraltemplate.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/referraltemplate.sql"
     }
   },
   "overdueTests": {
@@ -471,7 +471,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/overdue_referred_out_tests_LPA_LJ_CBNAAT.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/overdue_referred_out_tests_LPA_LJ_CBNAAT.sql"
     }
   },
   "programEnrollmentTemplateReport": {
@@ -484,7 +484,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
     }
  },
  "ancpatientswitheddandlatestobs": {
@@ -492,7 +492,7 @@
      "type": "MRSGeneric",
      "requiredPrivilege": "app:reports",
      "config": {
-       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANC_EDD_Latest_Obs.sql"
+       "sqlPath": "/etc/bahmni_config/openmrs/reports/ANC_EDD_Latest_Obs.sql"
      }
   },
  "jssrhdprogram": {
@@ -500,7 +500,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssrhdprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssrhdprogram.sql"
     }
  },
  "rhdobsCannedReport": {
@@ -589,7 +589,7 @@
         "type": "MRSGeneric",
         "requiredPrivilege": "app:reports",
         "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/reports/tbTemplatereport.sql"
+            "sqlPath": "/etc/bahmni_config/openmrs/reports/tbTemplatereport.sql"
         }
     },
 "AllTestsReferredOut": {
@@ -597,7 +597,7 @@
         "type": "ElisGeneric",
         "requiredPrivilege": "app:reports",
         "config": {
-          "sqlPath": "/var/www/bahmni_config/openmrs/reports/All_Tests_Referred_Out.sql"
+          "sqlPath": "/etc/bahmni_config/openmrs/reports/All_Tests_Referred_Out.sql"
         }
     },
 "SummaryReportForReferredOutCases": {
@@ -605,7 +605,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Summary_Report_ For_ReferredOut_Cases.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Summary_Report_ For_ReferredOut_Cases.sql"
     }
 },
 "ReferredOutTestswithAbnormalResults": {
@@ -613,7 +613,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Referred_Out_Tests_with_Abnormal_Results.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Referred_Out_Tests_with_Abnormal_Results.sql"
     }
 },
 "TotalPatientsandTests": {
@@ -621,7 +621,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
     }
 },
 "TotalTestsPerPatientAndResults": {
@@ -629,7 +629,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
     }
 },
 "AllTestResult": {
@@ -637,7 +637,7 @@
     "type": "ElisGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/AllTestResult.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/AllTestResult.sql"
     }
 },
 "CBNAATProspectiveStudyQ1": {
@@ -645,7 +645,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q1.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q1.sql"
     }
   },
 "CBNAATProspectiveStudyQ2": {
@@ -653,7 +653,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
   },
   "CBNAATProspectiveStudyQ2": {
@@ -661,7 +661,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
  },
  "diabetesFootStudy": {
@@ -669,7 +669,7 @@
     "type": "MRSGeneric",
     "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/diabetes_foot_study.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/diabetes_foot_study.sql"
     }
   }
 }
