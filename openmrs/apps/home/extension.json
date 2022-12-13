@@ -146,6 +146,27 @@
         "icon": "fa fa-newspaper-o",
         "order": 14,
         "requiredPrivilege": "app:clinical"
-   }
+   },
+   "ndhmHIU": {
+        "id": "bahmni.ndhm.hiu",
+        "extensionPointId": "org.bahmni.home.dashboard",
+        "type": "link",
+        "translationKey": "MODULE_LABEL_NDHMHIU_KEY",
+        "url": "/hiuser",
+        "icon": "fa fa-hospital-o",
+        "order": 6,
+        "requiredPrivilege": "app:clinical"
+  },
+   "abdmRegistration": {
+        "id": "bahmni.abdm.register",
+        "extensionPointId": "org.bahmni.home.dashboard",
+        "type": "link",
+        "translationKey": "MODULE_LABEL_ABDM_REGISTER_KEY",
+        "url": "https://healthidsbx.abdm.gov.in/",
+        "icon": "fa fa-leanpub",
+        "order": 9,
+        "target": "_blank",
+        "requiredPrivilege": "app:registration"
+  }
 }
 
