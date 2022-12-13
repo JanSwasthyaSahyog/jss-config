@@ -10,6 +10,10 @@
     {
       "id": "org.bahmni.registration.patient.next",
       "description": "After Bahmni Patient Registration, forward url configuration"
+    },
+    {
+        "id": "org.bahmni.registration.identifier",
+        "description": "NDHM HealthID Verification"
     }
   ],
   "contextModel": [
