@@ -154,7 +154,7 @@
         "translationKey": "MODULE_LABEL_NDHMHIU_KEY",
         "url": "/hiuser",
         "icon": "fa fa-hospital-o",
-        "order": 6,
+        "order": 16,
         "requiredPrivilege": "app:clinical"
   },
    "abdmRegistration": {
@@ -164,7 +164,7 @@
         "translationKey": "MODULE_LABEL_ABDM_REGISTER_KEY",
         "url": "https://healthidsbx.abdm.gov.in/",
         "icon": "fa fa-leanpub",
-        "order": 9,
+        "order": 17,
         "target": "_blank",
         "requiredPrivilege": "app:registration"
   }
