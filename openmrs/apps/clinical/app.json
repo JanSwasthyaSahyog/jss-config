@@ -40,6 +40,14 @@
         "showChart": false
       }
     },
+    "patientContext": {
+      "personAttributes": [
+        "primaryContact"
+      ],
+      "additionalPatientIdentifiers": [
+        "ABHA Address"
+      ]
+    },
     "maxConceptSetLevels": 3,
     "conceptSetUI": {
       "Psychiatry Followup Template": {
