@@ -24,7 +24,7 @@
     "mandatoryPersonAttributes": [
       "Smart card holder"
     ],
-    "readOnlyExtraIdentifiers": ["ABHA","ABHA Address"],
+    "readOnlyExtraIdentifiers": ["ABHA Number","ABHA Address"],
     "patientInformation": {
       "additionalPatientInformation": {
         "title": "Additional Patient Information",
