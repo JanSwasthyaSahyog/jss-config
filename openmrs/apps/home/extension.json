@@ -156,17 +156,6 @@
         "icon": "fa fa-hospital-o",
         "order": 16,
         "requiredPrivilege": "app:clinical"
-  },
-   "abdmRegistration": {
-        "id": "bahmni.abdm.register",
-        "extensionPointId": "org.bahmni.home.dashboard",
-        "type": "link",
-        "translationKey": "MODULE_LABEL_ABDM_REGISTER_KEY",
-        "url": "https://healthidsbx.abdm.gov.in/",
-        "icon": "fa fa-leanpub",
-        "order": 17,
-        "target": "_blank",
-        "requiredPrivilege": "app:registration"
   }
 }
 
