@@ -112,7 +112,7 @@
       "extensionPointId": "org.bahmni.home.dashboard",
       "type": "link",
       "translationKey": "MODULE_LABEL_APPOINTMENT_SCHEDULING_KEY",
-      "url": "../appointments",
+      "url": "/appointments",
       "icon": "fa fa-calendar",
       "order": 13,
       "requiredPrivilege": "app:appointments"
