@@ -20,6 +20,9 @@
                     "Smart card holder",
                     "Smart card brought"
                 ],
+                "additionalPatientIdentifiers": [
+                    "ABHA Address", "ABHA Number"
+                ],
                 "showDOB" : false,
                 "addressFields": [],
                 "displayOrder": 0
