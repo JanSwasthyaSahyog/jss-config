@@ -27,6 +27,16 @@
                 "addressFields": [],
                 "displayOrder": 0
             },
+            "forms-2.0": {
+                "type": "formsV2",
+                "displayOrder": 27,
+                "dashboardConfig": {
+                    "title": null,
+                    "maximumNoOfVisits": 10
+                },
+                "formGroup": [ "Immunization Incident Record", "Prescription Upload" ],
+                "translationKey": "DASHBOARD_TITLE_FORMS_2_DISPLAY_CONTROL_KEY"
+            },
             "nutritionalValue": {
                 "title": "Nutritional Values",
                 "type": "vitals",
