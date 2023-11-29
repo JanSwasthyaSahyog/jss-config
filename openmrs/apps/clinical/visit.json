@@ -95,8 +95,11 @@
         "config": {
           "conceptNames": [
             "History and Examination Notes",
+            "Discharge Summary, Treating Doctor",
             "Discharge Summary, Admission Indication",
+	    "Discharge Summary, Emergency Care",
             "Hospital Course",
+	    "Discharge Summary, Condition at the time of discharge",
             "Discharge Summary, Surgical Indication",
             "Date of Operation",
             "Operative Procedure",
@@ -144,7 +147,10 @@
           "conceptNames": [
             "Advice on Discharge",
             "Follow up Date",
-            "Discharge Summary, Plan for follow up"
+            "Discharge Summary, Plan for follow up",
+	    "Discharge Summary, Urgent Care",
+	    "Emergency Contact Person",
+	    "Emergency Contact Number"
           ],
           "scope": "latest"
         },
@@ -394,7 +400,7 @@
         "config": {
             "title": "Conditions"
          }
-       },
+      },
       "labInvestigations": {
         "type": "investigationResult",
         "config": {
@@ -422,7 +428,7 @@
           "showDrugForm": true
         },
         "displayOrder": 5
-      },
+     },
      "treatmentPlan": {
         "type": "observation",
         "title": "Treatment Plan",
@@ -433,7 +439,7 @@
           "scope": "latest"
           },
           "displayOrder": 7
-      },
+     },
      "followUp": {
         "type": "custom",
         "displayOrder": 6,

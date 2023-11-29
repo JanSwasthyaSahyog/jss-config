@@ -94,35 +94,6 @@
     "order": 2,
     "requiredPrivilege": "app:clinicalapp"
   },
-  "bahmniClinicalPatientsSearchHighRiskPatients": {
-    "id": "bahmni.clinical.patients.search.allPatientshighrisk",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler": "emrapi.sqlSearch.highRiskPatients",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard?encounterUuid=active",
-      "display": "High Risk",
-      "additionalParams": {
-        "tests": "'HIV ELISA (Blood)', 'HIV ELISA (Serum)', 'ZN Stain (Sputum)', 'HbsAg ELISA'"
-      }
-    },
-    "label": "High Risk",
-    "order": 3,
-    "requiredPrivilege": "app:clinicalapp"
-  },
-  "bahmniBillingPatientsSearchTodaysPatientsByProvider": {
-    "id": "bahmni.billing.patients.search.myPatients",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler": "emrapi.sqlSearch.todaysPatientsByProvider",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard/treatment",
-      "display":"My Patients"
-    },
-    "label": "Active",
-    "order": 2,
-    "requiredPrivilege": "app:billing"
-  },
   "bahmniClinicalPatientsSearchAll": {
     "id": "bahmni.clinical.patients.search.allPatients",
     "extensionPointId": "org.bahmni.patient.search",
