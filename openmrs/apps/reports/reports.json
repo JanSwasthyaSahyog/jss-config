@@ -18,6 +18,7 @@
   "ecgreport": {
     "name": "ECG Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "ECG Report"
     }
@@ -41,8 +42,9 @@
 "jssallprogrampatientenrollcountandcompleted": {
     "name": "JSS All Program Patient Enrollment And Outcome Count Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssallprogrampatientenrollcountandcompleted.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssallprogrampatientenrollcountandcompleted.sql"
     }
  },
 "jssdiabetesprogram": {
@@ -56,37 +58,42 @@
 "jsstuberclosisprogramenroll": {
     "name": "JSS Tuberclosis Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramenroll.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsstuberclosisprogramenroll.sql"
     }
  },
 "jsstuberclosisprogramoutcome": {
     "name": "JSS Tuberclosis Program Outcome Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramoutcome.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsstuberclosisprogramoutcome.sql"
     }
  },
  "jsshypertensionprogram": {
     "name": "JSS Hypertension Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsshypertensionprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsshypertensionprogram.sql"
     }
  },
 "jsssicklecelldiseaseprogram": {
     "name": "JSS Sickle Cell Disease Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsssicklecelldiseaseprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsssicklecelldiseaseprogram.sql"
     }
  },
  
 "erpipdopd": {
     "name": "ERP IPD OPD  Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ERPipdopdreport.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/ERPipdopdreport.sql"
     }
  },
  "newadmissions": {
@@ -100,29 +107,33 @@
  "OpdCountreport": {
     "name": "OPD Count Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Opd_Count_report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Opd_Count_report.sql"
     }
  },
  "Opdappointmentpatientlist": {
     "name": "OPD Appoinment Patient List Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/OPD_appointment_patient_list.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/OPD_appointment_patient_list.sql"
     }
  },
  "Registrationfeedatewisedetails": {
     "name": "Registration Fee Date Wise Details",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_details.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Registration_fee_date_wise_details.sql"
     }
  },
  "RegistrationfeedatewiseforBilling": {
     "name": "Registration Fee Date Wise For Billing",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_for_Billing.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Registration_fee_date_wise_for_Billing.sql"
     }
  }, 
  "DeathReport": {
@@ -136,6 +147,7 @@
  "opdSpecialityTemplate": {
     "name": "OPD Speciality Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "OPD Speciality Template"
     }
@@ -151,6 +163,7 @@
   "hypertensionIntakeData": {
     "name": "Hypertension Intake Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Hypertension Intake Template"
     }
@@ -235,6 +248,7 @@
  "Cancerregistrationtemplate": {
     "name": "Cancer Registration Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Cancer Registration Template"
     }
@@ -242,6 +256,7 @@
  "palliativecareassessmenttemplate": {
     "name": "Palliative Care Assessment Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Palliative Care Assessment Template"
     }
@@ -273,6 +288,7 @@
   "lowbackache": {
     "name": "Low Back Ache",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "PROFORMA FOR EVALUATION OF LOW BACK ACHE"
     }
@@ -354,6 +370,7 @@
   "AyushmanBharatTemplate": {
     "name": "Ayushman Bharat Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Ayushman Bharat Template"
     }
@@ -361,6 +378,7 @@
   "CommunityProgramReferralForm": {
     "name": "Community Program Referral Form",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Community Program Referral Form"
     }
@@ -418,6 +436,7 @@
   "BloodTransfusionReport": {
     "name": "Blood Transfusion Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Blood Transfusion Template"
     }
@@ -446,6 +465,7 @@
   "painStudy": {
     "name": "Pain Study Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Pain Study Template"
     }
@@ -789,8 +809,9 @@
  "billingipdopddiscount": {
     "name": "BILLING IPD OPD Discount Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Billing_ipdopd_discount_report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Billing_ipdopd_discount_report.sql"
     }
 },
 "CBNAATProspectiveStudyQ1": {
@@ -820,6 +841,7 @@
  "medicalComplicatedPregnancyIntakeTemplate": {
     "name": "Medical Complicated Pregnancy Intake Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Medical Complicated Pregnancy Intake Template"
     }
@@ -827,6 +849,7 @@
   "medicalComplicatedPregnancyFollowupTemplate": {
     "name": "Medical Complicated Pregnancy Followup Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Medical Complicated Pregnancy Followup Template"
     }
@@ -834,6 +857,7 @@
   "proformaforDescriptiveStudyOnEmpyema": {
     "name": "Proforma for Descriptive Study On Empyema",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Proforma for Descriptive Study On Empyema"
     }
@@ -841,6 +865,7 @@
   "her2NeuGastricCancer": {
     "name": "HER2 NEU Gastric Cancer Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "HER2 NEU Gastric Cancer"
     }
@@ -848,6 +873,7 @@
  "extrapulmonaryTuberculosisTemplate": {
     "name": "Extrapulmonary Tuberculosis",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Extrapulmonary Tuberculosis Template"
     }
@@ -855,6 +881,7 @@
  "surgicalSiteInfectionTemplate": {
     "name": "Surgical Site Infection",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Surgical Site Infection Template"
     }
@@ -862,8 +889,9 @@
  "billingipdopd": {
     "name": "BILLING IPD OPD  Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
     }
  },
  "diabetesFootStudy": {
