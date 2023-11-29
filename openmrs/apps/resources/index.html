@@ -25,6 +25,7 @@ h2.section-title {font-family: OpenSans,Arial,sans-serif;
     color: #FFF;
     font-size: 16px;
     clear: both;
+	text-align: center;
     background: #699;
     position: relative;
     border-radius: 2px 2px 0 0;
@@ -37,13 +38,50 @@ a, a:active, a:hover, a:link, a:visited {
 ul {
     list-style: none;
 }
+table, th, td {
+  border:1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {background-color: #f3f3f3;
 </style>
 </head>
 <body>
 <p>Click Following Link</p>
 <div><div>
 <h2 class="section-title">External References</h2>
-<ul><li><a href="http://192.168.0.156/" target="_blank">Resources</a><br><br></div></li></ul>
+
+<table style="width:100%">
+  <tr>
+    <th style="background:#699; color:#FFF" >Title</th>
+    <th style="background:#699; color:#FFF" >Description</th>
+    <th style="background:#699; color:#FFF" >Click Link</th>
+  </tr>
+  <tr>
+    <td >UpToDate</td>
+    <td>UpToDate Offline web access</td>
+    <td><a href="http://192.168.0.4/resource/UpToDateOffline.htm" target="_blank">Click Here</a></td>
+    
+  </tr>
+  <tr>
+    <td>Feedback/Suggestion Form</td>
+    <td>JSS EMR And Technical Work Feedback/ Suggestion form</td>
+    <td><a href="http://192.168.0.4/resource/feedback/form.html" target="_blank">Click Here</a></td>
+    
+  </tr>
+  <tr>
+    <td>Offline Website</td>
+    <td>JSS other Information and download software. (Fully Offline website)</td>
+    <td><a href="http://192.168.0.4/resource" target="_blank">Click Here</a></td>
+    
+  </tr>
+  <tr>
+    <td>Ayushman Package List</td>
+    <td>Ayushman Package List Provide By Goverment </td>
+    <td><a href="http://192.168.0.4/resource/Ayushman/PackageMasterReport.html" target="_blank">Click Here</a></td>
+    
+  </tr>
+</table>
 </div>
 </div>
 </body>

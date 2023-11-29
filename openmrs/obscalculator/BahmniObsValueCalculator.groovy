@@ -667,8 +667,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
 	)
         dischargeSummaryTemplates.put(ChemotherapytemplateTemplate.name, ChemotherapytemplateTemplate)
 
-
-
+	
 
       // TODO Read from actual CSV file after getting the library for CSV parser (commons-CSV ? )
 //        String fileName = OpenmrsUtil.getApplicationDataDirectory() + "obscalculator/discharge_summary_templates.csv"

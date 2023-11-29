@@ -37,7 +37,8 @@
           "debtReason",
           "migrationHistory",
           "migrationHistoryDetails",
-          "distanceFromCenter"
+          "distanceFromCenter",
+	  "nikshayId"
         ]
       }
     },
@@ -77,17 +78,22 @@
         "abnormalIndicator": true
       }
     },
-
+    "fieldValidation" : {
+                "primaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
+                "secondaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
+		"aadharCard" : {"pattern" : "[0-9]{12}", "errorMessage" : "Should be 12 characters"},
+                "ayushmanId" : {"pattern" : "[a-zA-Z0-9]{8,12}", "errorMessage" : "Should be 8 to 12 characters"}
+    },
     "patientSearch": {
       "address": {
         "label": "Village",
         "placeholder": "Enter Village",
         "field": "city_village"
       },
-      "programAttributes": {
-        "label": "Program ID",
-        "placeholder": "Program ID",
-        "field": "Program ID"
+      "customAttributes": {
+         "label": "AADHAR",
+         "placeholder": "Enter Card Number",
+         "fields": ["aadharCard"]
       }
     }
   }
