@@ -24,6 +24,7 @@
   ],
   "config": {
     "enablePACSOptions": true,
+    "preferExtraIdInSearchResults": false,
     "obsIgnoreList": [
       "Fee Information",
       "Patient file"
