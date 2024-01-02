@@ -34,11 +34,54 @@
       "templateName": "Diabetes Counselling Template"
     }
   },
+"jssallprogrampatientenrollcountandcompleted": {
+    "name": "JSS All Program Patient Enrollment And Outcome Count Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssallprogrampatientenrollcountandcompleted.sql"
+    }
+ },
 "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+    }
+ },
+"jsstuberclosisprogramenroll": {
+    "name": "JSS Tuberclosis Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramenroll.sql"
+    }
+ },
+"jsstuberclosisprogramoutcome": {
+    "name": "JSS Tuberclosis Program Outcome Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramoutcome.sql"
+    }
+ },
+ "jsshypertensionprogram": {
+    "name": "JSS Hypertension Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsshypertensionprogram.sql"
+    }
+ },
+"jsssicklecelldiseaseprogram": {
+    "name": "JSS Sickle Cell Disease Program Enrollment Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsssicklecelldiseaseprogram.sql"
+    }
+ },
+ 
+"erpipdopd": {
+    "name": "ERP IPD OPD  Report",
+    "type": "ERPGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ERPipdopdreport.sql"
     }
  },
  "newadmissions": {
@@ -48,6 +91,34 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/New_Admissions.sql"
     }
  },
+ "OpdCountreport": {
+    "name": "OPD Count Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Opd_Count_report.sql"
+    }
+ },
+ "Opdappointmentpatientlist": {
+    "name": "OPD Appoinment Patient List Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/OPD_appointment_patient_list.sql"
+    }
+ },
+ "Registrationfeedatewisedetails": {
+    "name": "Registration Fee Date Wise Details",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_details.sql"
+    }
+ },
+ "RegistrationfeedatewiseforBilling": {
+    "name": "Registration Fee Date Wise For Billing",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_for_Billing.sql"
+    }
+ }, 
  "DeathReport": {
     "name": "Death Report",
     "type": "MRSGeneric",
@@ -55,11 +126,25 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/Death_Report.sql"
     }
  },
+ "opdSpecialityTemplate": {
+    "name": "OPD Speciality Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "OPD Speciality Template"
+    }
+ },
  "TLRecords": {
     "name": "TL Records Report",
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/TL_Records_Report.sql"
+    }
+ },
+  "hypertensionIntakeData": {
+    "name": "Hypertension Intake Data",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Hypertension Intake Template"
     }
  },
   "tuberculosisIntakeData": {
@@ -128,6 +213,20 @@
     "type": "obsTemplate",
     "config": {
       "templateName": "Discharge Summary"
+    }
+  },
+ "Cancerregistrationtemplate": {
+    "name": "Cancer Registration Template Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Cancer Registration Template"
+    }
+  },
+ "palliativecareassessmenttemplate": {
+    "name": "Palliative Care Assessment Template Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Palliative Care Assessment Template"
     }
   },
  "BirthTemplate": {
@@ -282,6 +381,14 @@
       "programName": "Smart Card"
     }
   },
+  "BloodTransfusionReport": {
+    "name": "Blood Transfusion Report",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Blood Transfusion Template"
+    }
+  },
+
   "ipdPatients": {
     "name": "IPD Patients Report",
     "type": "ipdPatients",
@@ -622,6 +729,13 @@
       "sqlPath": "/var/www/bahmni_config/openmrs/reports/AllTestResult.sql"
     }
 },
+ "billingipdopddiscount": {
+    "name": "BILLING IPD OPD Discount Report",
+    "type": "ERPGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Billing_ipdopd_discount_report.sql"
+    }
+},
 "CBNAATProspectiveStudyQ1": {
     "name": "CBNAAT Prospective Study 01",
     "type": "MRSGeneric",
@@ -671,11 +785,25 @@
       "templateName": "HER2 NEU Gastric Cancer"
     }
  },
+ "extrapulmonaryTuberculosisTemplate": {
+    "name": "Extrapulmonary Tuberculosis",
+    "type": "obsTemplate",
+    "config": {
+      "templateName": "Extrapulmonary Tuberculosis Template"
+    }
+ },
  "surgicalSiteInfectionTemplate": {
     "name": "Surgical Site Infection",
     "type": "obsTemplate",
     "config": {
       "templateName": "Surgical Site Infection Template"
+    }
+ },
+ "billingipdopd": {
+    "name": "BILLING IPD OPD  Report",
+    "type": "ERPGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
     }
  },
  "diabetesFootStudy": {

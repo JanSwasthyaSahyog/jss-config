@@ -75,6 +75,9 @@
       "Any Symptoms": {
         "multiSelect": true
       },
+      "Clinical diagnosis of EPTB, Investigation used": {
+        "multiSelect": true
+      },
       "Procedure Detail": {
         "allowAddMore": true
       },
@@ -468,6 +471,15 @@
       "Diabetes, Complaint": {
         "multiSelect": true
       },
+      "Operative Note, Type of Surgery (Procedure based)": {
+        "required": true
+      },
+      "Operative Note, Type of Surgery (Time based)": {
+        "required": true
+      },
+      "Date of Surgery": {
+        "required": true
+      },
       "Coded Operating Surgeon": {
         "multiSelect": true
       },
@@ -586,6 +598,39 @@
       "Psychiatry, Sexual History": {
         "multiSelect": true
       },
+      "Palliative Care Assessment, Complaints": {
+        "multiSelect": true
+      },
+      "Next follow up Date": {
+         "allowFutureDates": true
+      },
+      "Cancer Registration, Head and Neck": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Gastro Intestinal": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Genitourinary": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Gynecology": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Musculo skeletal": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Skin": {
+        "multiSelect": true
+      },	
+      "Cancer Registration, Basis of Diagnosis": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Co-morbid conditions": {
+        "multiSelect": true
+      },
+      "Cancer Registration, Addictions": {
+        "multiSelect": true
+      },
       "RMRCT, Microbiology test requirement, Test": {
 	"required": true
        },
@@ -623,6 +668,26 @@
       "Summary, Advice": {
         "multiSelect": true
       },
+      "Discharge Summary, Treating Doctor":{
+        "disableAddNotes": true,
+        "dropdown": true,
+        "required": true
+      },
+      "Discharge Summary, Emergency Care": {
+        "required": true
+      },
+      "Discharge Summary, Condition at the time of discharge": {
+        "required": true
+      },
+      "Discharge Summary, Urgent Care": {
+        "required": true
+      },
+      "Emergency Contact Person": {
+        "required": true
+      },
+      "Emergency Contact Number": {
+        "required": true
+      },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
       }

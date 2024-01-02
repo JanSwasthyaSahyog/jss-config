@@ -43,10 +43,10 @@ SELECT  pi.identifier AS 'Identifier',DATE(pi.date_created)RegistrationDate,date
 	'Birth Number of Babies',
 	'Birth Sex of Baby',
 	'Birth Time',
-    	'Birth Weight',
+        'Birth Weight',
 	'Birth Alive/ Dead',
 	'Apgar - Score (X/10)',
-    	'Birth Any Congenital Abnormallities',
+        'Birth Any Congenital Abnormallities',
 	'Birth Condition of Baby at Birth',
 	'Conducted By'
 	)
