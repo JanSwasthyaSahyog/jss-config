@@ -696,6 +696,10 @@
       },
       "Emergency Contact Number": {
         "required": true
+      },
+      "Cause of seizure": {
+        "multiSelect": true
+
       },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
