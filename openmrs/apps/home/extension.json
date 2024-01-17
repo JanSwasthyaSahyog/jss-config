@@ -155,7 +155,7 @@
         "url": "/hiuser",
         "icon": "fa fa-hospital-o",
         "order": 16,
-        "requiredPrivilege": "app:clinical"
+        "requiredPrivilege": "app:disable-clinical"
   }
 }
 
