@@ -569,10 +569,6 @@
                     {
                         "translationKey": "Print latest prescription",
                         "url": "../clinical/#/default/patient/{{patientUuid}}/latest-prescription-print"
-                    },
-                    {
-                        "translationKey": "Patient Documents",
-                        "url": "../document-upload/?encounterType=Patient%20Document&topLevelConcept=Patient%20Document&defaultOption=Patient%20file#/patient/{{patientUuid}}/document"
                     }
                 ]
             }
