@@ -10,6 +10,10 @@
     {
       "id": "org.bahmni.registration.patient.next",
       "description": "After Bahmni Patient Registration, forward url configuration"
+    },
+    {
+        "id": "org.bahmni.registration.identifier",
+        "description": "NDHM HealthID Verification"
     }
   ],
   "contextModel": [
@@ -20,6 +24,7 @@
     "mandatoryPersonAttributes": [
       "Smart card holder"
     ],
+    "readOnlyExtraIdentifiers": ["ABHA Number","ABHA Address"],
     "patientInformation": {
       "additionalPatientInformation": {
         "title": "Additional Patient Information",
@@ -79,8 +84,8 @@
       }
     },
     "fieldValidation" : {
-                "primaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
-                "secondaryContact" : {"pattern" : "[0-9]{10}", "errorMessage" : "Should be 10 characters"},
+                "primaryContact" : {"pattern" : "^((?:\\+91)?[1-9]{1}[0-9]{9})$", "errorMessage" : "Phone Number should be 10 digits with or without prefix +91"},
+                "secondaryContact" : {"pattern" : "^((?:\\+91)?[1-9]{1}[0-9]{9})$", "errorMessage" : "Phone Number should be 10 digits with or without prefix +91"},
 		"aadharCard" : {"pattern" : "[0-9]{12}", "errorMessage" : "Should be 12 characters"},
                 "ayushmanId" : {"pattern" : "[a-zA-Z0-9]{8,12}", "errorMessage" : "Should be 8 to 12 characters"}
     },

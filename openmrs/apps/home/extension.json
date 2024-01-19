@@ -112,7 +112,7 @@
       "extensionPointId": "org.bahmni.home.dashboard",
       "type": "link",
       "translationKey": "MODULE_LABEL_APPOINTMENT_SCHEDULING_KEY",
-      "url": "../appointments",
+      "url": "/appointments",
       "icon": "fa fa-calendar",
       "order": 13,
       "requiredPrivilege": "app:appointments"
@@ -142,10 +142,20 @@
         "extensionPointId": "org.bahmni.home.dashboard",
         "type": "link",
         "label": "Resources",
-        "url": "../resources/index.html",
+        "url": "/bahmni_config/resources/index.html",
         "icon": "fa fa-newspaper-o",
         "order": 14,
         "requiredPrivilege": "app:clinical"
-   }
+   },
+   "ndhmHIU": {
+        "id": "bahmni.ndhm.hiu",
+        "extensionPointId": "org.bahmni.home.dashboard",
+        "type": "link",
+        "translationKey": "MODULE_LABEL_NDHMHIU_KEY",
+        "url": "/hiuser",
+        "icon": "fa fa-hospital-o",
+        "order": 16,
+        "requiredPrivilege": "app:disable-clinical"
+  }
 }
 

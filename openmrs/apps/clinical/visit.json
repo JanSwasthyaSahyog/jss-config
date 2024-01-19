@@ -81,8 +81,8 @@
       },
       "diagnoses": {
         "type": "diagnosis",
+        "title": "Diagnoses",
         "config": {
-          "title": "Diagnoses",
           "showCertainty": false,
           "showOrder": false,
           "showDetailsButton": true

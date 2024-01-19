@@ -2,6 +2,7 @@
   "vitalsTemplateReport": {
     "name": "Vitals Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Vitals"
     }
@@ -9,6 +10,7 @@
   "diabetesIntakeData": {
     "name": "Diabetes Intake Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Diabetes Intake Template"
     }
@@ -16,6 +18,7 @@
   "ecgreport": {
     "name": "ECG Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "ECG Report"
     }
@@ -23,6 +26,7 @@
   "diabetesFollowupData": {
     "name": "Diabetes Followup Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Diabetes Followup Template"
     }
@@ -30,6 +34,7 @@
  "diabetescounsellingtemplate": {
     "name": "Diabetes Counselling Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Diabetes Counselling Template"
     }
@@ -37,98 +42,112 @@
 "jssallprogrampatientenrollcountandcompleted": {
     "name": "JSS All Program Patient Enrollment And Outcome Count Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssallprogrampatientenrollcountandcompleted.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssallprogrampatientenrollcountandcompleted.sql"
     }
  },
 "jssdiabetesprogram": {
     "name": "JSS Diabetes Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssdiabetesprogram.sql"
     }
  },
 "jsstuberclosisprogramenroll": {
     "name": "JSS Tuberclosis Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramenroll.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsstuberclosisprogramenroll.sql"
     }
  },
 "jsstuberclosisprogramoutcome": {
     "name": "JSS Tuberclosis Program Outcome Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsstuberclosisprogramoutcome.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsstuberclosisprogramoutcome.sql"
     }
  },
  "jsshypertensionprogram": {
     "name": "JSS Hypertension Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsshypertensionprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsshypertensionprogram.sql"
     }
  },
 "jsssicklecelldiseaseprogram": {
     "name": "JSS Sickle Cell Disease Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jsssicklecelldiseaseprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jsssicklecelldiseaseprogram.sql"
     }
  },
  
 "erpipdopd": {
     "name": "ERP IPD OPD  Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ERPipdopdreport.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/ERPipdopdreport.sql"
     }
  },
  "newadmissions": {
     "name": "New Admission Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/New_Admissions.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/New_Admissions.sql"
     }
  },
  "OpdCountreport": {
     "name": "OPD Count Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Opd_Count_report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Opd_Count_report.sql"
     }
  },
  "Opdappointmentpatientlist": {
     "name": "OPD Appoinment Patient List Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/OPD_appointment_patient_list.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/OPD_appointment_patient_list.sql"
     }
  },
  "Registrationfeedatewisedetails": {
     "name": "Registration Fee Date Wise Details",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_details.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Registration_fee_date_wise_details.sql"
     }
  },
  "RegistrationfeedatewiseforBilling": {
     "name": "Registration Fee Date Wise For Billing",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Registration_fee_date_wise_for_Billing.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Registration_fee_date_wise_for_Billing.sql"
     }
  }, 
  "DeathReport": {
     "name": "Death Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Death_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Death_Report.sql"
     }
  },
  "opdSpecialityTemplate": {
     "name": "OPD Speciality Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "OPD Speciality Template"
     }
@@ -136,13 +155,15 @@
  "TLRecords": {
     "name": "TL Records Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TL_Records_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/TL_Records_Report.sql"
     }
  },
   "hypertensionIntakeData": {
     "name": "Hypertension Intake Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Hypertension Intake Template"
     }
@@ -150,6 +171,7 @@
   "tuberculosisIntakeData": {
     "name": "Tuberculosis Intake Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Tuberculosis Intake Template"
     }
@@ -157,6 +179,7 @@
   "tuberculosisFollowupData": {
     "name": "Tuberculosis Followup Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Tuberculosis Followup Template"
     }
@@ -164,6 +187,7 @@
   "tuberculosisLabData": {
     "name": "Tuberculosis Lab Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Tuberculosis Lab Template",
       "applyDateRangeFor": "encounterCreateDate"
@@ -172,6 +196,7 @@
  "tuberculosisvillageprogramfollowup": {
     "name": "Tuberculosis Village Program Followup Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Tuberculosis Village Program Followup Template",
       "applyDateRangeFor": "encounterCreateDate"
@@ -180,6 +205,7 @@
  "tuberculosisfamilymemberscreeningtemplate": {
     "name": "Tuberculosis Family Member Screening Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Tuberculosis Family Member Screening Template",
       "applyDateRangeFor": "encounterCreateDate"
@@ -188,13 +214,15 @@
  "TBMonthlyReportingFormat": {
     "name": "TB Monthly Reporting Format",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/TB_Monthly_Reporting_Format.sql"
     }
   },
  "Sicklecelldiseaseintake": {
     "name": "Sickle Cell Disease Intake Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Sickle Cell Disease Intake Template",
       "applyDateRangeFor": "encounterCreateDate"
@@ -203,6 +231,7 @@
 "Sicklecelldiseasefollowup": {
     "name": "Sickle Cell Disease Followup Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Sickle Cell Disease Followup Template",
       "applyDateRangeFor": "encounterCreateDate"
@@ -211,6 +240,7 @@
 "dischargesummary": {
     "name": "Discharge Summary Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Discharge Summary"
     }
@@ -218,6 +248,7 @@
  "Cancerregistrationtemplate": {
     "name": "Cancer Registration Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Cancer Registration Template"
     }
@@ -225,6 +256,7 @@
  "palliativecareassessmenttemplate": {
     "name": "Palliative Care Assessment Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Palliative Care Assessment Template"
     }
@@ -232,13 +264,15 @@
  "BirthTemplate": {
     "name": "Birth Template",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Birth_Template_Report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Birth_Template_Report.sql"
     }
   },
 "obusgtemplate": {
     "name": "OB USG Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "OB USG Template"
     }
@@ -246,6 +280,7 @@
 "echotemplate": {
     "name": "Echo Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Echo Template"
     }
@@ -253,6 +288,7 @@
   "lowbackache": {
     "name": "Low Back Ache",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "PROFORMA FOR EVALUATION OF LOW BACK ACHE"
     }
@@ -260,6 +296,7 @@
   "bacteriologytab": {
     "name": "Bacteriology Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "BACTERIOLOGY CONCEPT SET",
       "applyDateRangeFor": "encounterCreateDate"
@@ -268,6 +305,7 @@
   "BreastCancerData": {
     "name": "Breast Cancer Template Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Breast Cancer Intake Template"
     }
@@ -275,6 +313,7 @@
   "patientsWithTuberculosisFollowups": {
     "name": "TB - Patients with appointed Followups",
     "type": "DateConceptValuesPatientsList",
+    "requiredPrivilege": "app:reports",
     "config": {
       "conceptNames": ["Tuberculosis, Next Followup Visit"],
       "templateName": "Tuberculosis Followup Template"
@@ -283,6 +322,7 @@
   "operationNotesData": {
     "name": "Operation Notes Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Operation Notes Template"
     }
@@ -290,6 +330,7 @@
   "RMRCTData": {
     "name": "RMRCT Form",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "RMRCT Form"
     }
@@ -297,6 +338,7 @@
   "RNTCPData": {
     "name": "RNTCP Form",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "RNTCP Form"
     }
@@ -304,27 +346,31 @@
   "nonCodedDiagnosesEntered": {
     "name": "Non coded Diagnoses entered",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/noncoded_diagnoses.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/noncoded_diagnoses.sql"
     }
   },
   "CodedAndnonCodedDiagnosesEntered": {
     "name": "Coded And Non Coded Diagnoses Entered",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/coded_noncoded_diagnoses.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/coded_noncoded_diagnoses.sql"
     }
   },
   "PatientsInformation": {
     "name": "Patients Information",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/PatientInformation.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/PatientInformation.sql"
     }
   },
   "AyushmanBharatTemplate": {
     "name": "Ayushman Bharat Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Ayushman Bharat Template"
     }
@@ -332,6 +378,7 @@
   "CommunityProgramReferralForm": {
     "name": "Community Program Referral Form",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Community Program Referral Form"
     }
@@ -339,6 +386,7 @@
   "diagnosisCount": {
     "name": "Diagnosis Count",
     "type": "diagnosisCount",
+    "requiredPrivilege": "app:reports",
     "config": {
       "concept": "Diagnosis Set of Sets",
       "ageGroupName": "All Ages",
@@ -355,6 +403,7 @@
   "smartCardData": {
     "name": "Smart Card Data",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Smart card Template"
     }
@@ -362,6 +411,7 @@
   "smartCardTransactionDate": {
     "name": "Smart Card - Patients with Transaction Date",
     "type": "DateConceptValuesPatientsList",
+    "requiredPrivilege": "app:reports",
     "config": {
       "conceptNames": ["Smart card, amount to be transacted on"],
       "templateName": "Smart card Template"
@@ -370,6 +420,7 @@
   "smartCardProgram": {
     "name": "Smart card - Program Report",
     "type": "PatientProgramReport",
+    "requiredPrivilege": "app:reports",
     "config": {
       "programName": "Smart Card"
     }
@@ -377,6 +428,7 @@
   "smartCardStateCount": {
     "name": "Smart card - State count",
     "type": "programStateCount",
+    "requiredPrivilege": "app:reports",
     "config": {
       "programName": "Smart Card"
     }
@@ -384,6 +436,7 @@
   "BloodTransfusionReport": {
     "name": "Blood Transfusion Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Blood Transfusion Template"
     }
@@ -392,6 +445,7 @@
   "ipdPatients": {
     "name": "IPD Patients Report",
     "type": "ipdPatients",
+    "requiredPrivilege": "app:reports",
     "config": {
       "addressAttributes": ["address1", "city_village"],
       "patientAttributes": ["caste", "education"],
@@ -400,15 +454,18 @@
   },
   "ipdOPd": {
     "name": "OPD/IPD Visit Count",
-    "type": "IpdOpdVisitCount"
+    "type": "IpdOpdVisitCount",
+    "requiredPrivilege": "app:reports"
   },
   "testCount": {
     "name": "Tests count",
-    "type": "TestCount"
+    "type": "TestCount",
+    "requiredPrivilege": "app:reports"
   },
   "painStudy": {
     "name": "Pain Study Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Pain Study Template"
     }
@@ -416,13 +473,15 @@
   "radiologyCount": {
     "name": "Radiology(X-Ray) Count",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/radiology_orders_count.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/radiology_orders_count.sql"
     }
   },
   "abnormalityReportForCriticalTests": {
     "name": "Abnormality report for critical tests",
     "type": "PatientsWithLabtestResults",
+    "requiredPrivilege": "app:reports",
     "config": {
       "conceptNames": [
         "CA-125",
@@ -442,6 +501,7 @@
   "testobsCannedReport": {
     "name": "TB Report For Newly Diagnosed Patient",
     "type": "obsCannedReport",
+    "requiredPrivilege": "app:reports",
     "config": {
       "patientAttributes": [
         "caste","smoking","alcohol","landHolding",
@@ -496,6 +556,7 @@
   "testTbFollowUpCannedReport": {
     "name": "TB Report For Follow Up Patient",
     "type": "obsCannedReport",
+    "requiredPrivilege": "app:reports",
     "config": {
       "patientAttributes": [
         "smoking","alcohol","landHolding",
@@ -546,52 +607,60 @@
   "abnormalityReport": {
     "name": "Abnormality report for critical tests wt Tel",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/abnormal_criticality_with_village_telephone.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/abnormal_criticality_with_village_telephone.sql"
     }
   },
   "referraltemp": {
     "name": "Referral Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/referraltemplate.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/referraltemplate.sql"
     }
   },
   "overdueTests": {
     "name": "Overdue Referred out Tests(LPA, LJ, CBNAAT) As of Today",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/overdue_referred_out_tests_LPA_LJ_CBNAAT.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/overdue_referred_out_tests_LPA_LJ_CBNAAT.sql"
     }
   },
   "programEnrollmentTemplateReport": {
     "name": "Program Enrollments",
-    "type": "ProgramEnrollmentReport"
+    "type": "ProgramEnrollmentReport",
+    "requiredPrivilege": "app:reports"
   },
  "jssancprogramreport": {
     "name": "ANC Program Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/ANCProgramVisitDetails.sql"
     }
  },
  "ancpatientswitheddandlatestobs": {
      "name": "ANC Patients with EDD and Latest Observations",
      "type": "MRSGeneric",
+     "requiredPrivilege": "app:reports",
      "config": {
-       "sqlPath": "/var/www/bahmni_config/openmrs/reports/ANC_EDD_Latest_Obs.sql"
+       "sqlPath": "/etc/bahmni_config/openmrs/reports/ANC_EDD_Latest_Obs.sql"
      }
   },
  "jssrhdprogram": {
     "name": "JSS RHD Program Enrollment Report",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/jssrhdprogram.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/jssrhdprogram.sql"
     }
  },
  "rhdobsCannedReport": {
  "name": "JSS RHD Program Patient Visits",
  "type": "obsCannedReport",
+ "requiredPrivilege": "app:reports",
  "config": {
       "patientAttributes": ["caste","primaryContact","Telephone Number"],
  "applyDateRangeFor": "ProgramEnrollment",
@@ -620,6 +689,7 @@
  "tbobsCannedReport": {
  "name": "JSS TB Program Enrollment Report",
  "type": "obsCannedReport",
+ "requiredPrivilege": "app:reports",
  "config": {
     "patientAttributes": ["caste","class","primaryRelative","primaryContact","Telephone Number","bloodGroup","occupation","education",
          "smoking","alcohol","landHolding","rationCard","familyIncome","foodSecurity","distanceFromCenter"],
@@ -683,83 +753,87 @@
 "tbTemplatereportwithsql": {
         "name": "JSS TB Report For Follow Up Patient",
         "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
         "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/reports/tbTemplatereport.sql"
+            "sqlPath": "/etc/bahmni_config/openmrs/reports/tbTemplatereport.sql"
         }
     },
 "AllTestsReferredOut": {
         "name": "All Tests Referred Out",
         "type": "ElisGeneric",
+        "requiredPrivilege": "app:reports",
         "config": {
-          "sqlPath": "/var/www/bahmni_config/openmrs/reports/All_Tests_Referred_Out.sql"
+          "sqlPath": "/etc/bahmni_config/openmrs/reports/All_Tests_Referred_Out.sql"
         }
     },
 "SummaryReportForReferredOutCases": {
     "name": "Summary Report For Referred Out Cases",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Summary_Report_ For_ReferredOut_Cases.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Summary_Report_ For_ReferredOut_Cases.sql"
     }
 },
 "ReferredOutTestswithAbnormalResults": {
     "name": "Referred Out Tests with Abnormal Results",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Referred_Out_Tests_with_Abnormal_Results.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Referred_Out_Tests_with_Abnormal_Results.sql"
     }
 },
 "TotalPatientsandTests": {
     "name": "Total Patients and Tests",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Total_Patients_and_Tests.sql"
     }
 },
 "TotalTestsPerPatientAndResults": {
     "name": "Total Tests Per Patient and Results",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Total_Tests_Per_Patient_And_Abnormal_Results.sql"
     }
 },
 "AllTestResult": {
     "name": "All Test Result",
     "type": "ElisGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/AllTestResult.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/AllTestResult.sql"
     }
 },
  "billingipdopddiscount": {
     "name": "BILLING IPD OPD Discount Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/Billing_ipdopd_discount_report.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/Billing_ipdopd_discount_report.sql"
     }
 },
 "CBNAATProspectiveStudyQ1": {
     "name": "CBNAAT Prospective Study 01",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q1.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q1.sql"
     }
   },
 "CBNAATProspectiveStudyQ2": {
     "name": "CBNAAT Prospective Study 02",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
     }
   },
-  "CBNAATProspectiveStudyQ2": {
-    "name": "CBNAAT Prospective Study 02",
-    "type": "MRSGeneric",
-    "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/CBNAAT_Prospective_Study_Q2.sql"
-    }
- },
  "medicalComplicatedPregnancyIntakeTemplate": {
     "name": "Medical Complicated Pregnancy Intake Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Medical Complicated Pregnancy Intake Template"
     }
@@ -767,6 +841,7 @@
   "medicalComplicatedPregnancyFollowupTemplate": {
     "name": "Medical Complicated Pregnancy Followup Template",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Medical Complicated Pregnancy Followup Template"
     }
@@ -774,6 +849,7 @@
   "proformaforDescriptiveStudyOnEmpyema": {
     "name": "Proforma for Descriptive Study On Empyema",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Proforma for Descriptive Study On Empyema"
     }
@@ -781,6 +857,7 @@
   "her2NeuGastricCancer": {
     "name": "HER2 NEU Gastric Cancer Report",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "HER2 NEU Gastric Cancer"
     }
@@ -788,6 +865,7 @@
  "extrapulmonaryTuberculosisTemplate": {
     "name": "Extrapulmonary Tuberculosis",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Extrapulmonary Tuberculosis Template"
     }
@@ -795,6 +873,7 @@
  "surgicalSiteInfectionTemplate": {
     "name": "Surgical Site Infection",
     "type": "obsTemplate",
+    "requiredPrivilege": "app:reports",
     "config": {
       "templateName": "Surgical Site Infection Template"
     }
@@ -802,15 +881,17 @@
  "billingipdopd": {
     "name": "BILLING IPD OPD  Report",
     "type": "ERPGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
     }
  },
  "diabetesFootStudy": {
     "name": "Diabetes foot study",
     "type": "MRSGeneric",
+    "requiredPrivilege": "app:reports",
     "config": {
-      "sqlPath": "/var/www/bahmni_config/openmrs/reports/diabetes_foot_study.sql"
+      "sqlPath": "/etc/bahmni_config/openmrs/reports/diabetes_foot_study.sql"
     }
   }
 }

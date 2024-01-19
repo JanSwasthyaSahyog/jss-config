@@ -24,6 +24,7 @@
   ],
   "config": {
     "enablePACSOptions": true,
+    "preferExtraIdInSearchResults": false,
     "obsIgnoreList": [
       "Fee Information",
       "Patient file"
@@ -39,6 +40,14 @@
       "opdSummaryPrint": {
         "showChart": false
       }
+    },
+    "patientContext": {
+      "personAttributes": [
+        "primaryContact"
+      ],
+      "additionalPatientIdentifiers": [
+        "ABHA Address"
+      ]
     },
     "maxConceptSetLevels": 3,
     "conceptSetUI": {
@@ -687,6 +696,10 @@
       },
       "Emergency Contact Number": {
         "required": true
+      },
+      "Cause of seizure": {
+        "multiSelect": true
+
       },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
