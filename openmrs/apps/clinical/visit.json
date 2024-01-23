@@ -23,6 +23,11 @@
         },
         "displayOrder": 0
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
   "dischargeSummary": {
@@ -113,7 +118,7 @@
         "displayOrder": 5
       },
       "labInvestigations": {
-        "type": "investigationResult",
+        "type": "labOrders",
         "config": {
           "title": "Lab Investigations",
           "showChart": true,
@@ -156,6 +161,11 @@
         },
         "displayOrder": 8
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
   "rntcpform": {
@@ -174,6 +184,11 @@
           "template": "<rntcp-form></rntcp-form>"
         }
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
   "clinicalinfotbform": {
@@ -192,6 +207,11 @@
           "template": "<clinicalinfo-tb></clinicalinfo-tb>"
         }
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
   "Death Certificate": {
@@ -210,6 +230,11 @@
           "template": "<death-certificate></death-certificate>"
         }
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
   "pplhlthsptgrp": {
@@ -228,6 +253,11 @@
           "template": "<pplhlth-sptgrp></pplhlth-sptgrp>"
         }
       }
+    },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   },
  "OperationNotes": {
@@ -273,7 +303,12 @@
         },
         "displayOrder": 1
       }
-     }
+     },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
+    }
   },
   "EchoNotes": {
     "title": "Echo Notes",
@@ -320,7 +355,12 @@
         },
         "displayOrder": 1
 	 }
-     }
+     },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
+    }
   },
   "BacteriologyConceptSet": {
     "title": "Culture and Drug Sensitivity Report",
@@ -360,7 +400,12 @@
         },
         "displayOrder": 1
       }
-     }
+     },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
+    }
   },
   "opdSummary": {
     "title": "OPD Summary",
@@ -402,7 +447,7 @@
          }
       },
       "labInvestigations": {
-        "type": "investigationResult",
+        "type": "labOrders",
         "config": {
           "title": "Lab Investigations",
           "showChart": true,
@@ -448,6 +493,11 @@
           "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
         }
       }
+   },
+    "encounterContext": {
+        "filterEncounterTypes": [
+          "Consultation"
+        ]
     }
   }
 }
