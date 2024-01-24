@@ -133,9 +133,9 @@
         "displayOrder": 6
       },
       "treatments": {
-        "type": "treatment",
+        "type": "prescription",
+        "title": "Treatments",
         "config": {
-          "translationKey": "Treatments",
           "showFlowSheet": false,
           "showListView": true,
           "showOtherActive": true,
@@ -462,9 +462,9 @@
         "displayOrder": 4
       },
       "treatments": {
-        "type": "treatment",
+        "type": "prescription",
+        "title": "Treatments",
         "config": {
-          "translationKey": "Treatments",
           "showFlowSheet": false,
           "showListView": true,
           "showOtherActive": true,
