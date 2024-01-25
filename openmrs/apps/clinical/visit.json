@@ -5,7 +5,8 @@
     "printing": {
       "title": "Jan Swasthya Sahyog Community Health Centre",
       "header": "Visit",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "defaultSections": true,
     "sections": {
@@ -35,7 +36,8 @@
     "printing": {
       "title": "Jan Swasthya Sahyog Community Health Centre",
       "header": "Discharge Summary",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "sections": {
       "patientInformation": {
@@ -173,7 +175,8 @@
     "printing": {
       "title": "",
       "header": "",
-      "logo": ""
+      "logo": "",
+      "hideProviderName": true
     },
     "sections": {
       "RNTCP Form": {
@@ -196,7 +199,8 @@
     "printing": {
       "title": "",
       "header": "",
-      "logo": ""
+      "logo": "",
+      "hideProviderName": true
     },
     "sections": {
       "RMRCT Form": {
@@ -219,7 +223,8 @@
     "printing": {
       "title": "",
       "header": "Death Certificate",
-      "logo": ""
+      "logo": "",
+      "hideProviderName": true
     },
     "sections": {
       "Death Certificate": {
@@ -242,7 +247,8 @@
     "printing": {
       "title": "",
       "header": "",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "sections": {
       "PD Hinduja Form": {
@@ -265,7 +271,8 @@
     "printing": {
       "title": "Jan Swasthya Sahyog,Ganiyari",
       "header": "Operation Notes",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "sections": {
       "patientInformation": {
@@ -315,7 +322,8 @@
     "printing": {
       "title": "Jan Swasthya Sahyog,Ganiyari",
       "header": "Echo Report",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "sections": {
       "patientInformation": {
@@ -367,7 +375,8 @@
     "printing": {
       "title": "MICROBIOLOGY CULTURE AND DRUG SENSITIVITY REPORT",
       "header": "Jan Swasthya Sahyog,Ganiyari",
-      "logo": ""
+      "logo": "",
+      "hideProviderName": true
     },
     "sections": {
       "patientInformation": {
@@ -412,7 +421,8 @@
     "printing": {
       "title": "Jan Swasthya Sahyog Community Health Centre",
       "header": "OPD Summary",
-      "logo": "../images/jss-icon.png"
+      "logo": "../images/jss-icon.png",
+      "hideProviderName": true
     },
     "sections": {
       "patientInformation": {
