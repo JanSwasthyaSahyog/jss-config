@@ -16,5 +16,21 @@ Bahmni.ConceptSet.FormConditions.rules = {
 		conditions.disable.push(previousTreatmentWhere,previousTreamentWhen,previousTreatmentCount,previousTreatmentDots,previousTreatmentDrugs);
 	}
 	return conditions;
-  }
+  },
+	'Recent Diagnosis': function (formName, formFieldValues, patient) {
+		var recentDiagnosis = formFieldValues['Recent Diagnosis'];
+		var currentLocation = window.location.origin;
+		var pathName = window.location.pathname;
+		var patientUuid = patient.uuid;
+		var diagnosisRedirectUrl = `${currentLocation}/${pathName}#/default/patient/${patientUuid}/dashboard/diagnosis`;
+		if (recentDiagnosis === 'Fill Now') {
+			window.open(diagnosisRedirectUrl, '_blank');
+			var noButton = document.querySelector('button[title="Fill Now"]');
+			if (noButton) {
+				setTimeout(function () {
+					noButton.click();
+				});
+			}
+		}
+	},
 };
