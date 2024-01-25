@@ -103,6 +103,9 @@
       "Follow up Date": {
         "allowFutureDates": true
       },
+      "Recent Diagnosis": {
+				"required": true
+			},
      "APPOINTMENT_DATE": {
 	"allowFutureDates": true
      },
