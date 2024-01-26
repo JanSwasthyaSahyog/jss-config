@@ -10,6 +10,14 @@
     },
     "defaultSections": true,
     "sections": {
+      "patientInformation": {
+        "type": "patientInformation",
+        "config": {
+          "title": "PatientInformation",
+          "hideProviderName": true
+        },
+        "displayOrder": 0
+      },
       "pivotTable": {
         "type": "pivotTable",
         "title": "Pivot Table",
@@ -50,7 +58,8 @@
             "countyDistrict"
           ],
           "title": "PatientInformation",
-          "patientAttributes": []
+          "patientAttributes": [],
+          "hideProviderName": true
         },
         "displayOrder": 0
       },
@@ -285,7 +294,8 @@
             "countyDistrict"
           ],
           "title": "PatientInformation",
-          "patientAttributes": []
+          "patientAttributes": [],
+          "hideProviderName": true
         },
         "displayOrder": 0
       },
@@ -336,7 +346,8 @@
             "countyDistrict"
           ],
           "title": "PatientInformation",
-          "patientAttributes": []
+          "patientAttributes": [],
+          "hideProviderName": true
         },
         "displayOrder": 0
       },
@@ -389,7 +400,8 @@
             "countyDistrict"
           ],
           "title": "PatientInformation",
-          "patientAttributes": []
+          "patientAttributes": [],
+          "hideProviderName": true
         },
         "displayOrder": 0
       },
@@ -435,7 +447,8 @@
             "countyDistrict"
           ],
           "title": "PatientInformation",
-          "patientAttributes": []
+          "patientAttributes": [],
+          "hideProviderName": true
         },
         "displayOrder": 1
       },
