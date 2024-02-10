@@ -4,7 +4,6 @@
 </head>
 <body>
 <br>
-<br>
 <div>
     <center><span class="custom-print-center"><h1><strong> Jan Swasthya Sahyog,Ganiyari,Bilaspur</strong></h1></span> </center><br>
     <center><span class="referral-form custom-print-center"><h1><strong>Referral Letter</strong></h1></span></center>
@@ -23,10 +22,8 @@
         <span class="increased-font"><strong>Dear Doctor ,</strong></span><br><br>
                         <span class="increased-font">Shri/ Smt.<strong> {{patient.name}} ({{patient.identifier}})</strong> age <strong>{{patient.age}} </strong>Years / <strong>{{patient.gender}}</strong> of village
                         <strong>{{patient.address.cityVillage}}</strong>,district <strong>{{patient.address.countyDistrict}}</strong>,has attended Jan Swasthya Sahyog clinic on
-                        <strong> {{observation.visitStartDateTime | bahmniDate}}</strong> his/her clinical details are.</span><br><br>
-        <br>
+                        <strong> {{observation.visitStartDateTime | bahmniDate}}</strong> his/her clinical details are.</span><br>
     </div>
-    <br><br>
 </div>
 </body>
 </html>
