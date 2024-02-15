@@ -706,6 +706,9 @@
       },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
+      },
+      "Template Habits": {
+          "multiSelect" : true
       }
     }
   }
