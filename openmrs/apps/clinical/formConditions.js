@@ -34,11 +34,11 @@ Bahmni.ConceptSet.FormConditions.rules = {
 		}
 	},
 
-	'Template Habits': function (formName, formFieldValues, patient) {
+	'Habits': function (formName, formFieldValues, patient) {
 		var conditions = { show: [], hide: [] }
-		var templateHabitsValues = formFieldValues['Template Habits'];
+		var templateHabitsValues = formFieldValues['Habits'];
 
-		if (habitTestValues.length === 0) {
+		if (templateHabitsValues.length === 0) {
 			conditions.hide.push("Gudakhu Habit If Yes", "Alcohol Habit If Yes", "Smoking Habit If Yes", "Tobacco Habit If Yes", "Gutkha Habit If Yes", "Ganja Habit If Yes");
 		} else {
 			if (templateHabitsValues.includes('Gudakhu')) {
