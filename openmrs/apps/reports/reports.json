@@ -886,6 +886,38 @@
       "sqlPath": "/etc/bahmni_config/openmrs/reports/BILLINGipdopdreport.sql"
     }
  },
+ "epilepsyintaketemplate": {
+  "name": "Epilepsy Intake Template",
+  "type": "obsTemplate",
+  "requiredPrivilege": "app:reports",
+  "config": {
+    "templateName": "Epilepsy Intake Template"
+  }
+},
+"epilepsyfollowuptemplate": {
+  "name": "Epilepsy Follow up Template",
+  "type": "obsTemplate",
+  "requiredPrivilege": "app:reports",
+  "config": {
+    "templateName": "Epilepsy Follow up Template"
+  }
+},
+"dentaltemplate": {
+  "name": "Dental Template",
+  "type": "obsTemplate",
+  "requiredPrivilege": "app:reports",
+  "config": {
+    "templateName": "Dental Template"
+  }
+},
+"seizureintaketemplate": {
+  "name": "Seizure Intake Template",
+  "type": "obsTemplate",
+  "requiredPrivilege": "app:reports",
+  "config": {
+    "templateName": "Seizure Intake Template"
+  }
+},
  "diabetesFootStudy": {
     "name": "Diabetes foot study",
     "type": "MRSGeneric",
