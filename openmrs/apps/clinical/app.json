@@ -702,8 +702,40 @@
       },
       "Cause of seizure": {
         "multiSelect": true
-
-      },		
+      },
+      "Epilepsy, Type of disease": {
+        "multiSelect": true
+      },
+      "Date of next visit": {
+	      "allowFutureDates": true
+     },
+      "If No, what is the problem": {
+        "multiSelect": true
+      },
+      "Are there any medicine side effects": {
+        "multiSelect": true
+      },
+      "Medication": {
+        "multiSelect": true
+      },	  
+      "Referral reason": {
+        "multiSelect": true
+      },
+      "Dental Advice": {
+        "multiSelect": true
+      },
+      "Past Medical History": {
+        "multiSelect": true
+      },
+      "Past Dental History": {
+        "multiSelect": true
+      },
+      "Habits": {
+        "multiSelect": true
+      },
+      "Next follow up Date": {
+	      "allowFutureDates": true
+     },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
       }
