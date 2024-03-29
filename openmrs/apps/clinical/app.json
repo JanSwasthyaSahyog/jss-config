@@ -740,29 +740,29 @@
         "multiSelect": true
       },
       "Habits": {
-          "multiSelect" : true
+        "multiSelect" : true
       },
       "If No, what is the problem": {
 				"multiSelect": true
 			},
       "Are there any medicine side effects": {
-            "multiSelect": true
-          },
+        "multiSelect": true
+      },
       "Medicine": {
-            "multiSelect": true
-          },
+        "multiSelect": true
+      },
       "Past Medical History": {
-            "multiSelect": true
-          },
+        "multiSelect": true
+      },
       "Dental, Personal History": {
-            "multiSelect": true
-          },
+        "multiSelect": true
+      },
       "Dental Advice": {
-            "multiSelect": true
-          },
+        "multiSelect": true
+      },
       "Date of next visit": {
-            "allowFutureDates": true
-          }
+        "allowFutureDates": true
+      }
     }
   }
 }
