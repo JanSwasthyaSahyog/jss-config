@@ -706,7 +706,31 @@
       },		
       "Sickle Cell Disease, Complications": {
         "multiSelect": true
-      }
+      },
+      "Habits": {
+          "multiSelect" : true
+      },
+      "If No, what is the problem": {
+				"multiSelect": true
+			},
+      "Are there any medicine side effects": {
+            "multiSelect": true
+          },
+      "Medicine": {
+            "multiSelect": true
+          },
+      "Past Medical History": {
+            "multiSelect": true
+          },
+      "Dental, Personal History": {
+            "multiSelect": true
+          },
+      "Dental Advice": {
+            "multiSelect": true
+          },
+      "Date of next visit": {
+            "allowFutureDates": true
+          }
     }
   }
 }
