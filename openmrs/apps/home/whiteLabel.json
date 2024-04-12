@@ -47,6 +47,13 @@
 			"title": "Connect",
 			"logo": "/bahmni/images/connect.png",
 			"link": "/bahmni-connect"
+		},
+		{
+			"enabled": false,
+			"name": "metabase",
+			"title": "Analytics",
+			"logo": "/bahmni/images/analytics.png",
+			"link": "/metabase"
 		}
 	]
 }
