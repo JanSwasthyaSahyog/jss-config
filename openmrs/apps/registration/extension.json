@@ -67,6 +67,17 @@
         "order": 2,
         "requiredPrivilege": "Edit Visits"
     },
+    "opdInformation":{
+        "id": "bahmni.registration.conceptSetGroup.opdInformation",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "extensionParams": {
+            "conceptName": "OPD Information",
+            "required":true
+        },
+        "order": 3,
+        "requiredPrivilege": "Edit Visits"
+    },
     "NDHMIdentifierLookup": {
         "id": "org.bahmni.registration.identifier.ndhmIdentifierSrc",
         "extensionPointId": "org.bahmni.registration.identifier",
